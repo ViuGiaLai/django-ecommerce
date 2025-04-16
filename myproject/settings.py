@@ -111,14 +111,14 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": env("DB_NAME"),
-        "USER": env("DB_USER"),
-        "PASSWORD": env("DB_PASSWORD"),
-        "HOST": env("DB_HOST"),
-        "PORT": env("DB_PORT", default="3306"),
+        "NAME": os.getenv('DB_NAME', 'my_ecommerce'),  # Sử dụng os.getenv thay vì env
+        "USER": os.getenv('DB_USER', 'root'),
+        "PASSWORD": os.getenv('DB_PASSWORD'),  # Bắt buộc phải từ biến môi trường
+        "HOST": os.getenv('DB_HOST'),         # Không dùng localhost
+        "PORT": os.getenv('DB_PORT', '3306'),
         "OPTIONS": {
             "charset": "utf8mb4",
-            "use_unicode": True,
+            {"connect_timeout": 30, "charset": "utf8mb4"}
         },
     }
 }
