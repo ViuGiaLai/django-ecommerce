@@ -95,16 +95,18 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": env('DB_NAME'),
-        "USER": env('DB_USER'),
-        "PASSWORD": env('DB_PASSWORD'),
-        "HOST": env('DB_HOST', default='localhost'),
-        'OPTIONS': {
-            'charset': 'utf8mb4',
-            'use_unicode': True,
+        "NAME": env("DB_NAME"),
+        "USER": env("DB_USER"),
+        "PASSWORD": env("DB_PASSWORD"),
+        "HOST": env("DB_HOST"),  # Không cần default ở đây
+        "PORT": env("DB_PORT", default="3307"),
+        "OPTIONS": {
+            "charset": "utf8mb4",
+            "use_unicode": True,
         },
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
