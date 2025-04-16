@@ -1,0 +1,132 @@
+/* ========== CATEGORY TITLE ========== */
+.category-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #111827;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ========== BREADCRUMB ========== */
+.category-breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.category-breadcrumb-item a,
+.category-breadcrumb-current {
+    font-size: 14px;
+    color: #6b7280;
+    text-decoration: none;
+}
+
+.category-breadcrumb-item a:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+/* ========== PRODUCT CARD ========== */
+.product-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.product-card-body {
+    padding: 16px;
+}
+
+.product-title {
+    font-size: 16px;
+    font-weight: 600;
+    min-height: 44px;
+    margin-bottom: 10px;
+}
+
+.product-title-link {
+    color: #1f2937;
+    text-decoration: none;
+}
+
+.product-title-link:hover {
+    color: #2563eb;
+}
+
+/* ========== PRICES ========== */
+.product-price-sale {
+    font-size: 15px;
+    color: #ef4444;
+    font-weight: 700;
+}
+
+.product-price-original {
+    font-size: 13px;
+    color: #9ca3af;
+    margin-left: 6px;
+    text-decoration: line-through;
+}
+
+.product-price-normal {
+    font-size: 15px;
+    color: #111827;
+    font-weight: 700;
+}
+
+/* ========== RATING ========== */
+.product-rating .product-star {
+    font-size: 14px;
+    margin-right: 2px;
+    color: #f59e0b;
+}
+
+.product-review-count {
+    font-size: 12px;
+    color: #6b7280;
+    margin-left: 4px;
+}
+
+/* ========== ACTION BUTTON ========== */
+.product-detail-btn {
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.product-detail-btn:hover {
+    background-color: #2563eb;
+    color: #fff;
+}
+
+/* ========== BADGES ========== */
+.product-badge-new,
+.product-badge-sale {
+    font-size: 12px;
+    padding: 5px 8px;
+    font-weight: 600;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.product-badge-new {
+    background-color: #10b981;
+}
+
+.product-badge-sale {
+    background-color: #ef4444;
+}

@@ -1,0 +1,376 @@
+/* Base styles */
+.account-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+/* Sidebar styles */
+.account-container .account-sidebar {
+    width: 280px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+.account-container .account-sidebar .profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 3px solid #f8f9fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.account-container .account-sidebar .profile-initials {
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account-container .account-sidebar .account-name {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+.account-container .account-sidebar .account-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.account-container .account-sidebar .account-nav ul li {
+    margin-bottom: 8px;
+}
+
+.account-container .account-sidebar .account-nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: #555;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.account-container .account-sidebar .account-nav ul li a:hover,
+.account-container .account-sidebar .account-nav ul li a.active {
+    background-color: #f0f2f5;
+    color: #3498db;
+    font-weight: 500;
+}
+
+.account-container .account-sidebar .btn-logout {
+    width: 100%;
+    padding: 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.account-container .account-sidebar .btn-logout:hover {
+    background-color: #c0392b;
+}
+
+/* Content area styles */
+.account-container .account-content {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.account-container .account-content .content-section {
+    display: none;
+}
+
+.account-container .account-content .content-section.active {
+    display: block;
+}
+
+.account-container .account-content h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Form styles */
+.account-container .account-content form p {
+    margin-bottom: 15px;
+}
+
+.account-container .account-content form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.account-container .account-content form input[type="text"],
+.account-container .account-content form input[type="email"],
+.account-container .account-content form input[type="file"],
+.account-container .account-content form select,
+.account-container .account-content form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.account-container .account-content form .update-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.account-container .account-content form .update-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Address book styles */
+.account-container .account-content #address-list .address-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border-left: 4px solid #3498db;
+}
+
+.account-container .account-content #address-list .address-item p {
+    margin: 5px 0;
+}
+
+.account-container .account-content #address-list .edit-address-btn,
+.account-container .account-content #address-list .delete-address-btn {
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.account-container .account-content #address-list .edit-address-btn {
+    background-color: #f39c12;
+    color: white;
+}
+
+.account-container .account-content #address-list .delete-address-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.account-container .account-content #add-address-btn {
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/* Favorites styles */
+.account-container .account-content .favorites-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.account-container .account-content .favorite-item {
+    position: relative;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.account-container .account-content .favorite-item:hover {
+    transform: translateY(-5px);
+}
+
+.account-container .account-content .favorite-item .delete-favorite {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account-container .account-content .favorite-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.account-container .account-content .favorite-item h3 {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #2c3e50;
+}
+
+.account-container .account-content .favorite-item .price {
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+.account-container .account-content .favorite-item .original-price {
+    text-decoration: line-through;
+    color: #95a5a6;
+    font-size: 0.9rem;
+    margin-left: 5px;
+}
+
+.account-container .account-content .favorite-item .view-product {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+.account-container .account-content .empty-favorites {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.account-container .account-content .empty-favorites i {
+    font-size: 50px;
+    color: #bdc3c7;
+    margin-bottom: 20px;
+}
+
+.account-container .account-content .empty-favorites h2 {
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+/* Recently viewed styles */
+.account-container .account-content #recently-viewed-list .card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.account-container .account-content #recently-viewed-list .card:hover {
+    transform: translateY(-5px);
+}
+
+.account-container .account-content #recently-viewed-list .card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
+.account-container .account-content #recently-viewed-list .card-body {
+    padding: 15px;
+}
+
+.account-container .account-content #recently-viewed-list .card-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.account-container .account-content #recently-viewed-list .card-text {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 5px;
+}
+
+/* Form errors */
+.account-container .account-content .form-errors {
+    color: #e74c3c;
+    background-color: #fadbd8;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border-left: 4px solid #e74c3c;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .account-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .account-container .account-sidebar {
+        width: 100%;
+        position: static;
+        margin-bottom: 20px;
+    }
+    
+    .account-container .account-content {
+        padding: 20px;
+    }
+    
+    .account-container .account-content .favorites-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .account-container .account-content #recently-viewed-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .account-container .account-sidebar .account-nav ul li a {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+    
+    .account-container .account-content .favorites-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .account-container .account-content #recently-viewed-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .account-container .account-content h2 {
+        font-size: 1.3rem;
+    }
+}

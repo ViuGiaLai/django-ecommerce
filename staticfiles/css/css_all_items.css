@@ -1,0 +1,427 @@
+/* Sidebar Filter Styles */
+.min-h-screen {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 30px 40px;
+    background-color: #f9fafb;
+}
+
+.filter-sidebar {
+    width: 180px;
+    padding: 15px 10px;
+    border-right: 1px solid #e5e7eb;
+}
+
+.filter-header {
+    margin-bottom: 15px;
+}
+
+.filter-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.clear-all {
+    color: #666;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.filter-section {
+    margin-bottom: 25px;
+}
+
+.filter-section-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.category-checkbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+}
+
+.category-label {
+    font-size: 14px;
+    color: #333;
+    
+}
+
+/* Price Range Slider */
+.price-range-slider {
+    padding: 10px 0;
+}
+
+.form-range {
+    width: 100%;
+    height: 6px;
+    padding: 0;
+    background: #e5e7eb;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+    -webkit-appearance: none;
+}
+
+.form-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #3b82f6;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.form-range::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: #3b82f6;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.price-display {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.current-price-display {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #3b82f6;
+}
+
+/* View Mode Buttons */
+.view-mode {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.view-button {
+    padding: 8px;
+    border: 1px solid #e5e7eb;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.view-button:hover {
+    border-color: #3b82f6;
+    color: #3b82f6;
+}
+
+.view-button.active {
+    background: #3b82f6;
+    border-color: #3b82f6;
+    color: white;
+}
+
+.view-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 40px;
+}
+
+.page-link {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #333;
+    text-decoration: none;
+}
+
+.page-link.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+/* Color buttons */
+.color-button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    position: relative;
+}
+
+.color-button.selected {
+    border-color: #007bff;
+}
+
+.color-button.selected::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+}
+/* Toolbar */
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.products-count {
+    font-size: 14px;
+    color: #333;
+}
+
+.view-options {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Sort Select */
+.sort-select {
+    width: 180px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    color: #333;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.sort-select:focus {
+    border-color: #3b82f6;
+    outline: none;
+}
+
+/* View Mode Buttons */
+.view-mode {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.view-button {
+    padding: 8px;
+    border: 1px solid #e5e7eb;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.view-button:hover {
+    border-color: #3b82f6;
+    color: #3b82f6;
+}
+
+.view-button.active {
+    background: #3b82f6;
+    border-color: #3b82f6;
+    color: white;
+}
+
+.view-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Color button styles */
+.color-button[data-color="black"] { background-color: #000000; }
+.color-button[data-color="white"] { background-color: #FFFFFF; }
+.color-button[data-color="red"] { background-color: #FF0000; }
+.color-button[data-color="blue"] { background-color: #0000FF; }
+.color-button[data-color="green"] { background-color: #00FF00; }
+.color-button[data-color="yellow"] { background-color: #FFFF00; }
+.color-button[data-color="pink"] { background-color: #FFC0CB; }
+.color-button[data-color="purple"] { background-color: #800080; }
+.color-button[data-color="orange"] { background-color: #FFA500; }
+.color-button[data-color="brown"] { background-color: #A52A2A; }
+.color-button[data-color="gray"] { background-color: #808080; }
+
+/* Filter Tags */
+.selected-filters {
+    margin: 15px 0;
+}
+
+.filter-tag {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f3f4f6;
+    border-radius: 9999px;
+    padding: 4px 12px;
+    margin: 0 4px 4px 0;
+    transition: all 0.2s;
+}
+
+.filter-tag:hover {
+    background-color: #e5e7eb;
+}
+
+.filter-tag span {
+    font-size: 14px;
+    color: #374151;
+}
+
+.filter-tag .remove-filter {
+    margin-left: 6px;
+    color: #6b7280;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.filter-tag .remove-filter:hover {
+    color: #ef4444;
+}
+/* Rating Section */
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Khoảng cách giữa các ngôi sao */
+    font-size: 16px; /* Kích thước chữ của sao */
+}
+
+.product-rating i {
+    transition: color 0.3s ease; /* Hiệu ứng chuyển màu khi hover */
+}
+
+.product-rating .fas.fa-star {
+    color: #f39c12; /* Màu vàng cho sao đầy */
+}
+
+.product-rating .far.fa-star {
+    color: #6c757d; /* Màu xám nhẹ cho sao rỗng */
+}
+
+.product-rating .text-muted {
+    font-size: 12px; /* Kích thước nhỏ cho số lượng đánh giá */
+    margin-left: 10px; /* Khoảng cách giữa sao và số lượng đánh giá */
+}
+
+
+/* LIST VIEW SPECIFIC STYLES */
+.flex-1 .flex-col .border {
+    /* Card container */
+    background: white;
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0 !important;
+  }
+  
+  .flex-1 .flex-col .border:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-color: #cbd5e0 !important;
+  }
+  
+  .flex-1 .flex-col .flex .w-48 {
+    /* Image container */
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  
+  .flex-1 .flex-col .flex .w-48 img {
+    transition: transform 0.3s ease;
+  }
+  
+  .flex-1 .flex-col .flex:hover .w-48 img {
+    transform: scale(1.03);
+  }
+  
+  .flex-1 .flex-col .flex > div:last-child {
+    /* Content container */
+    padding: 0.5rem 0;
+  }
+  
+  .flex-1 .flex-col .flex h3 {
+    /* Product title */
+    font-size: 1.1rem;
+    color: #2d3748;
+    margin-bottom: 0.75rem;
+  }
+  
+  .flex-1 .flex-col .flex .line-clamp-2 {
+    /* Description */
+    color: #4a5568;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .flex-1 .flex-col .flex .text-xl {
+    /* Price */
+    color: #2b6cb0;
+    font-weight: 600;
+  }
+  
+  .flex-1 .flex-col .flex .line-through {
+    /* Old price */
+    color: #a0aec0;
+    font-size: 0.9rem;
+  }
+  
+  .flex-1 .flex-col .flex .gap-3 {
+    /* Buttons container */
+    margin-top: 1.25rem;
+  }
+  
+  .flex-1 .flex-col .flex .add-to-cart {
+    background-color: #4299e1;
+    transition: all 0.2s ease;
+  }
+  
+  .flex-1 .flex-col .flex .add-to-cart:hover {
+    background-color: #3182ce;
+  }
+  
+  .flex-1 .flex-col .flex .add-to-favorites {
+    transition: all 0.2s ease;
+  }
+  
+  .flex-1 .flex-col .flex .add-to-favorites:hover {
+    background-color: #f56565;
+    color: white;
+  }
+  
+  /* Rating stars in list view */
+  .flex-1 .flex-col .flex .fa-star {
+    font-size: 0.8rem;
+    color: #ecc94b;
+  }
+  
+  .flex-1 .flex-col .flex .text-gray-600 {
+    font-size: 0.8rem;
+  }
+

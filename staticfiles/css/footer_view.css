@@ -1,0 +1,417 @@
+.footer-social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.footer-social-icon:hover {
+    transform: scale(1.1);
+    background-color: #1d4ed8; /* Darker blue on hover */
+}
+
+.footer-social-icon i {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-social-icon:hover i {
+    color: #f3f4f6; /* Light gray on hover */
+}
+
+.grid img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+}
+
+.grid img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.class-Hotline {
+    display: flex;
+}
+.flex-hotline {
+    padding-right: 20px;
+}
+#newsletter-email {
+    border: 1px solid #ddd; /* Thêm đường viền */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ nhẹ */
+    transition: border-color 0.3s ease; /* Hiệu ứng chuyển tiếp khi focus */
+  }
+  
+  #newsletter-email:focus {
+    outline: none; /* Loại bỏ đường viền mặc định khi focus */
+    border-color: #007bff; /* Thay đổi màu đường viền khi focus */
+  }
+
+  #newsletter-button-container button {
+    font-weight: 600; /* In đậm chữ */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Hiệu ứng chuyển tiếp */
+  }
+  
+  #newsletter-button-container button:hover {
+    background-color: #333; /* Thay đổi màu nền khi hover */
+    transform: translateY(-2px); /* Hiệu ứng nâng nút lên khi hover */
+  }
+  
+  #newsletter-button-container button:active {
+    transform: translateY(0); /* Đặt lại vị trí khi nhấn */
+  }
+  #chat-box-messenser {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    background-color: #0084ff; /* Màu xanh đặc trưng của Messenger */
+    background-image: linear-gradient(147deg, #0084ff, #0055b7, #0084ff); /* Gradient từ xanh sáng đến xanh đậm */
+    cursor: pointer;
+    padding-top: 3px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.164);
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    background-size: 300%;
+    background-position: left;
+    transition-duration: 1s;
+    z-index: 50;
+  }
+
+  #chat-box-messenser:hover {
+    background-position: right;
+    transition-duration: 1s;
+  }
+
+  #chat-box-messenser .tooltip {
+    position: absolute;
+    top: -40px;
+    opacity: 0;
+    background-color: #00aaff; /* Màu sáng hơn để tooltip nổi bật */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .5s;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+  }
+
+  #chat-box-messenser:hover .tooltip {
+    opacity: 1;
+    transition-duration: .5s;
+  }
+
+  #chat-box-messenser img {
+    height: 32px;
+    width: 32px;
+    object-fit: contain;
+  }
+
+  .chatBtn-comment {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    background-color:rgb(209, 209, 209); /* Gray instead of blue */
+    background-image: linear-gradient(147deg,rgb(239, 239, 239),rgb(198, 194, 194),rgb(214, 212, 212)); /* Gray gradient */
+    cursor: pointer;
+    padding-top: 3px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.164);
+    position: fixed;
+    bottom: 110px;
+    right: 32px;
+    background-size: 300%;
+    background-position: left;
+    transition-duration: 1s;
+    z-index: 50;
+}
+
+.chatBtn-comment:hover {
+    background-color: rgb(160, 160, 160);
+    transform: scale(1.05);
+}
+
+.chatBtn-comment:active {
+    background-color: rgb(201, 194, 194);
+    transform: scale(0.98);
+}
+
+.chatBtn-comment img {
+    transition: transform 0.2s ease-in-out;
+    width: 32px;
+    height: 32px;
+    filter: grayscale(100%) contrast(120%); /* Make icon grayscale */
+}
+
+.chatBtn-comment:hover img {
+    transform: scale(1.1);
+}
+
+.chatBtn-comment .tooltip {
+    visibility: hidden;
+    background-color: rgba(3, 78, 239, 0.75);
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 70px;
+    right: 10px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    white-space: nowrap;
+}
+
+.chatBtn-comment:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* next */
+/* Chat Container */
+.chat-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Chat Card */
+.chat-card {
+    width: 550px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    animation: slideUp 0.3s ease-out;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Chat Header */
+.chat-header {
+    padding: 12px 15px;
+    background: #4361ee; /* Màu xanh giống hình mẫu */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header .h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+/* Chat Body */
+.chat-body {
+    padding: 15px;
+    max-height: 400px;
+    overflow-y: auto;
+    background: #f5f5f5; /* Màu nền xám nhạt giống hình mẫu */
+}
+
+/* Messages */
+.message {
+    margin-bottom: 12px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 80%;
+    display: inline-block;
+    clear: both;
+}
+
+.incoming {
+    background: rgb(240, 239, 239); /* Màu xám nhạt cho tin nhắn đến */
+    float: left;
+    color: rgb(23, 23, 24);
+}
+
+.outgoing {
+    background: #4361ee; /* Màu xanh cho tin nhắn đi */
+    color: white;
+    float: right;
+}
+
+.message p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Chat Footer */
+.chat-footer {
+    padding: 10px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #eee;
+}
+
+.chat-footer input[type="text"] {
+    width: 100%;
+    flex: 1;
+    background-color: #f5f5f5;
+    color: #242424;
+    padding: .15rem .5rem;
+    min-height: 40px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    line-height: 1.15;
+    box-shadow: 0px 10px 20px -18px;
+}
+.chat-footer input:focus {
+    border-bottom: 2px solid #5b5fc7;
+    border-radius: 4px 4px 2px 2px;
+  }
+  
+.chat-footer input:hover {
+    outline: 1px solid lightgrey;
+  }
+
+.chat-footer button {
+    padding: 10px 25px;
+    border: none;
+    background: #4361ee; /* Màu xanh giống hình mẫu */
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.chat-footer button:hover {
+    background: #3a0ca3; /* Màu xanh đậm hơn khi hover */
+}
+
+/* Animations */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Ẩn chat box ban đầu */
+.hidden {
+    display: none;
+}
+
+#chat-box {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    background-color: #0084ff; /* Màu xanh đặc trưng của Messenger */
+    background-image: linear-gradient(147deg, #0084ff, #0055b7, #0084ff); /* Gradient từ xanh sáng đến xanh đậm */
+    cursor: pointer;
+    padding-top: 3px;
+    box-shadow: 0 0 15px 5px rgba(0, 132, 255, 0.8); /* Tạo hiệu ứng phát sáng ban đầu */
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    background-size: 300%;
+    background-position: left;
+    transition-duration: 1s;
+    animation: shake 1s ease-in-out infinite, glow 1.5s ease-in-out infinite; /* Thêm hiệu ứng lắc và phát sáng */
+    z-index: 50;
+  }
+
+  /* Keyframes cho hiệu ứng lắc */
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px); /* Lắc nhẹ sang trái */
+    }
+    50% {
+      transform: translateX(5px); /* Lắc nhẹ sang phải */
+    }
+    75% {
+      transform: translateX(-5px); /* Lắc nhẹ lại sang trái */
+    }
+    100% {
+      transform: translateX(0); /* Quay lại vị trí ban đầu */
+    }
+  }
+
+  /* Keyframes cho hiệu ứng phát sáng */
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 15px 5px rgba(0, 132, 255, 0.8); /* Phát sáng ban đầu */
+    }
+    50% {
+      box-shadow: 0 0 25px 10px rgba(0, 132, 255, 1); /* Phát sáng mạnh hơn giữa chu kỳ */
+    }
+    100% {
+      box-shadow: 0 0 15px 5px rgba(0, 132, 255, 0.8); /* Quay lại phát sáng ban đầu */
+    }
+  }
+
+  #chat-box .tooltip {
+    position: absolute;
+    top: -40px;
+    opacity: 0;
+    background-color: #00aaff; /* Màu sáng hơn để tooltip nổi bật */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .5s;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+  }
+
+  #chat-box:hover .tooltip {
+    opacity: 1;
+    transition-duration: .5s;
+  }
+
+  #chat-box img {
+    height: 32px;
+    width: 32px;
+    object-fit: contain;
+  }
