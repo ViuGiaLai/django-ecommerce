@@ -1,8 +1,8 @@
 /* Base Styles */
 .product-container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1.5rem;
     background: white;
     border-radius: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -10,36 +10,39 @@
 
 .product-main {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    margin-bottom: 3rem;
+    grid-template-columns: 0.6fr 1.4fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 /* Product Images Section */
 .product-images {
     position: relative;
+    max-width: 250px;
+    margin: 0 auto;
 }
 
-.main-image {
+.product-images .main-image {
     position: relative;
-    border-radius: 12px;
+    border-radius: 8px;
     overflow: hidden;
     aspect-ratio: 3/4;
     background: #f8f9fa;
+    max-height: 300px;
 }
 
-.main-image img {
+.product-images .main-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.5s ease;
 }
 
-.main-image:hover img {
+.product-images .main-image:hover img {
     transform: scale(1.05);
 }
 
-.badge {
+.product-images .main-image .badge {
     position: absolute;
     top: 1rem;
     padding: 0.25rem 0.75rem;
@@ -49,34 +52,42 @@
     z-index: 10;
 }
 
-.badge.new {
+.product-images .main-image .badge.new {
     left: 1rem;
     background: #228be6;
     color: white;
+    width: 50px;
+    padding: 10px;
+    margin-left: 15px;
 }
 
-.badge.sale {
+.product-images .main-image .badge.sale {
     right: 1rem;
     background: #fa5252;
     color: white;
+    width: 50px;
+    margin-top: 40px;
+    padding: 10px;
+    margin-left: 20px;
 }
 
 .thumbnail-container {
     display: flex;
-    gap: 0.75rem;
-    margin-top: 1rem;
+    gap: 0.3rem;
+    margin-top: 0.4rem;
     overflow-x: auto;
     scrollbar-width: thin;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.4rem;
+    justify-content: center;
 }
 
 .thumbnail {
-    width: 80px;
-    height: 80px;
-    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
     cursor: pointer;
     object-fit: cover;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     transition: all 0.2s ease;
 }
 
@@ -245,19 +256,24 @@
     gap: 1rem;
     margin-top: 1rem;
 }
-
-
 .add-to-cart-btn {
-    background: #228be6;
+    background-color: #FF5733; /* Màu cam đẹp mắt */
     color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
     border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .add-to-cart-btn:hover {
-    background: #1971c2;
-    transform: translateY(-2px);
+    background-color: #e74c3c; /* Màu đỏ khi hover */
 }
 
+.add-to-cart-btn i {
+    margin-right: 8px;
+}
 
 .favorite-btn {
     width: 48px;
@@ -812,4 +828,90 @@
     margin-top: 10px;
     font-size: 16px;
     color: #555;
+}
+/* Toast Message Styles */
+.toast-message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.toast-message.success {
+    background-color: #4CAF50; /* Green for success */
+}
+
+.toast-message.error {
+    background-color: #F44336; /* Red for error */
+}
+
+.toast-message.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.toast-message:not(.hidden) {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.size-btn.active {
+    background-color: #007BFF; /* Blue background for the selected size */
+    color: white;
+    border: 1px solid #007BFF;
+}
+
+/* Review image styles */
+.review-images {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.75rem;
+}
+
+.review-image-item {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.review-image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* Image preview in review form */
+.image-preview-item {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 0.2rem;
+}
+
+.image-preview-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Modal image size */
+.modal-content img {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
 }

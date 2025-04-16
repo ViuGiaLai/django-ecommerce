@@ -28,7 +28,8 @@
         <div class="col-md-3 col-sm-6 mb-4 product-card-col">
             <div class="card h-100 product-card">
                 <a href="{% url 'product_detail' product.slug %}" class="product-image-link">
-                    <img src="{{ product.image.url }}" class="card-img-top product-image" alt="{{ product.name }}">
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}" 
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </a>
                 <div class="card-body product-card-body">
                     <h5 class="card-title product-title">

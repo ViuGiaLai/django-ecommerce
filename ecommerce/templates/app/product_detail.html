@@ -2,6 +2,22 @@
 {% load static %}
 {% load custom_filters %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/breadcrumb.css' %}">
+{% endblock %}
+
+{% block breadcrumb %}
+<nav class="breadcrumb-nav">
+    <div class="breadcrumb-container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'home' %}">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'san_pham' %}?category={{ product.category.id }}">{{ product.category.name }}</a></li>
+            <li class="breadcrumb-item active">{{ product.name }}</li>
+        </ol>
+    </div>
+</nav>
+{% endblock breadcrumb %}
+
 {% block content %}
 <style>
     /* CSS cho badges và flash sale */
@@ -36,7 +52,7 @@
         50% { opacity: 0.5; }
         100% { opacity: 1; }
     }
-    </style>
+</style>
 
 <div class="bg-gray-50 min-h-screen py-8">
     <div class="product-container">
@@ -45,18 +61,17 @@
             <!-- Product Images -->
             <div class="product-images">
                 <div class="main-image">
-                    <img id="main-image" src="{{ product.image.url }}" alt="{{ product.name }}" >
+                    <img id="main-image" src="{{ product.image.url }}" alt="{{ product.name }}" style="width: 100%; height: 100%; object-fit: cover;">
                     {% if product.is_new %}
                     <span class="badge new">Mới</span>
                     {% endif %}
                     {% if product.is_sale %}
-                    <span class="badge sale">Sale</span>
+                    <span class="badge sale" style="align-items: aleft; margin-right: 81%">Sale</span>
                     <div class="flash-sale" style="font-size: 1.2rem; padding: 10px 20px; background-color: #FF5733; color: white; border-radius: 5px; display: flex; align-items: center;">
                         <i class="fas fa-bolt"></i>
                         <span class="fw-bold">FLASH SALE</span>
                         <span class="countdown" id="countdown"></span>
                     </div>
-
                     {% endif %}
                 </div>
                 <div class="thumbnail-container">
@@ -100,7 +115,7 @@
                     </div>
                     <div class="size-buttons">
                         {% for size in sizes %}
-                            <button class="size-btn" data-size="{{ size }}">{{ size }}</button>
+                            <button class="size-btn {% if size == 'M' %}active{% endif %}" data-size="{{ size }}">{{ size }}</button>
                         {% endfor %}
                     </div>
                 </div>
@@ -121,7 +136,7 @@
                     <button class="add-to-cart-btn" data-product-slug="{{ product.slug }}">
                         <i class="fas fa-shopping-cart"></i> Thêm vào giỏ
                     </button>
-                    <button class="buy-now-btn" data-product-slug="{{ product.slug }}" style="background-color: #FF5733; color: white; padding: 10px 30px; border-radius: 5px;">
+                    <button class="buy-now-btn" data-product-slug="{{ product.slug }}" data-quantity="1" style="background-color: #FF5733; color: white; padding: 10px 30px; border-radius: 5px;">
                         MUA NGAY
                     </button>
                     <button class="favorite-btn" data-product-slug="{{ product.slug }}">
@@ -159,7 +174,6 @@
                     <div class="rating-bar">
                         <span class="star-label">{{ i }} sao</span>
                         <div class="progress-bar">
-                            <!-- Thay đổi ở đây: tính phần trăm dựa trên mức sao -->
                             {% widthratio i 5 100 as percentage %}
                             <div class="progress" style="width: {{ percentage }}%"></div>
                         </div>
@@ -192,12 +206,33 @@
                     </div>
                     <textarea name="content" id="reviewContent" placeholder="Chia sẻ trải nghiệm của bạn về sản phẩm..." required></textarea>
                     
-                    <div class="image-upload-section">
-                        <label for="reviewImages" class="image-upload-label">
-                            <i class="fas fa-camera"></i> Thêm hình ảnh (tối đa 5 hình)
+                    <div class="image-upload-section" style="margin-top: 15px;">
+                        <label for="reviewImages" 
+                               style="
+                                  display: inline-block;
+                                  padding: 8px 12px;
+                                  background: #f0f0f0;
+                                  border-radius: 4px;
+                                  cursor: pointer;
+                                  font-size: 14px;
+                               ">
+                            <i class="fas fa-camera"></i> Thêm hình ảnh (tối đa 5)
                         </label>
-                        <input type="file" id="reviewImages" name="images[]" accept="image/*" multiple class="image-upload-input" onchange="previewImages(event)">
-                        <div class="image-preview-container" id="imagePreviewContainer"></div>
+                        <input type="file" 
+                               id="reviewImages" 
+                               name="images[]" 
+                               accept="image/*" 
+                               multiple 
+                               style="display: none;"
+                               onchange="previewImages(event)">
+                               
+                        <div id="imagePreviewContainer" 
+                             style="
+                                display: flex;
+                                flex-wrap: wrap;
+                                gap: 8px;
+                                margin-top: 10px; width: 100px; height: 100px;
+                             "></div>
                     </div>
 
                     <div class="review-preview" id="reviewPreview" style="display: none;">
@@ -212,9 +247,47 @@
                         </div>
                     </div>
 
-                    <div class="review-actions">
-                        <button type="button" class="preview-review-btn" onclick="previewReview()">Xem lại</button>
-                        <button type="submit" class="submit-review">Gửi đánh giá</button>
+                    <div class="review-actions" style="
+                        display: flex;
+                        gap: 12px;
+                        margin-top: 20px;
+                        flex-wrap: wrap;
+                        justify-content: flex-end;
+                    ">
+                        <button type="button" 
+                                class="preview-review-btn" 
+                                onclick="previewReview()"
+                                style="
+                                    padding: 10px 20px;
+                                    background: #f0f0f0;
+                                    color: #333;
+                                    border: 1px solid #ddd;
+                                    border-radius: 6px;
+                                    font-weight: 500;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                "
+                                onmouseover="this.style.background='#e0e0e0'"
+                                onmouseout="this.style.background='#f0f0f0'">
+                            Xem lại
+                        </button>
+                        
+                        <button type="submit" 
+                                class="submit-review"
+                                style="
+                                    padding: 10px 20px;
+                                    background: #4CAF50;
+                                    color: white;
+                                    border: none;
+                                    border-radius: 6px;
+                                    font-weight: 500;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                "
+                                onmouseover="this.style.background='#45a049'"
+                                onmouseout="this.style.background='#4CAF50'">
+                            Gửi đánh giá
+                        </button>
                     </div>
                 </form>
             </div>
@@ -246,10 +319,12 @@
                         <div class="review-content">
                             {{ comment.content|linebreaks }}
                             {% if comment.images.all %}
-                            <div class="review-images">
+                            <div class="review-images" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
                                 {% for image in comment.images.all %}
                                 <div class="review-image-item">
-                                    <img src="{{ image.image.url }}" alt="Review image" onclick="showFullImage(this.src)">
+                                    <img src="{{ image.image.url }}" alt="Review image" 
+                                         onclick="showFullImage(this.src)" 
+                                         style="width: 150px; height: 150px; object-fit: cover;">
                                 </div>
                                 {% endfor %}
                             </div>
@@ -284,753 +359,90 @@
     <img class="modal-content" id="fullImage">
 </div>
 
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/script_product_detail.js' %}"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const addToCartBtn = document.querySelector('.add-to-cart-btn');
-    const buyNowBtn = document.querySelector('.buy-now-btn');
-    const quantityInput = document.querySelector('#quantity');
-    const sizeButtons = document.querySelectorAll('.size-btn');
-    let selectedSize = 'M'; // Default size
-
-    // Size selection
-    sizeButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            sizeButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            selectedSize = this.dataset.size;
-        });
-    });
-
-    function getCSRFToken() {
-        const tokenElement = document.querySelector('[name=csrfmiddlewaretoken]');
-        if (!tokenElement) {
-            console.error('CSRF token not found');
-            return null;
+    // Function to update quantity
+    function updateQuantity(change) {
+        const quantityInput = document.getElementById('quantity');
+        const currentValue = parseInt(quantityInput.value);
+        const newValue = currentValue + change;
+        const maxValue = parseInt(quantityInput.getAttribute('max'));
+        
+        if (newValue >= 1 && newValue <= maxValue) {
+            quantityInput.value = newValue;
+            // Update the buy-now button's data-quantity attribute
+            const buyNowBtn = document.querySelector('.buy-now-btn');
+            if (buyNowBtn) {
+                buyNowBtn.setAttribute('data-quantity', newValue);
+            }
         }
-        return tokenElement.value;
     }
 
-    function handleCartAction(action) {
-        const csrfToken = getCSRFToken();
-        if (!csrfToken) {
-            showToast('CSRF token not found', 'error');
-            return;
+    // Add event listener for quantity input changes
+    document.getElementById('quantity').addEventListener('change', function() {
+        const value = parseInt(this.value);
+        const maxValue = parseInt(this.getAttribute('max'));
+        if (value < 1) {
+            this.value = 1;
+        } else if (value > maxValue) {
+            this.value = maxValue;
         }
-
-        const quantity = parseInt(quantityInput.value) || 1;
-        const productSlug = addToCartBtn.dataset.productSlug;
-
-        if (!productSlug) {
-            showToast('Product slug not found', 'error');
-            return;
+        // Update the buy-now button's data-quantity attribute
+        const buyNowBtn = document.querySelector('.buy-now-btn');
+        if (buyNowBtn) {
+            buyNowBtn.setAttribute('data-quantity', this.value);
         }
+    });
 
-        const isAuthenticated = {{ user.is_authenticated|yesno:"true,false" }};
-        if (!isAuthenticated) {
-            window.location.href = '{% url "login" %}?next=' + window.location.pathname;
-            return;
-        }
+    // Handle buy-now button click
+    document.querySelector('.buy-now-btn').addEventListener('click', function() {
+        const slug = this.getAttribute('data-product-slug');
+        const quantity = parseInt(this.getAttribute('data-quantity'));
+        const size = document.querySelector('.size-btn.active').getAttribute('data-size');
 
-        fetch(`/cart/add/${productSlug}/`, {
+        fetch(`/add-to-cart/${slug}/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-CSRFToken': csrfToken,
+                'X-CSRFToken': getCookie('csrftoken')
             },
             body: JSON.stringify({
                 quantity: quantity,
-                size: selectedSize
+                size: size,
+                buy_now: true
             })
         })
-        .then(response => {
-            if (!response.ok) {
-                if (response.status === 403) {
-                    throw new Error('Vui lòng đăng nhập để thêm vào giỏ hàng');
-                }
-                return response.json().then(data => {
-                    throw new Error(data.message || 'Có lỗi xảy ra khi thêm vào giỏ hàng');
-                });
-            }
-            return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
             if (data.success) {
-                // Update cart count
-                const cartCountElement = document.querySelector('.cart-count');
-                if (cartCountElement && data.cart_count) {
-                    cartCountElement.textContent = data.cart_count;
-                }
-                
-                if (action === 'buy-now') {
-                    window.location.href = '/checkout/';
-                } else {
-                    showToast('Sản phẩm đã được thêm vào giỏ hàng!', 'success');
-                }
+                window.location.href = '/checkout/';
             } else {
-                showToast(data.message || 'Có lỗi xảy ra khi thêm vào giỏ hàng', 'error');
+                alert(data.message);
             }
         })
         .catch(error => {
             console.error('Error:', error);
-            showToast(error.message || 'Có lỗi xảy ra khi thêm vào giỏ hàng', 'error');
-        });
-    }
-
-    // Add to cart button click handler
-    if (addToCartBtn) {
-        addToCartBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            handleCartAction('add-to-cart');
-        });
-    }
-
-    // Buy now button click handler
-    if (buyNowBtn) {
-        buyNowBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            handleCartAction('buy-now');
-        });
-    }
-
-    // Quantity update function
-    function updateQuantity(change) {
-        const currentValue = parseInt(quantityInput.value) || 0;
-        const newValue = currentValue + change;
-        const maxStock = parseInt(quantityInput.getAttribute('max')) || 999;
-        
-        if (newValue >= 1 && newValue <= maxStock) {
-            quantityInput.value = newValue;
-        }
-    }
-
-    // Add quantity button handlers
-    document.querySelectorAll('.quantity-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const change = this.textContent === '+' ? 1 : -1;
-            updateQuantity(change);
+            alert('Có lỗi xảy ra. Vui lòng thử lại sau.');
         });
     });
 
-    // Toast notification function
-    function showToast(message, type = 'success') {
-        const toast = document.getElementById('toast');
-        if (toast) {
-            toast.textContent = message;
-            toast.className = `toast-message ${type}`;
-            toast.classList.remove('hidden');
-            setTimeout(() => {
-                toast.classList.add('hidden');
-                toast.className = 'toast-message hidden';
-            }, 3000);
-        }
-    }
-
-    const reviewForm = document.getElementById('reviewForm');
-    const imagePreviewContainer = document.getElementById('imagePreviewContainer');
-    const reviewsList = document.querySelector('.reviews-list');
-
-    if (reviewForm) {
-        reviewForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Kiểm tra xem đã chọn số sao chưa
-            const rating = document.querySelector('input[name="rating"]:checked');
-            if (!rating) {
-                showToast('Vui lòng chọn số sao đánh giá', 'error');
-                return;
-            }
-            
-            const formData = new FormData(this);
-            const images = document.getElementById('reviewImages').files;
-            
-            // Add each selected image to FormData
-            for (let i = 0; i < images.length; i++) {
-                formData.append('images[]', images[i]);
-            }
-
-            fetch(this.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+    // Helper function to get CSRF token
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
                 }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    // Show success message
-                    showToast(data.message, 'success');
-                    
-                    // Add new review to the list
-                    const newReview = createReviewElement(data.comment);
-                    if (reviewsList.querySelector('.no-reviews')) {
-                        reviewsList.innerHTML = '';
-                    }
-                    reviewsList.insertBefore(newReview, reviewsList.firstChild);
-                    
-                    // Reset form and clear image preview
-                    reviewForm.reset();
-                    imagePreviewContainer.innerHTML = '';
-                    
-                    // Reset star rating
-                    document.querySelectorAll('input[name="rating"]').forEach(input => {
-                        input.checked = false;
-                    });
-                    document.querySelectorAll('.star-label i').forEach(star => {
-                        star.className = 'far fa-star';
-                    });
-                } else {
-                    showToast(data.message, 'error');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                showToast('Có lỗi xảy ra khi gửi đánh giá', 'error');
-            });
-        });
-    }
-
-    function createReviewElement(comment) {
-        const reviewItem = document.createElement('div');
-        reviewItem.className = 'review-item';
-        
-        const stars = Array(5).fill().map((_, i) => 
-            `<i class="${i < comment.rating ? 'fas' : 'far'} fa-star"></i>`
-        ).join('');
-        
-        const images = comment.images.map(imageUrl => `
-            <div class="review-image-item">
-                <img src="${imageUrl}" alt="Review image" onclick="showFullImage(this.src)">
-            </div>
-        `).join('');
-        
-        reviewItem.innerHTML = `
-            <div class="review-header">
-                <div class="reviewer-info">
-                    <img src="${comment.user.avatar}" alt="${comment.user.username}" class="reviewer-avatar">
-                    <div class="reviewer-details">
-                        <div class="reviewer-name">${comment.user.username}</div>
-                        <div class="review-date">${comment.created_at}</div>
-                    </div>
-                </div>
-                <div class="review-rating">
-                    ${stars}
-                </div>
-            </div>
-            <div class="review-content">
-                ${comment.content.replace(/\n/g, '<br>')}
-                ${comment.images.length > 0 ? `
-                    <div class="review-images">
-                        ${images}
-                    </div>
-                ` : ''}
-            </div>
-        `;
-        
-        return reviewItem;
-    }
-});
-
-function previewImages(event) {
-    const container = document.getElementById('imagePreviewContainer');
-    const files = event.target.files;
-    const existingImages = container.querySelectorAll('.image-preview-item').length;
-    const totalImages = existingImages + files.length;
-    
-    if (totalImages > 5) {
-        showToast('Chỉ được chọn tối đa 5 hình ảnh', 'error');
-        event.target.value = '';
-        return;
-    }
-    
-    Array.from(files).forEach((file, index) => {
-        // Kiểm tra kích thước file (giới hạn 5MB)
-        if (file.size > 5 * 1024 * 1024) {
-            showToast(`Hình ảnh ${file.name} vượt quá 5MB`, 'error');
-            return;
+            }
         }
-        
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            const div = document.createElement('div');
-            div.className = 'image-preview-item';
-            
-            // Tạo một data attribute để lưu trữ index của file
-            div.dataset.fileIndex = existingImages + index;
-            
-            div.innerHTML = `
-                <img src="${e.target.result}" alt="Preview">
-                <button type="button" class="remove-image" onclick="removeImage(this)">
-                    <i class="fas fa-times"></i>
-                </button>
-            `;
-            container.appendChild(div);
-        }
-        reader.readAsDataURL(file);
-    });
-}
-
-function removeImage(button) {
-    const container = document.getElementById('imagePreviewContainer');
-    const item = button.closest('.image-preview-item');
-    const input = document.getElementById('reviewImages');
-    
-    // Tạo một FileList mới không có file đã xóa
-    const dt = new DataTransfer();
-    const { files } = input;
-    
-    for (let i = 0; i < files.length; i++) {
-        if (i !== parseInt(item.dataset.fileIndex)) {
-            dt.items.add(files[i]);
-        }
+        return cookieValue;
     }
-    
-    input.files = dt.files;
-    item.remove();
-    
-    // Cập nhật lại index cho các hình ảnh còn lại
-    container.querySelectorAll('.image-preview-item').forEach((item, index) => {
-        item.dataset.fileIndex = index;
-    });
-}
-
-// Thêm sự kiện để xử lý việc kéo thả hình ảnh
-const imageUploadArea = document.querySelector('.image-upload-section');
-if (imageUploadArea) {
-    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-        imageUploadArea.addEventListener(eventName, preventDefaults, false);
-    });
-
-    function preventDefaults(e) {
-        e.preventDefault();
-        e.stopPropagation();
-    }
-
-    ['dragenter', 'dragover'].forEach(eventName => {
-        imageUploadArea.addEventListener(eventName, highlight, false);
-    });
-
-    ['dragleave', 'drop'].forEach(eventName => {
-        imageUploadArea.addEventListener(eventName, unhighlight, false);
-    });
-
-    function highlight(e) {
-        imageUploadArea.classList.add('highlight');
-    }
-
-    function unhighlight(e) {
-        imageUploadArea.classList.remove('highlight');
-    }
-
-    imageUploadArea.addEventListener('drop', handleDrop, false);
-
-    function handleDrop(e) {
-        const dt = e.dataTransfer;
-        const files = dt.files;
-        const input = document.getElementById('reviewImages');
-        
-        // Combine existing files with new files
-        const existingFiles = Array.from(input.files || []);
-        const newFiles = Array.from(files);
-        const totalFiles = existingFiles.length + newFiles.length;
-        
-        if (totalFiles > 5) {
-            showToast('Chỉ được chọn tối đa 5 hình ảnh', 'error');
-            return;
-        }
-        
-        const dt2 = new DataTransfer();
-        existingFiles.forEach(file => dt2.items.add(file));
-        newFiles.forEach(file => dt2.items.add(file));
-        
-        input.files = dt2.files;
-        previewImages({ target: input });
-    }
-}
-
-// Thêm CSS cho khu vực kéo thả
-const style = document.createElement('style');
-style.textContent = `
-    .image-upload-section {
-        border: 2px dashed #dee2e6;
-        border-radius: 8px;
-        padding: 20px;
-        text-align: center;
-        transition: all 0.3s ease;
-    }
-    
-    .image-upload-section.highlight {
-        border-color: #4CAF50;
-        background-color: rgba(76, 175, 80, 0.1);
-    }
-    
-    .image-preview-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 15px;
-    }
-    
-    .image-preview-item {
-        position: relative;
-        width: 100px;
-        height: 100px;
-    }
-    
-    .image-preview-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 4px;
-    }
-    
-    .remove-image {
-        position: absolute;
-        top: -8px;
-        right: -8px;
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        background-color: #ff4444;
-        color: white;
-        border: none;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.2s ease;
-    }
-    
-    .remove-image:hover {
-        background-color: #cc0000;
-        transform: scale(1.1);
-    }
-`;
-document.head.appendChild(style);
-
-function previewReview() {
-    const rating = document.querySelector('input[name="rating"]:checked')?.value;
-    const content = document.getElementById('reviewContent').value;
-    const images = document.getElementById('reviewImages').files;
-    const previewSection = document.getElementById('reviewPreview');
-    const submitButton = document.querySelector('.submit-review');
-    
-    if (!rating) {
-        showToast('Vui lòng chọn số sao đánh giá', 'error');
-        return;
-    }
-    
-    if (!content.trim()) {
-        showToast('Vui lòng nhập nội dung đánh giá', 'error');
-        return;
-    }
-    
-    // Update preview content
-    const previewStars = previewSection.querySelector('.preview-stars');
-    previewStars.innerHTML = Array(5).fill().map((_, i) => 
-        `<i class="fa${i < rating ? 's' : 'r'} fa-star"></i>`
-    ).join('');
-    
-    previewSection.querySelector('.preview-text').textContent = content;
-    
-    const previewImages = previewSection.querySelector('.preview-images');
-    previewImages.innerHTML = '';
-    Array.from(images).forEach(file => {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            const img = document.createElement('img');
-            img.src = e.target.result;
-            previewImages.appendChild(img);
-        }
-        reader.readAsDataURL(file);
-    });
-    
-    previewSection.style.display = 'block';
-    submitButton.style.display = 'block';
-}
-
-function showFullImage(src) {
-    const modal = document.getElementById('imageModal');
-    const modalImg = document.getElementById('fullImage');
-    modal.style.display = "block";
-    modalImg.src = src;
-}
-
-// Close modal when clicking the x button
-document.querySelector('.close-modal').onclick = function() {
-    document.getElementById('imageModal').style.display = "none";
-}
-
-// Close modal when clicking outside the image
-document.getElementById('imageModal').onclick = function(e) {
-    if (e.target === this) {
-        this.style.display = "none";
-    }
-}
-
-// Thêm hiệu ứng hover cho star rating
-const starLabels = document.querySelectorAll('.star-label');
-starLabels.forEach((label, index) => {
-    label.addEventListener('mouseover', () => {
-        // Highlight stars up to current
-        starLabels.forEach((l, i) => {
-            const star = l.querySelector('i');
-            star.className = i <= index ? 'fas fa-star' : 'far fa-star';
-        });
-    });
-    
-    label.addEventListener('mouseout', () => {
-        // Reset to selected rating
-        const selectedRating = document.querySelector('input[name="rating"]:checked');
-        starLabels.forEach((l, i) => {
-            const star = l.querySelector('i');
-            star.className = selectedRating && i < selectedRating.value ? 'fas fa-star' : 'far fa-star';
-        });
-    });
-});
 </script>
-
-<style>
-.toast-message {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    z-index: 1000;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: all 0.3s ease-in-out;
-    color: white;
-    font-weight: 500;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.toast-message.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.toast-message.success {
-    background-color: #10B981;
-}
-
-.toast-message.error {
-    background-color: #EF4444;
-}
-
-.image-upload-section {
-    margin: 15px 0;
-}
-
-.image-upload-label {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #f8f9fa;
-    border: 2px dashed #dee2e6;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.image-upload-label:hover {
-    background-color: #e9ecef;
-    border-color: #adb5bd;
-}
-
-.image-upload-input {
-    display: none;
-}
-
-.image-preview-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.image-preview-item {
-    position: relative;
-    width: 100px;
-    height: 100px;
-}
-
-.image-preview-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-.remove-image {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    font-size: 12px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s;
-}
-
-.remove-image:hover {
-    background-color: #c82333;
-    transform: scale(1.1);
-}
-
-.review-preview {
-    margin: 20px 0;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    border: 1px solid #dee2e6;
-}
-
-.preview-content {
-    margin-top: 15px;
-}
-
-.preview-rating {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.preview-stars {
-    color: #ffd700;
-}
-
-.preview-text {
-    margin-bottom: 15px;
-    white-space: pre-wrap;
-}
-
-.preview-images {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.preview-images img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-.review-actions {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.preview-review-btn, .submit-review {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: all 0.3s;
-}
-
-.preview-review-btn {
-    background-color: #6c757d;
-    color: white;
-}
-
-.preview-review-btn:hover {
-    background-color: #5a6268;
-}
-
-.submit-review {
-    background-color: #28a745;
-    color: white;
-}
-
-.submit-review:hover {
-    background-color: #218838;
-}
-
-.review-images {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 10px;
-}
-
-.review-image-item {
-    width: 80px;
-    height: 80px;
-    border-radius: 4px;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.review-image-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.2s;
-}
-
-.review-image-item img:hover {
-    transform: scale(1.05);
-}
-
-/* Image Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    padding-top: 50px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-.modal-content {
-    margin: auto;
-    display: block;
-    max-width: 90%;
-    max-height: 90vh;
-    object-fit: contain;
-}
-
-.close-modal {
-    position: absolute;
-    right: 25px;
-    top: 15px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.submit-review {
-    display: block !important;
-    background-color: #28a745;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: all 0.3s;
-}
-
-.submit-review:hover {
-    background-color: #218838;
-}
-</style>
-
 {% endblock %}

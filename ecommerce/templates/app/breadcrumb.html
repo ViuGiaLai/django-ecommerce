@@ -1,0 +1,17 @@
+{% load static %}
+
+<div class="breadcrumb-container">
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="{% url 'home' %}">Trang chủ</a>
+            {% for item in breadcrumb_items %}
+                <span class="divider">/</span>
+                {% if not forloop.last %}
+                    <a href="{{ item.url }}">{{ item.title }}</a>
+                {% else %}
+                    <span class="active">{{ item.title }}</span>
+                {% endif %}
+            {% endfor %}
+        </nav>
+    </div>
+</div> 

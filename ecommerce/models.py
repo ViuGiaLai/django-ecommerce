@@ -10,6 +10,7 @@ class Category(models.Model):
     name = models.CharField(max_length=255, unique=True)
     image = models.ImageField(upload_to='categories/', blank=True, null=True)
     is_active = models.BooleanField(default=True)  # Thêm dòng này
+    show_on_home = models.BooleanField(default=False)  # Thêm trường này
     description = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -134,6 +135,12 @@ class CartItem(models.Model):
     
     def __str__(self):
         return f"{self.quantity} x {self.product.name}"
+    
+    def get_total(self):
+        """Tính tổng tiền của item trong giỏ hàng"""
+        if self.product.sale_price:
+            return float(self.product.sale_price) * self.quantity * 1000
+        return float(self.product.price) * self.quantity * 1000
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -165,15 +172,30 @@ class RecentlyViewedProduct(models.Model):
 class Address(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     full_name = models.CharField(max_length=100)
+    phone = models.CharField(max_length=20)
     street_address = models.CharField(max_length=255)
-    city = models.CharField(max_length=100)
-    state = models.CharField(max_length=100)
-    zip_code = models.CharField(max_length=20)
-    country = models.CharField(max_length=100)
+    province = models.CharField(max_length=100)
+    district = models.CharField(max_length=100) 
+    ward = models.CharField(max_length=100)
+    is_default = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name_plural = 'Addresses'
 
     def __str__(self):
-        return f'{self.full_name}, {self.street_address}, {self.city}, {self.state}, {self.zip_code}, {self.country}'
-    
+        return f"{self.full_name}'s address at {self.street_address}"
+
+    def save(self, *args, **kwargs):
+        if self.is_default:
+            # Set all other addresses of this user to non-default
+            Address.objects.filter(user=self.user).update(is_default=False)
+        elif not Address.objects.filter(user=self.user).exists():
+            # If this is the first address, make it default
+            self.is_default = True
+        super().save(*args, **kwargs)
+
 class InstagramPost(models.Model):
     image = models.ImageField(upload_to='instagram_posts/')  # Để lưu trữ ảnh Instagram
     caption = models.CharField(max_length=255, blank=True, null=True)  # Thêm mô tả cho ảnh

@@ -48,4 +48,5 @@ urlpatterns = [
     path('my-orders/<str:order_number>/update-status/', views.update_order_status, name='update_order_status'),
     path('review-order/<str:order_number>/', views.review_order, name='review_order'),
     path('rebuy-order/<str:order_number>/', views.rebuy_order, name='rebuy_order'),
+    path('get-address/<int:address_id>/', views.get_address, name='get_address'),
 ]

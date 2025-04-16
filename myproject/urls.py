@@ -22,6 +22,7 @@ from django.conf.urls.static import static
 # Định nghĩa các đường dẫn chính
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # path('api/v1/', include('products.urls')),  # Add this line
     path('', include('ecommerce.urls')),  # Include ecommerce URLs
 ]
 

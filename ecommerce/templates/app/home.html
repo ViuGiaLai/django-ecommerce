@@ -44,7 +44,13 @@
                     {% for category in categories %}
                     <div class="category-item" data-aos="fade-up" data-aos-delay="{% widthratio forloop.counter0 1 100 %}">
                         <div class="relative aspect-[3/4]">
-                            <img src="{{ category.image.url }}" alt="{{ category.name }}" class="w-full h-full object-cover">
+                            {% if category.image %}
+                                <img src="{{ category.image.url }}" alt="{{ category.name }}" class="w-full h-full object-cover">
+                            {% else %}
+                                <div class="w-full h-full bg-gray-200 flex items-center justify-center">
+                                    <i class="fas fa-folder text-4xl text-gray-400"></i>
+                                </div>
+                            {% endif %}
                             <div class="overlay"></div>
                         </div>
                         <h3 class="text-center mt-2">{{ category.name }}</h3>
@@ -89,7 +95,7 @@
                                     <span class="bg-red-500 text-white text-xs px-2 py-1 rounded">Sale</span>
                                 {% endif %}
                                <button class="btn-heart btn-outline-danger rounded-circle p-2 d-flex align-items-center justify-content-center position-absolute top-0 end-0 m-2 add-to-favorites" data-product-slug="{{ product.slug }}"
-                                style="position: absolute; top: 5px; left: 240px; width: 35px; height: 35px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                style="position: absolute; top: 3px; left: 245px; width: 35px; height: 35px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
                                    <i class="fas fa-heart text-danger"></i>
                                 </button>
                             </div>
@@ -190,7 +196,7 @@
                                     <span class="bg-red-500 text-white text-xs px-2 py-1 rounded">Sale</span>
                                 {% endif %}
                                 <button class="btn-heart btn-outline-danger rounded-circle p-2 d-flex align-items-center justify-content-center position-absolute top-0 end-0 m-2 add-to-favorites" data-product-slug="{{ product.slug }}"
-                                style="position: absolute; top: 5px; left: 240px; width: 35px; height: 35px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                style="position: absolute; top: 3px; left: 195px; width: 35px; height: 35px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
                                    <i class="fas fa-heart text-danger"></i>
                                 </button>
                             </div>
@@ -329,131 +335,6 @@
     });
 </script>
 
-<!-- Add to Cart/Favorites Scripts -->
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        function getCSRFToken() {
-            return document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-        }
-
-        function handleCartAction(productSlug, action) {
-            if (!document.querySelector('meta[name="csrf-token"]')) {
-                showToast('CSRF token not found', 'error');
-                return;
-            }
-
-            {% if not user.is_authenticated %}
-                window.location.href = '{% url "login" %}?next=' + window.location.pathname;
-                return;
-            {% endif %}
-
-            fetch(`/cart/add/${productSlug}/`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-CSRFToken': getCSRFToken(),
-                },
-                body: JSON.stringify({ quantity: 1, size: 'M' })
-            })
-            .then(response => {
-                if (!response.ok) {
-                    if (response.status === 403) {
-                        throw new Error('Vui lòng đăng nhập để thêm vào giỏ hàng');
-                    }
-                    return response.json().then(data => {
-                        throw new Error(data.message || 'Có lỗi xảy ra khi thêm vào giỏ hàng');
-                    });
-                }
-                return response.json();
-            })
-            .then(data => {
-                if (data.success) {
-                    // Update cart count
-                    const cartCountElement = document.querySelector('.cart-count');
-                    if (cartCountElement && data.cart_count) {
-                        cartCountElement.textContent = data.cart_count;
-                    }
-                    
-                    if (action === 'buy-now') {
-                        window.location.href = '/checkout/';
-                    } else {
-                        showToast('Sản phẩm đã được thêm vào giỏ hàng!', 'success');
-                    }
-                } else {
-                    showToast(data.message || 'Có lỗi xảy ra khi thêm vào giỏ hàng', 'error');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                showToast(error.message || 'Có lỗi xảy ra khi thêm vào giỏ hàng', 'error');
-            });
-        }
-
-        // Handle "MUA NGAY" button
-        document.querySelectorAll('.buy-now-btn').forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                const productSlug = this.dataset.productSlug;
-                handleCartAction(productSlug, 'buy-now');
-            });
-        });
-
-        // Handle "Thêm vào giỏ" button
-        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                const productSlug = this.dataset.productSlug;
-                handleCartAction(productSlug, 'add-to-cart');
-            });
-        });
-
-        // Handle Add to Favorites
-        document.querySelectorAll('.add-to-favorites').forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                const productSlug = this.dataset.productSlug;
-                
-                fetch(`/add-to-favorites/${productSlug}/`, {
-                    method: 'POST',
-                    headers: {
-                        'X-CSRFToken': getCSRFToken(),
-                        'Content-Type': 'application/json',
-                    },
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        // Change icon from outline to filled
-                        const icon = this.querySelector('i');
-                        icon.classList.remove('far');
-                        icon.classList.add('fas');
-                        showToast(data.message, 'success');
-                    } else {
-                        showToast(data.message || 'Có lỗi xảy ra khi thêm vào yêu thích', 'error');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    showToast('Có lỗi xảy ra khi thêm vào yêu thích', 'error');
-                });
-            });
-        });
-
-        // Toast Notification Function
-        function showToast(message, type = 'success') {
-            const toast = document.getElementById('toast');
-            if (toast) {
-                toast.textContent = message;
-                toast.className = `toast-message ${type}`;
-                toast.classList.remove('hidden');
-                setTimeout(() => {
-                    toast.classList.add('hidden');
-                    toast.className = 'toast-message hidden';
-                }, 3000);
-            }
-        }
-    });
-</script>
 
 <!-- Toast Message -->
 <div id="toast" class="toast-message hidden"></div>

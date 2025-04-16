@@ -39,7 +39,15 @@ class ProfileUpdateForm(forms.ModelForm):
 class AddressForm(forms.ModelForm):
     class Meta:
         model = Address
-        fields = ['full_name', 'street_address', 'city', 'state', 'zip_code', 'country']
+        fields = ['full_name', 'phone', 'street_address', 'province', 'district', 'ward']
+        widgets = {
+            'full_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Họ và tên'}),
+            'phone': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Số điện thoại'}),
+            'street_address': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Địa chỉ cụ thể'}),
+            'province': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Tỉnh/Thành phố'}),
+            'district': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Quận/Huyện'}),
+            'ward': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Phường/Xã'})
+        }
 
 class CustomUserCreationForm(UserCreationForm):
     email = forms.EmailField(

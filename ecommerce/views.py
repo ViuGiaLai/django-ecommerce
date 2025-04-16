@@ -25,8 +25,9 @@ import json
 from datetime import date
 import requests
 import random
-import openai
 from django.conf import settings
+from django.db import transaction
+from django.urls import reverse
 
 logger = logging.getLogger(__name__)  # Add this line to define the logger
 
@@ -56,21 +57,33 @@ def cart_context_processor(request):
     }
 
 def home(request):
-    instagram_posts = InstagramPost.objects.filter(is_active=True)  # Lọc bài đăng đang hoạt động
-    slides = Slide.objects.filter(is_active=True)  # Ensure only active slides are retrieved
-    categories = Category.objects.filter(is_active=True)  # Add categories if needed
-    featured_products = Product.objects.filter(is_featured=True, is_active=True)  # Add featured products if needed
-    new_arrivals = Product.objects.filter(is_new=True, is_active=True)  # Add new arrivals if needed
-    brands = Brand.objects.all()  # Lấy tất cả các thương hiệu
-
+    # Get slides
+    slides = Slide.objects.filter(is_active=True)
+    
+    # Get categories that are marked to show on home
+    categories = Category.objects.filter(is_active=True, show_on_home=True)
+    
+    # Get featured products
+    featured_products = Product.objects.filter(is_featured=True, is_active=True)[:8]
+    
+    # Get new arrivals
+    new_arrivals = Product.objects.filter(is_new=True, is_active=True).order_by('-created_at')[:8]
+    
+    # Get brands
+    brands = Brand.objects.filter(is_featured=True)
+    
+    # Get Instagram posts
+    instagram_posts = InstagramPost.objects.all()[:6]
+    
     context = {
-        'instagram_posts': instagram_posts,
         'slides': slides,
         'categories': categories,
         'featured_products': featured_products,
         'new_arrivals': new_arrivals,
-        'brands': brands,  # Truyền danh sách thương hiệu vào context
+        'brands': brands,
+        'instagram_posts': instagram_posts,
     }
+    
     return render(request, 'app/home.html', context)
 
 def product_detail(request, slug):
@@ -121,6 +134,7 @@ def add_to_cart(request, slug):
             data = json.loads(request.body)
             quantity = int(data.get("quantity", 1))
             size = data.get("size", "M")
+            is_buy_now = data.get("buy_now", False)
         except json.JSONDecodeError:
             return JsonResponse({
                 "success": False,
@@ -141,30 +155,47 @@ def add_to_cart(request, slug):
                 "message": f"Chỉ còn {product.stock} sản phẩm trong kho"
             }, status=400)
 
-        # Get or create cart item
-        try:
-            cart_item = CartItem.objects.get(
-                user=request.user,
-                product=product,
-                size=size
-            )
-            # Update quantity of existing item
-            new_quantity = cart_item.quantity + quantity
-            if new_quantity > product.stock:
-                return JsonResponse({
-                    "success": False,
-                    "message": f"Tổng số lượng trong giỏ ({new_quantity}) vượt quá số lượng trong kho ({product.stock})"
-                }, status=400)
-            cart_item.quantity = new_quantity
+        with transaction.atomic():
+            # If this is a buy now request, clear the cart first
+            if is_buy_now:
+                CartItem.objects.filter(user=request.user).delete()
+                # Create new cart item with exact quantity
+                cart_item = CartItem.objects.create(
+                    user=request.user,
+                    product=product,
+                    size=size,
+                    quantity=quantity
+                )
+            else:
+                # For regular add to cart, update existing or create new
+                try:
+                    cart_item = CartItem.objects.select_for_update().get(
+                        user=request.user,
+                        product=product,
+                        size=size
+                    )
+                    new_quantity = cart_item.quantity + quantity
+                    if new_quantity > product.stock:
+                        return JsonResponse({
+                            "success": False,
+                            "message": f"Tổng số lượng trong giỏ ({new_quantity}) vượt quá số lượng trong kho ({product.stock})"
+                        }, status=400)
+                    cart_item.quantity = new_quantity
+                    cart_item.save()
+                except CartItem.DoesNotExist:
+                    cart_item = CartItem.objects.create(
+                        user=request.user,
+                        product=product,
+                        size=size,
+                        quantity=quantity
+                    )
+
+        # Verify the quantity was saved correctly
+        cart_item.refresh_from_db()
+        if cart_item.quantity != quantity and is_buy_now:
+            logger.error(f"Quantity mismatch: expected {quantity}, got {cart_item.quantity}")
+            cart_item.quantity = quantity
             cart_item.save()
-        except CartItem.DoesNotExist:
-            # Create new cart item
-            cart_item = CartItem.objects.create(
-                user=request.user,
-                product=product,
-                size=size,
-                quantity=quantity
-            )
 
         # Get updated cart count
         cart_count = CartItem.objects.filter(user=request.user).count()
@@ -216,18 +247,58 @@ def update_cart_item(request, item_id):
         cart_item = get_object_or_404(CartItem, id=item_id, user=request.user)
         data = json.loads(request.body)
         new_quantity = int(data.get("quantity", cart_item.quantity))
-        new_size = data.get("size", cart_item.size)
 
-        if new_quantity < 1 or new_quantity > cart_item.product.stock:
-            return JsonResponse({"success": False, "message": "Số lượng không hợp lệ hoặc vượt quá hàng tồn kho."})
+        # Validate quantity
+        if new_quantity < 1:
+            return JsonResponse({
+                "success": False,
+                "message": "Số lượng phải lớn hơn 0"
+            })
 
+        # Check stock availability
+        if new_quantity > cart_item.product.stock:
+            return JsonResponse({
+                "success": False,
+                "message": f"Chỉ còn {cart_item.product.stock} sản phẩm trong kho"
+            })
+
+        # Update quantity
         cart_item.quantity = new_quantity
-        cart_item.size = new_size
         cart_item.save()
 
-        return JsonResponse({"success": True, "message": "Cập nhật giỏ hàng thành công!"})
+        # Recalculate cart totals
+        cart_items = CartItem.objects.filter(user=request.user)
+        subtotal = 0
+        for item in cart_items:
+            if item.product.sale_price:
+                subtotal += float(item.product.sale_price) * item.quantity * 1000
+            else:
+                subtotal += float(item.product.price) * item.quantity * 1000
+
+        shipping_fee = 30000  # Fixed shipping fee
+        total = subtotal + shipping_fee
+
+        # Format numbers for display
+        formatted_subtotal = f"{subtotal:,.0f}"
+        formatted_total = f"{total:,.0f}"
+
+        return JsonResponse({
+            "success": True,
+            "message": "Cập nhật số lượng thành công",
+            "subtotal": formatted_subtotal,
+            "total": formatted_total
+        })
+    except CartItem.DoesNotExist:
+        return JsonResponse({
+            "success": False,
+            "message": "Không tìm thấy sản phẩm trong giỏ hàng"
+        })
     except Exception as e:
-        return JsonResponse({"success": False, "message": f"Đã xảy ra lỗi: {str(e)}"})
+        logger.error(f"Error updating cart item: {str(e)}")
+        return JsonResponse({
+            "success": False,
+            "message": f"Có lỗi xảy ra: {str(e)}"
+        })
 
 @login_required
 @require_POST
@@ -275,22 +346,37 @@ def set_csrf_token(request):
 @login_required
 def checkout(request):
     cart_items = CartItem.objects.filter(user=request.user)
+    if not cart_items.exists():
+        messages.warning(request, 'Giỏ hàng của bạn đang trống')
+        return redirect('cart')
+        
+    # Calculate cart total
+    cart_total = 0
+    cart_items_list = []
     
-    if not cart_items:
-        messages.error(request, 'Giỏ hàng của bạn đang trống!')
-        return redirect('view_cart')
+    for cart_item in cart_items:
+        if cart_item.product.sale_price:
+            item_price = float(cart_item.product.sale_price)
+            item_total = item_price * cart_item.quantity * 1000
+        else:
+            item_price = float(cart_item.product.price)
+            item_total = item_price * cart_item.quantity * 1000
+            
+        cart_total += item_total
+        cart_items_list.append({
+            'item': cart_item,
+            'total': item_total,
+            'unit_price': item_price
+        })
     
-    # Calculate totals
-    subtotal = sum((item.product.sale_price if item.product.sale_price else item.product.price) * item.quantity for item in cart_items)
-
     shipping_fee = 30000  # Fixed shipping fee
-    total = subtotal + shipping_fee
+    total_with_shipping = cart_total + shipping_fee
     
     context = {
-        'cart_items': cart_items,
-        'subtotal': subtotal,
+        'cart_items': cart_items_list,
+        'cart_total': cart_total,
         'shipping_fee': shipping_fee,
-        'total': total,
+        'total_with_shipping': total_with_shipping,
     }
     
     return render(request, 'app/checkout.html', context)
@@ -341,94 +427,99 @@ def cancel_order(request, order_number):
         })
 
 @login_required
+@require_POST  # Ensure only POST requests are accepted
 def process_checkout(request):
-    if request.method == 'POST':
-        try:
-            # Verify user has items in cart
-            cart_items = CartItem.objects.filter(user=request.user)
-            if not cart_items.exists():
-                return JsonResponse({'success': False, 'message': 'Giỏ hàng của bạn đang trống.'})
+    try:
+        # Get form data
+        full_name = request.POST.get('full_name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        address = request.POST.get('address')
+        province = request.POST.get('province')
+        district = request.POST.get('district')
+        ward = request.POST.get('ward')
+        payment_method = request.POST.get('payment_method')
+        province_name = request.POST.get('province_name')
+        district_name = request.POST.get('district_name')
+        ward_name = request.POST.get('ward_name')
 
-            # Verify stock availability for all items
-            for item in cart_items:
-                if item.quantity > item.product.stock:
-                    return JsonResponse({
-                        'success': False, 
-                        'message': f'Sản phẩm {item.product.name} chỉ còn {item.product.stock} trong kho.'
-                    })
+        # Validate required fields
+        required_fields = {
+            'full_name': full_name,
+            'email': email,
+            'phone': phone,
+            'address': address,
+            'province': province,
+            'district': district,
+            'ward': ward,
+            'payment_method': payment_method
+        }
 
-            # Extract and validate form data
-            full_name = request.POST.get('full_name', '').strip()
-            email = request.POST.get('email', '').strip()
-            phone = request.POST.get('phone', '').strip()
-            address = request.POST.get('address', '').strip()
-            province_name = request.POST.get('province_name', '').strip()
-            district_name = request.POST.get('district_name', '').strip()
-            ward_name = request.POST.get('ward_name', '').strip()
-            payment_method = request.POST.get('payment_method', '').strip()
-            bank_name = request.POST.get('bank_name', '') if payment_method == 'bank' else None
-            
-            # Basic validation
-            if not all([full_name, email, phone, address, province_name, district_name, ward_name, payment_method]):
-                missing_fields = []
-                if not full_name: missing_fields.append("họ tên")
-                if not email: missing_fields.append("email")
-                if not phone: missing_fields.append("số điện thoại")
-                if not address: missing_fields.append("địa chỉ")
-                if not province_name: missing_fields.append("tỉnh/thành phố")
-                if not district_name: missing_fields.append("quận/huyện")
-                if not ward_name: missing_fields.append("phường/xã")
-                if not payment_method: missing_fields.append("phương thức thanh toán")
-                
+        for field_name, value in required_fields.items():
+            if not value or not str(value).strip():
                 return JsonResponse({
-                    'success': False, 
-                    'message': f'Vui lòng điền đầy đủ thông tin: {", ".join(missing_fields)}.'
+                    'success': False,
+                    'message': f'Vui lòng điền đầy đủ thông tin: {field_name}'
                 })
 
-            # Validate email format
-            if '@' not in email:
-                return JsonResponse({'success': False, 'message': 'Email không hợp lệ.'})
-            
-            # Validate phone number (must be 10 digits)
-            if not phone.isdigit() or len(phone) != 10:
-                return JsonResponse({'success': False, 'message': 'Số điện thoại không hợp lệ.'})
-            
-            # Validate payment method
-            if payment_method not in ['bank', 'cod', 'momo']:
-                return JsonResponse({'success': False, 'message': 'Phương thức thanh toán không hợp lệ.'})
+        # Get cart items
+        cart_items = CartItem.objects.filter(user=request.user)
+        if not cart_items.exists():
+            return JsonResponse({
+                'success': False,
+                'message': 'Giỏ hàng của bạn đang trống'
+            })
 
-            # Validate cart items
-            cart_items = CartItem.objects.filter(user=request.user)
-            if not cart_items.exists():
-                logger.error("Cart is empty.")
-                return JsonResponse({'success': False, 'message': 'Giỏ hàng của bạn đang trống.'})
+        # Calculate totals
+        subtotal = sum(
+            float(item.product.sale_price or item.product.price) * item.quantity * 1000 
+            for item in cart_items
+        )
+        shipping_fee = 30000  # Fixed shipping fee
+        discount = 0
 
-            # Calculate totals
+        # Apply discount if promo code exists and is valid
+        promo_code = request.POST.get('promo_code')
+        if promo_code:
             try:
-                # Calculate subtotal
-                subtotal = sum(item.quantity * (float(item.product.sale_price) if item.product.sale_price else float(item.product.price)) * 1000 for item in cart_items)
-                shipping_fee = 30000  # Fixed shipping fee
-                discount = 0  # Initialize discount
+                discount_obj = DiscountCode.objects.get(code__iexact=promo_code)
+                today = timezone.now().date()
+                
+                # Check if promo code is valid
+                if not discount_obj.start_date <= today <= discount_obj.end_date:
+                    return JsonResponse({
+                        'success': False,
+                        'message': 'Mã giảm giá đã hết hạn.'
+                    })
+                    
+                # Calculate discount
+                if discount_obj.discount_percentage:
+                    discount = subtotal * (float(discount_obj.discount_percentage) / 100)
+                elif discount_obj.discount_amount:
+                    discount = float(discount_obj.discount_amount) * 1000
+                    
+            except DiscountCode.DoesNotExist:
+                return JsonResponse({
+                    'success': False,
+                    'message': 'Mã giảm giá không hợp lệ.'
+                })
 
-                # Apply discount if promo code exists and is valid
-                promo_code = request.POST.get('promo_code')
-                if promo_code:
-                    try:
-                        discount_obj = DiscountCode.objects.get(code__iexact=promo_code)
-                        today = timezone.now().date()
-                        if discount_obj.start_date <= today <= discount_obj.end_date:
-                            if discount_obj.discount_percentage:
-                                discount = subtotal * (discount_obj.discount_percentage / 100)
-                            elif discount_obj.discount_amount:
-                                discount = float(discount_obj.discount_amount) * 1000
-                        else:
-                            return JsonResponse({'success': False, 'message': 'Mã giảm giá đã hết hạn.'})
-                    except DiscountCode.DoesNotExist:
-                        return JsonResponse({'success': False, 'message': 'Mã giảm giá không hợp lệ.'})
+        # Calculate total
+        total = subtotal + shipping_fee - discount
 
-                # Calculate total
-                total = subtotal + shipping_fee - discount
+        # Validate payment method specific requirements
+        if payment_method == 'bank':
+            bank_name = request.POST.get('bank_name')
+            bank_bin = request.POST.get('bank_bin')
+            if not bank_name or not bank_bin:
+                return JsonResponse({
+                    'success': False,
+                    'message': 'Vui lòng chọn ngân hàng'
+                })
 
+        # Create order with transaction
+        try:
+            with transaction.atomic():
                 # Create order
                 order = Order.objects.create(
                     user=request.user,
@@ -440,59 +531,69 @@ def process_checkout(request):
                     district=district_name,
                     ward=ward_name,
                     payment_method=payment_method,
-                    bank_name=bank_name,
                     subtotal=subtotal,
                     shipping_fee=shipping_fee,
                     discount=discount,
                     total=total,
-                    status='pending'
+                    promo_code=promo_code if promo_code else None
                 )
-                logger.info(f"Order created successfully: {order.order_number}")
 
-                # Create order items
-                try:
-                    for item in cart_items:
-                        if not item.product:
-                            logger.error(f"Cart item has no product: {item.id}")
-                            return JsonResponse({'success': False, 'message': 'Có lỗi xảy ra với giỏ hàng. Sản phẩm không tồn tại.'})
-                        
-                        # Get the correct price (sale price if available, otherwise regular price)
-                        item_price = float(item.product.sale_price if item.product.sale_price else item.product.price)
-                        
-                        OrderItem.objects.create(
-                            order=order,
-                            product=item.product,
-                            quantity=item.quantity,
-                            price=item_price,
-                            size=item.size,
-                            color=item.product.color if hasattr(item.product, 'color') else None,
-                        )
-                        
-                        # Update product stock
-                        item.product.stock -= item.quantity
-                        item.product.save()
-                        
-                        logger.info(f"Order item created: {item.product.name} x {item.quantity}")
-                except Exception as e:
-                    logger.error(f"Error creating order items: {str(e)}")
-                    return JsonResponse({'success': False, 'message': 'Có lỗi xảy ra khi tạo chi tiết đơn hàng. Vui lòng thử lại sau.'})
+                # Add bank information if bank payment is selected
+                if payment_method == 'bank':
+                    bank_name = request.POST.get('bank_name')
+                    bank_bin = request.POST.get('bank_bin')
+                    order.bank_name = bank_name
+                    order.bank_bin = bank_bin
+                    order.save()
+
+                # Create order items and update stock
+                for cart_item in cart_items:
+                    # Check stock availability
+                    if cart_item.quantity > cart_item.product.stock:
+                        raise ValueError(f'Sản phẩm {cart_item.product.name} không đủ số lượng trong kho')
+
+                    OrderItem.objects.create(
+                        order=order,
+                        product=cart_item.product,
+                        quantity=cart_item.quantity,
+                        price=cart_item.product.sale_price if cart_item.product.sale_price else cart_item.product.price,
+                        size=cart_item.size,
+                        color=cart_item.color if hasattr(cart_item, 'color') else None
+                    )
+
+                    # Update product stock
+                    product = cart_item.product
+                    product.stock -= cart_item.quantity
+                    product.sold_quantity += cart_item.quantity
+                    product.save()
 
                 # Clear cart
-                try:
-                    cart_items.delete()
-                    logger.info("Cart cleared after order creation.")
-                except Exception as e:
-                    logger.error(f"Error clearing cart: {str(e)}")
-                    return JsonResponse({'success': False, 'message': 'Có lỗi xảy ra khi xóa giỏ hàng. Vui lòng thử lại sau.'})
+                cart_items.delete()
 
-                return JsonResponse({'success': True, 'redirect_url': f'/order-success/{order.order_number}/'})
-            except Exception as e:
-                logger.error(f"Error calculating totals: {str(e)}")
-                return JsonResponse({'success': False, 'message': 'Có lỗi xảy ra khi tính toán tổng số tiền. Vui lòng thử lại sau.'})
+                return JsonResponse({
+                    'success': True,
+                    'message': 'Đặt hàng thành công!',
+                    'redirect_url': reverse('order_success', args=[order.order_number])
+                })
+
+        except ValueError as ve:
+            return JsonResponse({
+                'success': False,
+                'message': str(ve)
+            })
         except Exception as e:
-            logger.error(f"Unexpected error during checkout: {str(e)}")
-            return JsonResponse({'success': False, 'message': 'Có lỗi xảy ra. Vui lòng thử lại sau.'})
-    return JsonResponse({'success': False, 'message': 'Phương thức không hợp lệ.'})
+            logger.error(f"Error processing order: {str(e)}")
+            return JsonResponse({
+                'success': False,
+                'message': 'Có lỗi xảy ra khi xử lý đơn hàng. Vui lòng thử lại sau.'
+            })
+
+    except Exception as e:
+        logger.error(f"Unexpected error in checkout: {str(e)}")
+        return JsonResponse({
+            'success': False,
+            'message': 'Có lỗi xảy ra. Vui lòng thử lại sau.'
+        })
 
 @login_required
 def my_orders(request):
@@ -669,7 +770,7 @@ def san_pham(request):
         products = products.order_by('-created_at')
 
     # Pagination
-    paginator = Paginator(products, 12)  # 12 products per page
+    paginator = Paginator(products, 20)  # 20 products per page
     try:
         page = int(request.GET.get('page', 1))
     except (ValueError, TypeError):
@@ -757,24 +858,358 @@ def san_pham(request):
     return render(request, 'app/all_items.html', context)
 
 def giay_dep(request):
+    subcategory = request.GET.get('subcategory', '')
     products = Product.objects.filter(category__name="Giày dép", is_active=True)
+    
+    if subcategory:
+        products = products.filter(name__icontains=subcategory)
+    
+    # Get filter parameters
+    selected_categories = request.GET.getlist('category', [])
+    min_price = request.GET.get('min_price', '')
+    max_price = request.GET.get('max_price', '3000000')
+    selected_colors = request.GET.getlist('color', [])
+    selected_sizes = request.GET.getlist('size', [])
+    sort_by = request.GET.get('sort', 'newest')
+    view_mode = request.GET.get('view', 'grid')
+
+    # Apply filters
+    if selected_categories:
+        products = products.filter(category_id__in=selected_categories)
+
+    if min_price:
+        try:
+            min_price_value = float(min_price)
+            products = products.filter(price__gte=min_price_value)
+        except ValueError:
+            pass
+
+    if max_price:
+        try:
+            max_price_value = float(max_price)
+            products = products.filter(price__lte=max_price_value)
+        except ValueError:
+            pass
+
+    if selected_colors:
+        products = products.filter(colors__name__in=selected_colors)
+
+    if selected_sizes:
+        products = products.filter(size__name__in=selected_sizes)
+
+    # Apply sorting
+    if sort_by == 'price-asc':
+        products = products.order_by('price')
+    elif sort_by == 'price-desc':
+        products = products.order_by('-price')
+    elif sort_by == 'rating':
+        products = products.order_by('-rating')
+    else:  # newest
+        products = products.order_by('-created_at')
+
+    # Pagination
+    paginator = Paginator(products, 20)
+    page = request.GET.get('page', 1)
+    try:
+        products = paginator.page(page)
+    except (PageNotAnInteger, EmptyPage):
+        products = paginator.page(1)
+
+    # Get all categories and colors
+    categories = Category.objects.all()
+    colors = Color.objects.all()
+    sizes = Size.objects.values_list('name', flat=True)
+
+    # Prepare filter tags
+    filter_tags = []
+    if subcategory:
+        filter_tags.append({
+            'type': 'subcategory',
+            'value': subcategory,
+            'display': subcategory
+        })
+
     cart_items_count = CartItem.objects.filter(user=request.user).count() if request.user.is_authenticated else 0
-    return render(request, 'app/giay_dep.html', {'products': products, 'cart_items_count': cart_items_count})
+    
+    context = {
+        'products': products,
+        'cart_items_count': cart_items_count,
+        'categories': categories,
+        'colors': colors,
+        'sizes': sizes,
+        'filter_tags': filter_tags,
+        'view_mode': view_mode,
+        'sort_by': sort_by,
+        'selected_categories': selected_categories,
+        'selected_colors': selected_colors,
+        'selected_sizes': selected_sizes,
+        'min_price': min_price,
+        'max_price': max_price,
+    }
+    
+    return render(request, 'app/all_items.html', context)
 
 def tui_vi(request):
+    subcategory = request.GET.get('subcategory', '')
     products = Product.objects.filter(category__name="Túi ví", is_active=True)
+    
+    if subcategory:
+        products = products.filter(name__icontains=subcategory)
+    
+    # Get filter parameters
+    selected_categories = request.GET.getlist('category', [])
+    min_price = request.GET.get('min_price', '')
+    max_price = request.GET.get('max_price', '3000000')
+    selected_colors = request.GET.getlist('color', [])
+    selected_sizes = request.GET.getlist('size', [])
+    sort_by = request.GET.get('sort', 'newest')
+    view_mode = request.GET.get('view', 'grid')
+
+    # Apply filters
+    if selected_categories:
+        products = products.filter(category_id__in=selected_categories)
+
+    if min_price:
+        try:
+            min_price_value = float(min_price)
+            products = products.filter(price__gte=min_price_value)
+        except ValueError:
+            pass
+
+    if max_price:
+        try:
+            max_price_value = float(max_price)
+            products = products.filter(price__lte=max_price_value)
+        except ValueError:
+            pass
+
+    if selected_colors:
+        products = products.filter(colors__name__in=selected_colors)
+
+    if selected_sizes:
+        products = products.filter(size__name__in=selected_sizes)
+
+    # Apply sorting
+    if sort_by == 'price-asc':
+        products = products.order_by('price')
+    elif sort_by == 'price-desc':
+        products = products.order_by('-price')
+    elif sort_by == 'rating':
+        products = products.order_by('-rating')
+    else:  # newest
+        products = products.order_by('-created_at')
+
+    # Pagination
+    paginator = Paginator(products, 20)
+    page = request.GET.get('page', 1)
+    try:
+        products = paginator.page(page)
+    except (PageNotAnInteger, EmptyPage):
+        products = paginator.page(1)
+
+    # Get all categories and colors
+    categories = Category.objects.all()
+    colors = Color.objects.all()
+    sizes = Size.objects.values_list('name', flat=True)
+
+    # Prepare filter tags
+    filter_tags = []
+    if subcategory:
+        filter_tags.append({
+            'type': 'subcategory',
+            'value': subcategory,
+            'display': subcategory
+        })
+
     cart_items_count = CartItem.objects.filter(user=request.user).count() if request.user.is_authenticated else 0
-    return render(request, 'app/tui_vi.html', {'products': products, 'cart_items_count': cart_items_count})
+    
+    context = {
+        'products': products,
+        'cart_items_count': cart_items_count,
+        'categories': categories,
+        'colors': colors,
+        'sizes': sizes,
+        'filter_tags': filter_tags,
+        'view_mode': view_mode,
+        'sort_by': sort_by,
+        'selected_categories': selected_categories,
+        'selected_colors': selected_colors,
+        'selected_sizes': selected_sizes,
+        'min_price': min_price,
+        'max_price': max_price,
+    }
+    
+    return render(request, 'app/all_items.html', context)
 
 def phu_kien(request):
+    subcategory = request.GET.get('subcategory', '')
     products = Product.objects.filter(category__name="Phụ kiện", is_active=True)
+    
+    if subcategory:
+        products = products.filter(name__icontains=subcategory)
+    
+    # Get filter parameters
+    selected_categories = request.GET.getlist('category', [])
+    min_price = request.GET.get('min_price', '')
+    max_price = request.GET.get('max_price', '3000000')
+    selected_colors = request.GET.getlist('color', [])
+    selected_sizes = request.GET.getlist('size', [])
+    sort_by = request.GET.get('sort', 'newest')
+    view_mode = request.GET.get('view', 'grid')
+
+    # Apply filters
+    if selected_categories:
+        products = products.filter(category_id__in=selected_categories)
+
+    if min_price:
+        try:
+            min_price_value = float(min_price)
+            products = products.filter(price__gte=min_price_value)
+        except ValueError:
+            pass
+
+    if max_price:
+        try:
+            max_price_value = float(max_price)
+            products = products.filter(price__lte=max_price_value)
+        except ValueError:
+            pass
+
+    if selected_colors:
+        products = products.filter(colors__name__in=selected_colors)
+
+    if selected_sizes:
+        products = products.filter(size__name__in=selected_sizes)
+
+    # Apply sorting
+    if sort_by == 'price-asc':
+        products = products.order_by('price')
+    elif sort_by == 'price-desc':
+        products = products.order_by('-price')
+    elif sort_by == 'rating':
+        products = products.order_by('-rating')
+    else:  # newest
+        products = products.order_by('-created_at')
+
+    # Pagination
+    paginator = Paginator(products, 20)
+    page = request.GET.get('page', 1)
+    try:
+        products = paginator.page(page)
+    except (PageNotAnInteger, EmptyPage):
+        products = paginator.page(1)
+
+    # Get all categories and colors
+    categories = Category.objects.all()
+    colors = Color.objects.all()
+    sizes = Size.objects.values_list('name', flat=True)
+
+    # Prepare filter tags
+    filter_tags = []
+    if subcategory:
+        filter_tags.append({
+            'type': 'subcategory',
+            'value': subcategory,
+            'display': subcategory
+        })
+
     cart_items_count = CartItem.objects.filter(user=request.user).count() if request.user.is_authenticated else 0
-    return render(request, 'app/phu_kien.html', {'products': products, 'cart_items_count': cart_items_count})
+    
+    context = {
+        'products': products,
+        'cart_items_count': cart_items_count,
+        'categories': categories,
+        'colors': colors,
+        'sizes': sizes,
+        'filter_tags': filter_tags,
+        'view_mode': view_mode,
+        'sort_by': sort_by,
+        'selected_categories': selected_categories,
+        'selected_colors': selected_colors,
+        'selected_sizes': selected_sizes,
+        'min_price': min_price,
+        'max_price': max_price,
+    }
+    
+    return render(request, 'app/all_items.html', context)
 
 def giam_gia(request):
-    products = Product.objects.filter(is_active=True).order_by('-price')[:10]
+    products = Product.objects.filter(is_sale=True, is_active=True)
+    
+    # Get filter parameters
+    selected_categories = request.GET.getlist('category', [])
+    min_price = request.GET.get('min_price', '')
+    max_price = request.GET.get('max_price', '3000000')
+    selected_colors = request.GET.getlist('color', [])
+    selected_sizes = request.GET.getlist('size', [])
+    sort_by = request.GET.get('sort', 'newest')
+    view_mode = request.GET.get('view', 'grid')
+
+    # Apply filters
+    if selected_categories:
+        products = products.filter(category_id__in=selected_categories)
+
+    if min_price:
+        try:
+            min_price_value = float(min_price)
+            products = products.filter(price__gte=min_price_value)
+        except ValueError:
+            pass
+
+    if max_price:
+        try:
+            max_price_value = float(max_price)
+            products = products.filter(price__lte=max_price_value)
+        except ValueError:
+            pass
+
+    if selected_colors:
+        products = products.filter(colors__name__in=selected_colors)
+
+    if selected_sizes:
+        products = products.filter(size__name__in=selected_sizes)
+
+    # Apply sorting
+    if sort_by == 'price-asc':
+        products = products.order_by('price')
+    elif sort_by == 'price-desc':
+        products = products.order_by('-price')
+    elif sort_by == 'rating':
+        products = products.order_by('-rating')
+    else:  # newest
+        products = products.order_by('-created_at')
+
+    # Pagination
+    paginator = Paginator(products, 20)
+    page = request.GET.get('page', 1)
+    try:
+        products = paginator.page(page)
+    except (PageNotAnInteger, EmptyPage):
+        products = paginator.page(1)
+
+    # Get all categories and colors
+    categories = Category.objects.all()
+    colors = Color.objects.all()
+    sizes = Size.objects.values_list('name', flat=True)
+
     cart_items_count = CartItem.objects.filter(user=request.user).count() if request.user.is_authenticated else 0
-    return render(request, 'app/giam_gia.html', {'products': products, 'cart_items_count': cart_items_count})
+    
+    context = {
+        'products': products,
+        'cart_items_count': cart_items_count,
+        'categories': categories,
+        'colors': colors,
+        'sizes': sizes,
+        'view_mode': view_mode,
+        'sort_by': sort_by,
+        'selected_categories': selected_categories,
+        'selected_colors': selected_colors,
+        'selected_sizes': selected_sizes,
+        'min_price': min_price,
+        'max_price': max_price,
+    }
+    
+    return render(request, 'app/all_items.html', context)
 
 def about(request):
     cart_items_count = CartItem.objects.filter(user=request.user).count() if request.user.is_authenticated else 0
@@ -849,7 +1284,7 @@ def search_products(request):
         products = products.order_by('-created_at')
 
     # Pagination
-    paginator = Paginator(products, 12)  # 12 products per page
+    paginator = Paginator(products, 20)  # 20 products per page
     try:
         page = int(request.GET.get('page', 1))
     except (ValueError, TypeError):
@@ -1110,7 +1545,6 @@ import logging
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.db.models import Q
-import openai
 from django.conf import settings
 
 logger = logging.getLogger(__name__)
@@ -1209,7 +1643,7 @@ def all_items(request):
         products = products.order_by('-created_at')
 
     # Pagination
-    paginator = Paginator(products, 20)  # 12 products per page
+    paginator = Paginator(products, 20)  # 20 products per page
     try:
         page = int(request.GET.get('page', 1))
     except (ValueError, TypeError):
@@ -1379,33 +1813,135 @@ def favorites_view(request):
 
 # thêm sửa xóa địa chỉ
 @login_required
+@require_POST
 def add_address(request):
-    if request.method == 'POST':
-        form = AddressForm(request.POST)
-        if form.is_valid():
-            address = form.save(commit=False)
-            address.user = request.user
+    try:
+        # Get form data
+        full_name = request.POST.get('full_name')
+        phone = request.POST.get('phone')
+        street_address = request.POST.get('street_address')
+        province = request.POST.get('province')
+        district = request.POST.get('district')
+        ward = request.POST.get('ward')
+
+        # Validate required fields
+        if not all([full_name, phone, street_address, province, district, ward]):
+            return JsonResponse({
+                'success': False,
+                'message': 'Vui lòng điền đầy đủ thông tin địa chỉ'
+            })
+
+        # Create new address
+        address = Address.objects.create(
+            user=request.user,
+            full_name=full_name,
+            phone=phone,
+            street_address=street_address,
+            province=province,
+            district=district,
+            ward=ward
+        )
+
+        # If this is the first address, make it default
+        if Address.objects.filter(user=request.user).count() == 1:
+            address.is_default = True
             address.save()
-            return redirect('profile')
-    return redirect('profile')
+
+        return JsonResponse({
+            'success': True,
+            'message': 'Thêm địa chỉ mới thành công!',
+            'address': {
+                'id': address.id,
+                'full_name': address.full_name,
+                'phone': address.phone,
+                'street_address': address.street_address,
+                'province': address.province,
+                'district': address.district,
+                'ward': address.ward,
+                'is_default': address.is_default
+            }
+        })
+    except Exception as e:
+        return JsonResponse({
+            'success': False,
+            'message': f'Có lỗi xảy ra: {str(e)}'
+        })
 
 @login_required
 def edit_address(request, address_id):
     address = get_object_or_404(Address, id=address_id, user=request.user)
-    if request.method == 'POST':
-        form = AddressForm(request.POST, instance=address)
-        if form.is_valid():
-            form.save()
-            return redirect('profile')
-    return redirect('profile')
+    
+    if request.method == 'GET':
+        return JsonResponse({
+            'full_name': address.full_name,
+            'phone': address.phone,
+            'street_address': address.street_address,
+            'province': address.province,
+            'district': address.district,
+            'ward': address.ward
+        })
+    
+    elif request.method == 'POST':
+        try:
+            # Get form data
+            full_name = request.POST.get('full_name')
+            phone = request.POST.get('phone')
+            street_address = request.POST.get('street_address')
+            province = request.POST.get('province')
+            district = request.POST.get('district')
+            ward = request.POST.get('ward')
+
+            # Validate required fields
+            if not all([full_name, phone, street_address, province, district, ward]):
+                return JsonResponse({
+                    'success': False,
+                    'message': 'Vui lòng điền đầy đủ thông tin địa chỉ'
+                })
+
+            # Update address
+            address.full_name = full_name
+            address.phone = phone
+            address.street_address = street_address
+            address.province = province
+            address.district = district
+            address.ward = ward
+            address.save()
+
+            return JsonResponse({
+                'success': True,
+                'message': 'Cập nhật địa chỉ thành công!',
+                'address': {
+                    'id': address.id,
+                    'full_name': address.full_name,
+                    'phone': address.phone,
+                    'street_address': address.street_address,
+                    'province': address.province,
+                    'district': address.district,
+                    'ward': address.ward,
+                    'is_default': address.is_default
+                }
+            })
+        except Exception as e:
+            return JsonResponse({
+                'success': False,
+                'message': f'Có lỗi xảy ra: {str(e)}'
+            })
 
 @login_required
+@require_POST
 def delete_address(request, address_id):
-    address = get_object_or_404(Address, id=address_id, user=request.user)
-    if request.method == 'POST':
+    try:
+        address = get_object_or_404(Address, id=address_id, user=request.user)
         address.delete()
-        return redirect('profile')
-    return redirect('profile')
+        return JsonResponse({
+            'success': True,
+            'message': 'Xóa địa chỉ thành công!'
+        })
+    except Exception as e:
+        return JsonResponse({
+            'success': False,
+            'message': f'Có lỗi xảy ra: {str(e)}'
+        })
 
 def category_detail(request, category_id):
     """
@@ -1609,3 +2145,20 @@ def rebuy_order(request, order_number):
             'success': False,
             'message': 'Có lỗi xảy ra khi thêm vào giỏ hàng'
         })
+
+@login_required
+def get_address(request, address_id):
+    try:
+        address = get_object_or_404(Address, id=address_id, user=request.user)
+        return JsonResponse({
+            'full_name': address.full_name,
+            'phone': address.phone,
+            'street_address': address.street_address,
+            'province': address.province,
+            'district': address.district,
+            'ward': address.ward
+        })
+    except Address.DoesNotExist:
+        return JsonResponse({'error': 'Địa chỉ không tồn tại'}, status=404)
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)

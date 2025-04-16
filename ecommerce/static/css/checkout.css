@@ -504,3 +504,53 @@
         padding: 0.75rem;
     }
 }
+
+/* Toast Container - Căn giữa màn hình phía trên */
+.toast-container {
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+/* Toast */
+.toast-container .toast {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    max-width: 350px;
+    width: 100%;
+}
+
+/* Phần còn lại giữ nguyên */
+.toast-container .toast .toast-header {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.toast-container .toast .toast-header strong {
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.toast-container .toast .toast-body {
+    padding: 16px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+}
+
+.toast-container .toast .btn-close {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.toast-container .toast .btn-close:hover {
+    opacity: 1;
+}

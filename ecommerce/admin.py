@@ -53,8 +53,10 @@ class FeaturedProductAdmin(admin.ModelAdmin):
 admin.site.register(FeaturedProduct, FeaturedProductAdmin)
 
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('name',)
+    list_display = ('name', 'show_on_home', 'is_active')
+    list_editable = ('show_on_home', 'is_active')
     search_fields = ('name',)
+    list_filter = ('show_on_home', 'is_active')
 
 class SlideAdmin(admin.ModelAdmin):
     list_display = ('title', 'subtitle', 'image', 'cta', 'is_active')  # Thêm 'cta' vào list_display

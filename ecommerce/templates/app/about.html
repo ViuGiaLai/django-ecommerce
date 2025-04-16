@@ -1,0 +1,104 @@
+{% extends "app/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="about-page">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="{% url 'home' %}">Trang chủ</a>
+                <span class="divider">/</span>
+                <span class="active">Giới thiệu</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="about-content container">
+        <h1 class="main-title">VỀ CHÚNG TÔI</h1>
+
+        <!-- Brand Section -->
+        <section class="about-section">
+            <h2 class="section-title">THƯƠNG HIỆU RV FASHION</h2>
+            <div class="section-content">
+                <p class="highlight-text">
+                    Tự hào là thương hiệu thời trang cao cấp tiên phong đồng hành cùng phụ nữ Việt, RV Fashion là thương hiệu đánh thức sự lôi cuốn của phái đẹp.
+                </p>
+                <p>
+                    Với RV Fashion, mỗi người phụ nữ khi khoác lên mình trang phục của chúng tôi đều tràn đầy một ánh mắt đầy hạnh phúc, tự tin vào bản thân và sống hết mình cho từng khoảnh khắc trong cuộc sống.
+                </p>
+                <p>
+                    Tại RV Fashion, mỗi "tác phẩm" đều được nâng niu, chăm chút với bao tâm huyết, khơi nguồn từ những nguồn cảm hứng bất tận. Trải qua gần 2 thập kỷ trên chặng đường định hình phong cách trẻ trung và thanh lịch cho người phụ nữ hiện đại, RV Fashion luôn đề cao tính ứng dụng với kỹ thuật và tiêu chuẩn chất lượng hàng đầu, hơn cả là mang tới trải nghiệm tốt nhất cho khách hàng tại mọi điểm chạm.
+                </p>
+            </div>
+            <div class="brand-image">
+                <img src="{% static 'images/about11.jpg' %}" alt="RV Fashion Brand">
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="about-section">
+            <h2 class="section-title">CÂU CHUYỆN THƯƠNG HIỆU</h2>
+            <div class="section-content">
+                <p>
+                    Được thành lập vào năm 2007, cột mốc khơi nguồn trên hành trình phát triển được ghi dấu tại Đà Nẵng - cửa hàng đầu tiên của RV Fashion với sứ mệnh duy nhất - mang lại cho phụ nữ Việt các thiết kế công sở hoàn hảo nhất.
+                </p>
+                <p>
+                    Trên hành trình đó, chúng tôi nhận ra thời trang có khả năng trao quyền và thỏa mãn của người phụ nữ ở bất cứ đâu. Vì vậy, bên cạnh các tiêu chuẩn khắt khe về chất lượng được áp dụng theo quy chuẩn quốc tế, các thiết kế của RV Fashion hiện tại hướng đến tính ứng dụng cao, giúp vẻ đẹp Việt luôn rạng rỡ và cuốn hút trong mọi hoàn cảnh, phù hợp với bối cảnh năng động của thời đại mới.
+                </p>
+            </div>
+            <div class="story-image">
+                <img src="{% static 'images/about22.jpg' %}" alt="RV Fashion Story">
+            </div>
+        </section>
+
+        <!-- Core Values Section -->
+        <section class="about-section values-section">
+            <h2 class="section-title">GIÁ TRỊ CỐT LÕI</h2>
+            <div class="section-content">
+                <p class="intro-text">
+                    Để hiện thực hóa tầm nhìn trở thành thương hiệu có ảnh hưởng đến xu hướng thời trang nữ tại Việt Nam và là lựa chọn ưa thích nhất trên thị trường nội địa, RV Fashion tập trung phát triển 05 giá trị cốt lõi:
+                </p>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3>Chất lượng</h3>
+                        <p>Quality</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Thoải mái</h3>
+                        <p>Comfortable</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-sync"></i>
+                        </div>
+                        <h3>Ứng dụng cao</h3>
+                        <p>Versatile</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <h3>Thời trang</h3>
+                        <p>Fashionable</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3>Thanh lịch</h3>
+                        <p>Elegant</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %} 

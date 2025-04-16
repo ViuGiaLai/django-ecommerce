@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token }}">
-    <title>SHOP RV VIU</title>
+    <title>{% block title %}{% endblock title %}</title>
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/css_base.css' %}">
     <link rel="stylesheet" href="{% static 'css/product_detail.css' %}">
     <link rel="stylesheet" href="{% static 'css/stylde_addcart.css' %}">
-    <link rel="stylesheet" href="{% static 'css/csscheckout.css' %}">
-    <link rel="stylesheet" href="{% static 'css/css_profile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/checkout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
     <link rel="stylesheet" href="{% static 'css/cssfavorites.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer_view.css' %}">
     <link rel="stylesheet" href="{% static 'css/css_home.css' %}">
@@ -21,7 +21,8 @@
     <link rel="stylesheet" href="{% static 'css/order_success_form.css' %}">
     <link rel="stylesheet" href="{% static 'css/my_orders.css' %}">
     <link rel="stylesheet" href="{% static 'css/order_detail.css' %}">
-    <link rel="stylesheet" href="{% static 'css/category_detail.CSS' %}">
+    <link rel="stylesheet" href="{% static 'css/category_detail.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
     <!-- cho output.css -->  
     <link href="{% static 'src/output.css' %}" rel="stylesheet">
 
@@ -42,7 +43,10 @@
     <link href="https://cdn.jsdelivr.net/npm/flowbite@1.6.3/dist/flowbite.min.css" rel="stylesheet">
 
     <script src="{% static 'js/main.js' %}" defer></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/breadcrumb.css' %}">
 </head>
+
 <body data-user-authenticated="{{ user.is_authenticated|yesno:'true,false' }}" 
       data-login-url="{% url 'login' %}">
     <!-- Add hidden form with csrf token -->
@@ -63,9 +67,39 @@
         <ul class="nav-menu">
             <li><a href="{% url 'home' %}">HOME</a></li>
             <li><a href="{% url 'san_pham' %}">SẢN PHẨM</a></li>
-            <li><a href="{% url 'giay_dep' %}">GIÀY DÉP</a></li>
-            <li><a href="{% url 'tui_vi' %}">TÚI VÍ</a></li>
-            <li><a href="{% url 'phu_kien' %}">PHỤ KIỆN</a></li>
+            <li class="nav-item dropdown position-relative">
+                <a class="nav-link dropdown-toggle" href="{% url 'giay_dep' %}" id="giayDepDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    GIÀY DÉP
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="giayDepDropdown">
+                    <li><a class="dropdown-item" href="{% url 'giay_dep' %}?subcategory=Giày thể thao">Giày thể thao</a></li>
+                    <li><a class="dropdown-item" href="{% url 'giay_dep' %}?subcategory=Giày cao gót">Giày cao gót</a></li>
+                    <li><a class="dropdown-item" href="{% url 'giay_dep' %}?subcategory=Dép sandal">Dép sandal</a></li>
+                </ul>
+            </li>
+            
+            <li class="nav-item dropdown position-relative">
+                <a class="nav-link dropdown-toggle" href="{% url 'tui_vi' %}" id="tuiViDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    TÚI VÍ
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="tuiViDropdown">
+                    <li><a class="dropdown-item" href="{% url 'tui_vi' %}?subcategory=Túi xách">Túi xách</a></li>
+                    <li><a class="dropdown-item" href="{% url 'tui_vi' %}?subcategory=Ví da">Ví da</a></li>
+                    <li><a class="dropdown-item" href="{% url 'tui_vi' %}?subcategory=Balo">Balo</a></li>
+                </ul>
+            </li>
+            
+            <li class="nav-item dropdown position-relative">
+                <a class="nav-link dropdown-toggle" href="{% url 'phu_kien' %}" id="phuKienDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    PHỤ KIỆN
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="phuKienDropdown">
+                    <li><a class="dropdown-item" href="{% url 'phu_kien' %}?subcategory=Nón">Nón</a></li>
+                    <li><a class="dropdown-item" href="{% url 'phu_kien' %}?subcategory=Khăn choàng">Khăn choàng</a></li>
+                    <li><a class="dropdown-item" href="{% url 'phu_kien' %}?subcategory=Thắt lưng">Thắt lưng</a></li>
+                </ul>
+            </li>
+            
             <li><a href="{% url 'giam_gia' %}" class="sale">GIẢM GIÁ</a></li>
             <li><a href="{% url 'about' %}">ABOUT</a></li>
         </ul>
@@ -120,10 +154,10 @@
         </div>
 
     </nav>
-    {% comment %} nội dụng  {% endcomment %}
-    {% block content %}
-
-    {% endblock content %}
+    <main>
+        {% block breadcrumb %}{% endblock breadcrumb %}
+        {% block content %}{% endblock content %}
+    </main>
     {% comment %} footer {% endcomment %}
     {% include 'app/footer.html' with about_items=about_items %}
 
@@ -140,13 +174,13 @@
         </div>
     {% endif %}
     <script src="{% static 'js/script_base.js' %}" defer></script>
-    <script src="{% static 'js/script_profile.js' %}" defer></script>
-    <script src="{% static 'js/script_productDetail.js' %}" defer></script>
+    {% comment %} <script src="{% static 'js/script_productDetail.js' %}" defer></script> {% endcomment %}
     <script src="{% static 'js/bootstrap.bundle.min.js' %}" defer></script>
     <script src="{% static 'js/script_footer.js' %}"></script>
     <script src="{% static 'js/alpine.js' %}" defer></script>
-    <script src="{% static 'js/script_home.js' %}" defer></script>
-    <script src="{% static 'js/script_product_detail.js' %}" defer></script>
+    <script src="{% static 'js/home.js' %}" defer></script>
+    <script src="{% static 'js/all_items.js' %}" defer></script>
+    <script src="{% static 'js/product_detail.js' %}" defer></script>
     
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- Load Alpine.js core -->
@@ -161,6 +195,5 @@
     <script>
         lucide.createIcons();
     </script>
-
 </body>
 </html>

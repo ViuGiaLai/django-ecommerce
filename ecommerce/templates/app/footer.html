@@ -170,6 +170,7 @@
      
     </div>
   </div>
+  
   <a href="https://www.facebook.com/messages/new/?initial_e2ee_toggle_position=true&locale=vi_VN" target="_blank">
     <div id="chat-box" class="chatBtn">
         <img src="{% static 'images/icons/messenger.png' %}" class="h-8 w-8" alt="Chat Icon" />
@@ -177,6 +178,48 @@
     </div>
   </a>
   
+  <!-- Chat Box Buttons -->
+  <div class="fixed-contact-buttons">
+    <!-- Main Chat Button -->
+    <button id="mainChatBtn" class="contact-btn main-chat-btn">
+      <div class="contact-icon chat-icon">
+        <span class="chat-text">💬</span>
+        <span class="close-text">✕</span>
+      </div>
+    </button>
+
+    <!-- Contact Buttons Container -->
+    <div id="contactButtons" class="contact-buttons-container hidden">
+      <a href="tel:0367604684" class="contact-btn phone-btn">
+        <div class="contact-icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        <span class="tooltip">Gọi ngay cho chúng tôi</span>
+      </a>
+
+      <a href="https://zalo.me/" target="_blank" class="contact-btn zalo-btn">
+        <div class="contact-icon">
+          <img src="{% static 'images/icons/Icon_of_Zalo.svg.webp' %}" alt="Zalo" class="zalo-icon">
+        </div>
+        <span class="tooltip">Chat với chúng tôi qua Zalo</span>
+      </a>
+
+      <button class="contact-btn contact-form-btn">
+        <div class="contact-icon">
+          <i class="far fa-envelope"></i>
+        </div>
+        <span class="tooltip">Đăng kí thông tin và để lại lời nhắn</span>
+      </button>
+
+      <a href="/showroom" class="contact-btn location-btn">
+        <div class="contact-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <span class="tooltip">Xem địa chỉ cửa hàng</span>
+      </a>
+    </div>
+  </div>
+
   <style>
   #chat-box {
     width: 55px;
@@ -259,7 +302,240 @@
     width: 32px;
     object-fit: contain;
   }
-</style>
+
+  .fixed-contact-buttons {
+    position: fixed;
+    right: 30px;
+    bottom: 120px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    gap: 10px;
+    z-index: 1000;
+  }
+
+  .contact-buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.3s ease;
+    position: absolute;
+    bottom: 70px;
+  }
+
+  .contact-buttons-container.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    pointer-events: none;
+  }
+
+  .main-chat-btn {
+    background: #00a884;
+    width: 60px;
+    height: 60px;
+    z-index: 1001;
+    position: relative;
+  }
+
+  .chat-icon {
+    font-size: 28px;
+    color: white;
+    position: relative;
+  }
+
+  .chat-text, .close-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+  }
+
+  .close-text {
+    opacity: 0;
+    visibility: hidden;
+    font-size: 24px;
+  }
+
+  .main-chat-btn.active .chat-text {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .main-chat-btn.active .close-text {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .contact-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transform-origin: bottom right;
+  }
+
+  .contact-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 24px;
+  }
+
+  .phone-btn {
+    background: #28a745;
+  }
+
+  .phone-btn .contact-icon {
+    background: #28a745;
+    color: white;
+  }
+
+  .messenger-btn {
+    background: #0084ff;
+  }
+
+  .messenger-btn .contact-icon {
+    background: #0084ff;
+    color: white;
+  }
+
+  .zalo-btn {
+    background: #0068ff;
+  }
+
+  .zalo-btn .contact-icon {
+    background: #0068ff;
+  }
+
+  .zalo-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+
+  .contact-form-btn {
+    background: #dc3545;
+  }
+
+  .contact-form-btn .contact-icon {
+    background: #dc3545;
+    color: white;
+  }
+
+  .location-btn {
+    background: #17a2b8;
+  }
+
+  .location-btn .contact-icon {
+    background: #17a2b8;
+    color: white;
+  }
+
+  .contact-btn .tooltip {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .contact-btn:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .contact-btn:hover {
+    transform: scale(1.1);
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+    }
+    
+    70% {
+      transform: scale(1.1);
+      box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+    }
+    
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+    }
+  }
+
+  .phone-btn {
+    animation: pulse 2s infinite;
+  }
+
+  .contact-buttons-container:not(.hidden) .contact-btn {
+    animation: slideIn 0.3s ease forwards;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .contact-buttons-container:not(.hidden) .phone-btn {
+    animation-delay: 0.1s;
+  }
+
+  .contact-buttons-container:not(.hidden) .messenger-btn {
+    animation-delay: 0.2s;
+  }
+
+  .contact-buttons-container:not(.hidden) .zalo-btn {
+    animation-delay: 0.3s;
+  }
+
+  .contact-buttons-container:not(.hidden) .contact-form-btn {
+    animation-delay: 0.4s;
+  }
+
+  .contact-buttons-container:not(.hidden) .location-btn {
+    animation-delay: 0.5s;
+  }
+  </style>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mainChatBtn = document.getElementById('mainChatBtn');
+    const contactButtons = document.getElementById('contactButtons');
+
+    mainChatBtn.addEventListener('click', function() {
+      this.classList.toggle('active');
+      contactButtons.classList.toggle('hidden');
+    });
+  });
+  </script>
 </footer>
 
 {% endblock content_footer %}

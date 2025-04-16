@@ -10,28 +10,31 @@
 
 .product-main {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    grid-template-columns: 0.6fr 1.4fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 /* Product Images Section */
 .product-images {
     position: relative;
+    max-width: 250px;
+    margin: 0 auto;
 }
 
 .product-images .main-image {
     position: relative;
-    border-radius: 12px;
+    border-radius: 8px;
     overflow: hidden;
     aspect-ratio: 3/4;
     background: #f8f9fa;
+    max-height: 300px;
 }
 
 .product-images .main-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.5s ease;
 }
 
@@ -70,20 +73,21 @@
 
 .thumbnail-container {
     display: flex;
-    gap: 0.75rem;
-    margin-top: 1rem;
+    gap: 0.3rem;
+    margin-top: 0.4rem;
     overflow-x: auto;
     scrollbar-width: thin;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.4rem;
+    justify-content: center;
 }
 
 .thumbnail {
-    width: 80px;
-    height: 80px;
-    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
     cursor: pointer;
     object-fit: cover;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     transition: all 0.2s ease;
 }
 
@@ -864,4 +868,50 @@
     background-color: #007BFF; /* Blue background for the selected size */
     color: white;
     border: 1px solid #007BFF;
+}
+
+/* Review image styles */
+.review-images {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.75rem;
+}
+
+.review-image-item {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.review-image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* Image preview in review form */
+.image-preview-item {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 0.2rem;
+}
+
+.image-preview-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Modal image size */
+.modal-content img {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
 }
