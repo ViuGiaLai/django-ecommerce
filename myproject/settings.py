@@ -37,8 +37,24 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8000",
     "http://127.0.0.1:8000",
 ]
+import os
+from pathlib import Path
 
-# Application definition
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Static files (CSS, JavaScript, Images)
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Nếu thư mục static của app 'ecommerce' tồn tại thì thêm vào STATICFILES_DIRS
+ecommerce_static_path = BASE_DIR / 'ecommerce' / 'static'
+STATICFILES_DIRS = []
+if ecommerce_static_path.exists():
+    STATICFILES_DIRS.append(str(ecommerce_static_path))
+
+# WhiteNoise config
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 INSTALLED_APPS = [
     "tailwind",
@@ -56,7 +72,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # ⚠️ Thêm dòng này vào đầu danh sách
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -141,12 +157,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = []
-ecommerce_static_path = BASE_DIR / 'ecommerce' / 'static'
-if ecommerce_static_path.exists():
-    STATICFILES_DIRS.append(str(ecommerce_static_path))
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 # MEDIA (file upload)
 MEDIA_URL = '/media/'
