@@ -1,6 +1,5 @@
 {% extends "app/base.html" %}
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/product_detail.css' %}">
 
 {% load custom_filters %}
 
@@ -62,13 +61,13 @@
         <div class="product-main">
             <!-- Product Images -->
             <div class="product-images">
-                <div class="main-image">
-                    <img id="main-image" src="{{ product.image.url }}" alt="{{ product.name }}" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="main-image" style="width: 250px; height: 250px; object-fit: cover;">
+                    <img id="main-image" src="{{ product.image.url }}" alt="{{ product.name }}">
                     {% if product.is_new %}
-                    <span class="badge new">Mới</span>
+                    <span class="badge new" >Mới</span>
                     {% endif %}
                     {% if product.is_sale %}
-                    <span class="badge sale" style="align-items: aleft; margin-right: 81%">Sale</span>
+                    <span class="badge sale" >Sale</span>
                     <div class="flash-sale" style="font-size: 1.2rem; padding: 10px 20px; background-color: #FF5733; color: white; border-radius: 5px; display: flex; align-items: center;">
                         <i class="fas fa-bolt"></i>
                         <span class="fw-bold">FLASH SALE</span>

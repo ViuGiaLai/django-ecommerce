@@ -54660,3 +54660,1377 @@ Traceback (most recent call last):
 django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
 Bad Request: /static/js/bootstrap.bundle.min.js.map
 "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 400 143
+Watching for file changes with StatReloader
+code 400, message Bad request version (';.i')
+You're accessing the development server over HTTPS, but it only supports HTTP.
+code 400, message Bad request version ('>\x94m=ÛP"º')
+You're accessing the development server over HTTPS, but it only supports HTTP.
+Watching for file changes with StatReloader
+code 400, message Bad request version ('\x14ìy.!eð\x9f\\²¾Ì\x80[\xadâ¶Ieì\x07§.Ü_')
+You're accessing the development server over HTTPS, but it only supports HTTP.
+code 400, message Bad request version ('**\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06S')
+You're accessing the development server over HTTPS, but it only supports HTTP.
+code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03<w\x8e\x8dwÖ¥Þ\x8c_')
+You're accessing the development server over HTTPS, but it only supports HTTP.
+code 400, message Bad request version ('\x16ÑÉæ«¼\x0fXLc\x81?C9¼®×A|\xad6çµ\x99')
+You're accessing the development server over HTTPS, but it only supports HTTP.
+code 400, message Bad request syntax ('\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03ú')
+You're accessing the development server over HTTPS, but it only supports HTTP.
+code 400, message Bad request version ('A\x00')
+You're accessing the development server over HTTPS, but it only supports HTTP.
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Bad Request: /
+"GET / HTTP/1.1" 400 143
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 400 143
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Bad Request: /
+"GET / HTTP/1.1" 400 143
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 400 143
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Bad Request: /
+"GET / HTTP/1.1" 400 143
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 400 143
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Bad Request: /
+"GET / HTTP/1.1" 400 143
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 400 143
+Watching for file changes with StatReloader
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Bad Request: /
+"GET / HTTP/1.1" 400 143
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 400 143
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Bad Request: /
+"GET / HTTP/1.1" 400 143
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 400 143
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Bad Request: /
+"GET / HTTP/1.1" 400 143
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 400 143
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Bad Request: /
+"GET / HTTP/1.1" 400 143
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 400 143
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+code 400, message Bad request version ('k\x05°')
+You're accessing the development server over HTTPS, but it only supports HTTP.
+code 400, message Bad request version ('%I')
+You're accessing the development server over HTTPS, but it only supports HTTP.
+"GET / HTTP/1.1" 200 31901
+"GET /static/css/css_base.css HTTP/1.1" 200 9735
+"GET /static/src/output.css HTTP/1.1" 200 29167
+Not Found: /static/css/style.css
+"GET /static/css/main.css HTTP/1.1" 200 19889
+"GET /static/css/breadcrumb.css HTTP/1.1" 200 1279
+"GET /static/css/style.css HTTP/1.1" 404 179
+"GET /static/css/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/images/bosieutam.jpg HTTP/1.1" 200 815797
+"GET /static/css/footer_view.css HTTP/1.1" 200 9493
+"GET /static/images/visa.png HTTP/1.1" 200 22100
+"GET /static/images/jcb.png HTTP/1.1" 200 6387
+"GET /static/images/mastercard.png HTTP/1.1" 200 52849
+"GET /static/images/cod.png HTTP/1.1" 200 15859
+"GET /static/js/script_footer.js HTTP/1.1" 200 3753
+"GET /static/js/main.js HTTP/1.1" 200 2833
+"GET /static/images/logo_viu.png HTTP/1.1" 200 3761
+"GET /static/images/atm.png HTTP/1.1" 200 14049
+"GET /static/images/momo.png HTTP/1.1" 200 22119
+"GET /static/images/icons/messenger.png HTTP/1.1" 200 21140
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 200 41526
+"GET /static/js/script_base.js HTTP/1.1" 200 3559
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/js/alpine.js HTTP/1.1" 200 114
+"GET /static/js/home.js HTTP/1.1" 200 5848
+"GET /static/js/all_items.js HTTP/1.1" 200 12543
+"GET /static/js/product_detail.js HTTP/1.1" 200 19822
+Not Found: /static/css/style.css
+"GET /static/css/style.css HTTP/1.1" 404 179
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 179
+"GET /accounts/login/ HTTP/1.1" 200 10652
+"GET /static/css/style_login.css HTTP/1.1" 200 6109
+"GET /accounts/login/ HTTP/1.1" 200 10652
+"POST /accounts/login/ HTTP/1.1" 200 10934
+"GET /accounts/login/ HTTP/1.1" 200 10652
+"GET /accounts/login/ HTTP/1.1" 200 10652
+"GET / HTTP/1.1" 200 31901
+Not Found: /static/css/style.css
+"GET /static/css/style.css HTTP/1.1" 404 179
+Not Found: /static/css/style.css
+"GET /static/css/style.css HTTP/1.1" 404 179
+"GET /accounts/login/ HTTP/1.1" 200 10652
+"GET /accounts/login/ HTTP/1.1" 200 10652
+"GET /static/css/style_login.css HTTP/1.1" 304 0
+"GET /accounts/login/ HTTP/1.1" 200 10652
+"POST /accounts/login/ HTTP/1.1" 200 10934
+"POST /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 32395
+"GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/css_base.css HTTP/1.1" 304 0
+"GET /static/css/main.css HTTP/1.1" 304 0
+Not Found: /static/css/style.css
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/src/output.css HTTP/1.1" 304 0
+"GET /static/images/bosieutam.jpg HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 179
+"GET /static/css/footer_view.css HTTP/1.1" 304 0
+"GET /static/images/visa.png HTTP/1.1" 304 0
+"GET /static/images/mastercard.png HTTP/1.1" 304 0
+"GET /static/images/jcb.png HTTP/1.1" 304 0
+"GET /static/images/cod.png HTTP/1.1" 304 0
+"GET /static/js/script_footer.js HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /static/images/atm.png HTTP/1.1" 304 0
+"GET /static/images/momo.png HTTP/1.1" 304 0
+"GET /static/images/icons/messenger.png HTTP/1.1" 304 0
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/script_base.js HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/js/alpine.js HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+Not Found: /static/css/style.css
+"GET /static/css/style.css HTTP/1.1" 404 179
+"GET /profile/ HTTP/1.1" 200 60920
+Not Found: /static/css/style.css
+"GET /static/css/style.css HTTP/1.1" 404 179
+Not Found: /static/css/style.css
+"GET /static/css/style.css HTTP/1.1" 404 179
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /profile/ HTTP/1.1" 200 60920
+"GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/css_base.css HTTP/1.1" 304 0
+"GET /static/src/output.css HTTP/1.1" 304 0
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/css/footer_view.css HTTP/1.1" 304 0
+"GET /static/images/visa.png HTTP/1.1" 304 0
+"GET /static/images/mastercard.png HTTP/1.1" 304 0
+"GET /static/images/jcb.png HTTP/1.1" 304 0
+"GET /static/images/cod.png HTTP/1.1" 304 0
+"GET /static/images/atm.png HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/js/script_footer.js HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /static/images/momo.png HTTP/1.1" 304 0
+"GET /static/images/icons/messenger.png HTTP/1.1" 304 0
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/script_base.js HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/js/alpine.js HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /profile/ HTTP/1.1" 200 61288
+"GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/css_base.css HTTP/1.1" 304 0
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/css/footer_view.css HTTP/1.1" 304 0
+"GET /static/src/output.css HTTP/1.1" 304 0
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/images/mastercard.png HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/images/visa.png HTTP/1.1" 304 0
+"GET /static/images/jcb.png HTTP/1.1" 304 0
+"GET /static/images/cod.png HTTP/1.1" 304 0
+"GET /static/images/atm.png HTTP/1.1" 304 0
+"GET /static/js/script_footer.js HTTP/1.1" 304 0
+"GET /static/css/css_home.css HTTP/1.1" 200 6558
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /static/images/momo.png HTTP/1.1" 304 0
+"GET /static/images/icons/messenger.png HTTP/1.1" 304 0
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/script_base.js HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/js/alpine.js HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+"GET /profile/ HTTP/1.1" 200 61288
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /profile/ HTTP/1.1" 200 61288
+"GET /static/css/css_base.css HTTP/1.1" 304 0
+"GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/css/footer_view.css HTTP/1.1" 304 0
+"GET /static/src/output.css HTTP/1.1" 304 0
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/images/mastercard.png HTTP/1.1" 304 0
+"GET /static/images/visa.png HTTP/1.1" 304 0
+"GET /static/images/cod.png HTTP/1.1" 304 0
+"GET /static/images/jcb.png HTTP/1.1" 304 0
+"GET /static/js/script_footer.js HTTP/1.1" 304 0
+"GET /static/images/atm.png HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /static/images/momo.png HTTP/1.1" 304 0
+"GET /static/images/icons/messenger.png HTTP/1.1" 304 0
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/script_base.js HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/js/alpine.js HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+"GET /profile/ HTTP/1.1" 200 61288
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /profile/ HTTP/1.1" 200 61288
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /profile/ HTTP/1.1" 200 61288
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 2017
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 2002
+"GET /profile/ HTTP/1.1" 200 62081
+"GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/css_base.css HTTP/1.1" 304 0
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/css/footer_view.css HTTP/1.1" 304 0
+"GET /static/css/profile.css HTTP/1.1" 200 21435
+"GET /static/css/css_all_items.css HTTP/1.1" 200 8443
+"GET /static/css/about.css HTTP/1.1" 200 3683
+"GET /static/css/cssfavorites.css HTTP/1.1" 200 3898
+"GET /static/css/checkout.css HTTP/1.1" 200 9753
+"GET /static/css/category_detail.css HTTP/1.1" 200 2506
+"GET /static/css/order_detail.css HTTP/1.1" 200 5238
+"GET /static/css/my_orders.css HTTP/1.1" 200 8352
+"GET /static/css/order_success_form.css HTTP/1.1" 200 11167
+"GET /static/src/output.css HTTP/1.1" 304 0
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/css/stylde_addcart.css HTTP/1.1" 200 3907
+"GET /static/images/visa.png HTTP/1.1" 304 0
+"GET /static/css/product_detail.css HTTP/1.1" 200 15642
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/images/mastercard.png HTTP/1.1" 304 0
+"GET /static/images/jcb.png HTTP/1.1" 304 0
+"GET /static/images/cod.png HTTP/1.1" 304 0
+"GET /static/images/atm.png HTTP/1.1" 304 0
+"GET /static/js/script_footer.js HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /static/images/momo.png HTTP/1.1" 304 0
+"GET /static/images/icons/messenger.png HTTP/1.1" 304 0
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/script_base.js HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/js/alpine.js HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+"GET /profile/ HTTP/1.1" 200 62081
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET / HTTP/1.1" 200 33556
+"GET /static/images/bosieutam.jpg HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET / HTTP/1.1" 200 33556
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /profile/ HTTP/1.1" 200 62081
+"GET /static/css/style.css HTTP/1.1" 404 1966
+Not Found: /profile/admin
+"GET /profile/admin HTTP/1.1" 404 13835
+Not Found: /profile/admin
+"GET /profile/admin HTTP/1.1" 404 13835
+Not Found: /profile/admin
+"GET /profile/admin HTTP/1.1" 404 13835
+Not Found: /profile/admin
+"GET /profile/admin HTTP/1.1" 404 13835
+"GET /admin HTTP/1.1" 301 0
+"GET /admin/ HTTP/1.1" 200 32605
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 103009
+"GET /static/jazzmin/css/main.css HTTP/1.1" 200 16969
+"GET /static/vendor/bootswatch/flatly/bootstrap.min.css HTTP/1.1" 200 164819
+"GET /static/vendor/adminlte/img/user2-160x160.jpg HTTP/1.1" 200 5357
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /static/jazzmin/js/main.js HTTP/1.1" 200 2391
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 200 44244
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 62440
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 200 1382975
+"GET /static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 25392
+"GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 156400
+"GET /admin/ecommerce/brand/ HTTP/1.1" 200 18750
+"GET /static/vendor/select2/css/select2.min.css HTTP/1.1" 200 16264
+"GET /static/admin/js/core.js HTTP/1.1" 200 6208
+"GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9097
+"GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/jazzmin/js/change_list.js HTTP/1.1" 200 2252
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+"GET /static/vendor/select2/js/select2.min.js HTTP/1.1" 200 73170
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+"GET /admin/ecommerce/brand/add/ HTTP/1.1" 200 19632
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+"GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/jazzmin/js/change_form.js HTTP/1.1" 200 6052
+"POST /admin/ecommerce/brand/add/ HTTP/1.1" 302 0
+"GET /admin/ecommerce/brand/ HTTP/1.1" 200 22178
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET / HTTP/1.1" 200 34246
+"GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/footer_view.css HTTP/1.1" 304 0
+"GET /static/css/css_base.css HTTP/1.1" 304 0
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/src/output.css HTTP/1.1" 304 0
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/images/bosieutam.jpg HTTP/1.1" 304 0
+"GET /static/images/visa.png HTTP/1.1" 304 0
+"GET /static/images/mastercard.png HTTP/1.1" 304 0
+"GET /static/images/cod.png HTTP/1.1" 304 0
+"GET /static/images/jcb.png HTTP/1.1" 304 0
+"GET /static/js/script_footer.js HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/images/atm.png HTTP/1.1" 304 0
+"GET /static/images/momo.png HTTP/1.1" 304 0
+"GET /static/images/icons/messenger.png HTTP/1.1" 304 0
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/script_base.js HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/js/alpine.js HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 34246
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /admin/ecommerce/slide/ HTTP/1.1" 200 18113
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/product/ HTTP/1.1" 200 20750
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/product/add/ HTTP/1.1" 200 42812
+"GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+"GET /static/admin/js/inlines.js HTTP/1.1" 200 15526
+"GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+"GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15502
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+"GET /static/jazzmin/img/selector-icons.svg HTTP/1.1" 200 3291
+"GET /admin/ecommerce/category/add/?_to_field=id&_popup=1 HTTP/1.1" 200 9290
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/category/add/?_to_field=id&_popup=1 HTTP/1.1" 200 9290
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"POST /admin/ecommerce/category/add/?_to_field=id&_popup=1 HTTP/1.1" 200 401
+"GET /static/admin/js/popup_response.js HTTP/1.1" 200 1535
+"POST /admin/ecommerce/product/add/ HTTP/1.1" 302 0
+"GET /admin/ecommerce/product/ HTTP/1.1" 200 30596
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET / HTTP/1.1" 200 46890
+"GET /static/css/css_base.css HTTP/1.1" 304 0
+"GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/footer_view.css HTTP/1.1" 304 0
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/src/output.css HTTP/1.1" 304 0
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /media/categories/DSC08383-scaled.jpg HTTP/1.1" 200 875489
+"GET /media/products/vn-11134207-7r98o-lmttsfaxyztrad.webp HTTP/1.1" 200 129106
+"GET /static/images/bosieutam.jpg HTTP/1.1" 304 0
+"GET /static/images/visa.png HTTP/1.1" 304 0
+"GET /static/js/script_footer.js HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /static/images/mastercard.png HTTP/1.1" 304 0
+"GET /static/images/jcb.png HTTP/1.1" 304 0
+"GET /static/images/cod.png HTTP/1.1" 304 0
+"GET /static/images/atm.png HTTP/1.1" 304 0
+"GET /static/images/momo.png HTTP/1.1" 304 0
+"GET /static/images/icons/messenger.png HTTP/1.1" 304 0
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /static/js/alpine.js HTTP/1.1" 304 0
+"GET /static/js/script_base.js HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+"GET /admin/ecommerce/brand/ HTTP/1.1" 200 21619
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/cartitem/ HTTP/1.1" 200 18838
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/category/ HTTP/1.1" 200 23409
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/color/ HTTP/1.1" 200 18113
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/comment/ HTTP/1.1" 200 20027
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/slide/ HTTP/1.1" 200 18113
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/slide/add/ HTTP/1.1" 200 23099
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/ecommerce/slide/add/ HTTP/1.1" 302 0
+"GET /admin/ecommerce/slide/ HTTP/1.1" 200 22982
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/slide/add/ HTTP/1.1" 200 23099
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/ecommerce/slide/add/ HTTP/1.1" 302 0
+"GET /admin/ecommerce/slide/ HTTP/1.1" 200 23709
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/slide/add/ HTTP/1.1" 200 23099
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/ecommerce/slide/add/ HTTP/1.1" 302 0
+"GET /admin/ecommerce/slide/ HTTP/1.1" 200 24424
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/slide/add/ HTTP/1.1" 200 23099
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/ecommerce/slide/add/ HTTP/1.1" 302 0
+"GET /admin/ecommerce/slide/ HTTP/1.1" 200 25104
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/color/ HTTP/1.1" 200 18113
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/color/add/ HTTP/1.1" 200 19702
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/instagrampost/ HTTP/1.1" 200 18803
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/instagrampost/add/ HTTP/1.1" 200 20560
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/ecommerce/instagrampost/add/ HTTP/1.1" 302 0
+"GET /admin/ecommerce/instagrampost/ HTTP/1.1" 200 24116
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/instagrampost/add/ HTTP/1.1" 200 20560
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/ecommerce/instagrampost/add/ HTTP/1.1" 302 0
+"GET /admin/ecommerce/instagrampost/ HTTP/1.1" 200 24845
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/instagrampost/add/ HTTP/1.1" 200 20560
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/ecommerce/instagrampost/add/ HTTP/1.1" 302 0
+"GET /admin/ecommerce/instagrampost/ HTTP/1.1" 200 25546
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/instagrampost/add/ HTTP/1.1" 200 20560
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/ecommerce/instagrampost/add/ HTTP/1.1" 302 0
+"GET /admin/ecommerce/instagrampost/ HTTP/1.1" 200 26294
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/instagrampost/add/ HTTP/1.1" 200 20560
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/ecommerce/instagrampost/add/ HTTP/1.1" 302 0
+"GET /admin/ecommerce/instagrampost/ HTTP/1.1" 200 26995
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/instagrampost/add/ HTTP/1.1" 200 20560
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/ecommerce/instagrampost/add/ HTTP/1.1" 302 0
+"GET /admin/ecommerce/instagrampost/ HTTP/1.1" 200 27711
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/instagrampost/add/ HTTP/1.1" 200 20560
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/ecommerce/instagrampost/add/ HTTP/1.1" 302 0
+"GET /admin/ecommerce/instagrampost/ HTTP/1.1" 200 28472
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET / HTTP/1.1" 200 55167
+"GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/footer_view.css HTTP/1.1" 304 0
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/css/css_base.css HTTP/1.1" 304 0
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/src/output.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /media/slides/slide_4_u7sFuJo_3jctaXi.png HTTP/1.1" 200 84684
+"GET /media/slides/slide_3_t10aHt9_CGSX330_Y3tpZAn.png HTTP/1.1" 200 117206
+"GET /media/slides/slide_1_2I5N8vo_nra09ea.png HTTP/1.1" 200 50592
+"GET /media/slides/slide_2_GFe0GtE_yrX1Kgj.png HTTP/1.1" 200 260130
+"GET /media/categories/DSC08383-scaled.jpg HTTP/1.1" 304 0
+"GET /static/js/script_footer.js HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /media/products/vn-11134207-7r98o-lmttsfaxyztrad.webp HTTP/1.1" 304 0
+"GET /static/images/bosieutam.jpg HTTP/1.1" 304 0
+"GET /media/instagram_posts/e9c2f537783b7d9a5fdb512d1561a622_I8V5HSv.jpg HTTP/1.1" 200 243339
+"GET /media/instagram_posts/photo-1-1606291917324352525852_xzzF6B2.webp HTTP/1.1" 200 146624
+"GET /media/instagram_posts/20230606_Rl61LQHo_ZMbXfDm.jpg HTTP/1.1" 200 51080
+"GET /media/instagram_posts/4492114_4476993_upload_2018-11-7_22-20-19_JHCP9q8.jpg HTTP/1.1" 200 692553
+"GET /media/instagram_posts/mo-shop-quan-ao1_wN1TTBy.webp HTTP/1.1" 200 87310
+"GET /media/instagram_posts/thiet-ke-noi-that-shop-thoi-trang.jpg HTTP/1.1" 200 633088
+"GET /static/images/visa.png HTTP/1.1" 304 0
+"GET /static/images/mastercard.png HTTP/1.1" 304 0
+"GET /static/images/jcb.png HTTP/1.1" 304 0
+"GET /static/images/cod.png HTTP/1.1" 304 0
+"GET /static/images/atm.png HTTP/1.1" 304 0
+"GET /static/images/momo.png HTTP/1.1" 304 0
+"GET /static/images/icons/messenger.png HTTP/1.1" 304 0
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/script_base.js HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/js/alpine.js HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+"GET /admin/ecommerce/color/ HTTP/1.1" 200 18113
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/color/add/ HTTP/1.1" 200 19702
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/ecommerce/color/add/ HTTP/1.1" 302 0
+"GET /admin/ecommerce/color/ HTTP/1.1" 200 21490
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /admin/ecommerce/color/add/ HTTP/1.1" 200 19702
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/ecommerce/color/add/ HTTP/1.1" 302 0
+"GET /admin/ecommerce/color/ HTTP/1.1" 200 21883
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/color/add/ HTTP/1.1" 200 19702
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/ecommerce/color/add/ HTTP/1.1" 302 0
+"GET /admin/ecommerce/color/ HTTP/1.1" 200 22282
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/color/add/ HTTP/1.1" 200 19702
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/ecommerce/color/add/ HTTP/1.1" 302 0
+"GET /admin/ecommerce/color/ HTTP/1.1" 200 22679
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/color/add/ HTTP/1.1" 200 19702
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/ecommerce/color/add/ HTTP/1.1" 302 0
+"GET /admin/ecommerce/color/ HTTP/1.1" 200 23074
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/product/ HTTP/1.1" 200 31099
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/product/add/ HTTP/1.1" 200 43039
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/category/add/?_to_field=id&_popup=1 HTTP/1.1" 200 9290
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"POST /admin/ecommerce/category/add/?_to_field=id&_popup=1 HTTP/1.1" 200 405
+"GET /admin/ecommerce/category/add/?_to_field=id&_popup=1 HTTP/1.1" 200 9290
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/ecommerce/category/add/?_to_field=id&_popup=1 HTTP/1.1" 200 406
+"GET /admin/ecommerce/category/add/?_to_field=id&_popup=1 HTTP/1.1" 200 9290
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/ecommerce/category/add/?_to_field=id&_popup=1 HTTP/1.1" 200 400
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"POST /admin/ecommerce/product/add/ HTTP/1.1" 302 0
+"GET /admin/ecommerce/product/ HTTP/1.1" 200 34198
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/product/add/ HTTP/1.1" 200 43175
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"POST /admin/ecommerce/product/add/ HTTP/1.1" 302 0
+"GET /admin/ecommerce/product/ HTTP/1.1" 200 35569
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET / HTTP/1.1" 200 78066
+"GET /static/css/css_base.css HTTP/1.1" 304 0
+"GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/css/footer_view.css HTTP/1.1" 304 0
+"GET /static/src/output.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /media/slides/slide_4_u7sFuJo_3jctaXi.png HTTP/1.1" 304 0
+"GET /media/slides/slide_3_t10aHt9_CGSX330_Y3tpZAn.png HTTP/1.1" 304 0
+"GET /media/slides/slide_2_GFe0GtE_yrX1Kgj.png HTTP/1.1" 304 0
+"GET /media/slides/slide_1_2I5N8vo_nra09ea.png HTTP/1.1" 304 0
+"GET /media/categories/DSC08383-scaled.jpg HTTP/1.1" 304 0
+"GET /static/js/script_footer.js HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /media/categories/lovepik-fashion-womens-summer-shopping-image-png-image_400331099_wh1200.png HTTP/1.1" 200 975931
+"GET /media/categories/vn-11134207-7ras8-m2msrktcw4vu2d_tn.webp HTTP/1.1" 200 19040
+"GET /media/categories/images_2.jpg HTTP/1.1" 200 9575
+"GET /media/products/vn-11134207-7r98o-lmttsfaxyztrad.webp HTTP/1.1" 304 0
+"GET /media/products/vn-11134207-7r98o-lmttsfaxyztrad_dRP8C7v.webp HTTP/1.1" 200 129106
+"GET /media/products/vn-11134207-7ra0g-m6gdfg9lpoag2f_tn.webp HTTP/1.1" 200 17322
+"GET /static/images/bosieutam.jpg HTTP/1.1" 304 0
+"GET /media/instagram_posts/e9c2f537783b7d9a5fdb512d1561a622_I8V5HSv.jpg HTTP/1.1" 304 0
+"GET /media/instagram_posts/photo-1-1606291917324352525852_xzzF6B2.webp HTTP/1.1" 304 0
+"GET /media/instagram_posts/20230606_Rl61LQHo_ZMbXfDm.jpg HTTP/1.1" 304 0
+"GET /media/instagram_posts/4492114_4476993_upload_2018-11-7_22-20-19_JHCP9q8.jpg HTTP/1.1" 304 0
+"GET /media/instagram_posts/mo-shop-quan-ao1_wN1TTBy.webp HTTP/1.1" 304 0
+"GET /media/instagram_posts/thiet-ke-noi-that-shop-thoi-trang.jpg HTTP/1.1" 304 0
+"GET /static/images/visa.png HTTP/1.1" 304 0
+"GET /static/images/mastercard.png HTTP/1.1" 304 0
+"GET /static/images/jcb.png HTTP/1.1" 304 0
+"GET /static/images/cod.png HTTP/1.1" 304 0
+"GET /static/images/atm.png HTTP/1.1" 304 0
+"GET /static/images/momo.png HTTP/1.1" 304 0
+"GET /static/images/icons/messenger.png HTTP/1.1" 304 0
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/script_base.js HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/js/alpine.js HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+"GET /admin/ecommerce/product/2/change/ HTTP/1.1" 200 45874
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/ecommerce/product/2/change/ HTTP/1.1" 302 0
+"GET /admin/ecommerce/product/ HTTP/1.1" 200 35596
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET / HTTP/1.1" 200 78050
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /media/categories/lovepik-fashion-womens-summer-shopping-image-png-image_400331099_wh1200.png HTTP/1.1" 304 0
+"GET /media/categories/vn-11134207-7ras8-m2msrktcw4vu2d_tn.webp HTTP/1.1" 304 0
+"GET /media/categories/images_2.jpg HTTP/1.1" 304 0
+"GET /media/products/vn-11134207-7r98o-lrzbaz1jdnrt5c.webp HTTP/1.1" 200 174206
+"GET /media/products/vn-11134207-7ra0g-m6gdfg9lpoag2f_tn.webp HTTP/1.1" 304 0
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47154
+"GET /media/products/vn-11134207-7r98o-lrzbaz1jdnrt5c.webp HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 46869
+"GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/css/footer_view.css HTTP/1.1" 304 0
+"GET /static/css/css_base.css HTTP/1.1" 304 0
+"GET /static/src/output.css HTTP/1.1" 304 0
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /media/products/vn-11134207-7r98o-lrzbaz1jdnrt5c.webp HTTP/1.1" 304 0
+"GET /static/images/visa.png HTTP/1.1" 304 0
+"GET /static/images/mastercard.png HTTP/1.1" 304 0
+"GET /static/images/jcb.png HTTP/1.1" 304 0
+"GET /static/images/cod.png HTTP/1.1" 304 0
+"GET /static/js/script_footer.js HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /static/images/atm.png HTTP/1.1" 304 0
+"GET /static/images/momo.png HTTP/1.1" 304 0
+"GET /static/images/icons/messenger.png HTTP/1.1" 304 0
+"GET /static/js/script_base.js HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/js/alpine.js HTTP/1.1" 304 0
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 46869
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 46845
+"GET /media/products/vn-11134207-7r98o-lrzbaz1jdnrt5c.webp HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47154
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47156
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /media/products/vn-11134207-7r98o-lrzbaz1jdnrt5c.webp HTTP/1.1" 304 0
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47156
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47156
+"GET /media/products/vn-11134207-7r98o-lrzbaz1jdnrt5c.webp HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47156
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47156
+"GET /media/products/vn-11134207-7r98o-lrzbaz1jdnrt5c.webp HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47212
+"GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/css_base.css HTTP/1.1" 304 0
+"GET /media/products/vn-11134207-7r98o-lrzbaz1jdnrt5c.webp HTTP/1.1" 304 0
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/css/footer_view.css HTTP/1.1" 304 0
+"GET /static/src/output.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/images/mastercard.png HTTP/1.1" 304 0
+"GET /static/images/visa.png HTTP/1.1" 304 0
+"GET /static/images/jcb.png HTTP/1.1" 304 0
+"GET /static/js/script_footer.js HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /static/images/cod.png HTTP/1.1" 304 0
+"GET /static/images/atm.png HTTP/1.1" 304 0
+"GET /static/images/momo.png HTTP/1.1" 304 0
+"GET /static/images/icons/messenger.png HTTP/1.1" 304 0
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/script_base.js HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/js/alpine.js HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47212
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47193
+"GET /media/products/vn-11134207-7r98o-lrzbaz1jdnrt5c.webp HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47193
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47212
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47212
+"GET /media/products/vn-11134207-7r98o-lrzbaz1jdnrt5c.webp HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47212
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47212
+"GET /media/products/vn-11134207-7r98o-lrzbaz1jdnrt5c.webp HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47194
+"GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/css_base.css HTTP/1.1" 304 0
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/css/footer_view.css HTTP/1.1" 304 0
+"GET /static/src/output.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/images/visa.png HTTP/1.1" 304 0
+"GET /static/images/mastercard.png HTTP/1.1" 304 0
+"GET /static/images/jcb.png HTTP/1.1" 304 0
+"GET /static/js/script_footer.js HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /static/images/cod.png HTTP/1.1" 304 0
+"GET /static/images/atm.png HTTP/1.1" 304 0
+"GET /static/images/momo.png HTTP/1.1" 304 0
+"GET /static/images/icons/messenger.png HTTP/1.1" 304 0
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/js/script_base.js HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/js/alpine.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47194
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47212
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47212
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47212
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /media/products/vn-11134207-7r98o-lrzbaz1jdnrt5c.webp HTTP/1.1" 304 0
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47167
+"GET /media/products/vn-11134207-7r98o-lrzbaz1jdnrt5c.webp HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47212
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47212
+"GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/css_base.css HTTP/1.1" 304 0
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/css/footer_view.css HTTP/1.1" 304 0
+"GET /static/src/output.css HTTP/1.1" 304 0
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/images/visa.png HTTP/1.1" 304 0
+"GET /static/images/mastercard.png HTTP/1.1" 304 0
+"GET /static/images/jcb.png HTTP/1.1" 304 0
+"GET /static/js/script_footer.js HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /static/images/cod.png HTTP/1.1" 304 0
+"GET /static/images/atm.png HTTP/1.1" 304 0
+"GET /static/images/momo.png HTTP/1.1" 304 0
+"GET /static/images/icons/messenger.png HTTP/1.1" 304 0
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/script_base.js HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/js/alpine.js HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47212
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47212
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47212
+"GET /media/products/vn-11134207-7r98o-lrzbaz1jdnrt5c.webp HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47212
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47258
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47258
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47258
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47238
+"GET /media/products/vn-11134207-7r98o-lrzbaz1jdnrt5c.webp HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47238
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47238
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47155
+"GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/css_base.css HTTP/1.1" 304 0
+"GET /static/css/footer_view.css HTTP/1.1" 304 0
+"GET /static/src/output.css HTTP/1.1" 304 0
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/images/visa.png HTTP/1.1" 304 0
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/images/mastercard.png HTTP/1.1" 304 0
+"GET /static/images/jcb.png HTTP/1.1" 304 0
+"GET /static/js/script_footer.js HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /static/images/cod.png HTTP/1.1" 304 0
+"GET /static/images/atm.png HTTP/1.1" 304 0
+"GET /static/images/momo.png HTTP/1.1" 304 0
+"GET /static/images/icons/messenger.png HTTP/1.1" 304 0
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/script_base.js HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/js/alpine.js HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47239
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47239
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47238
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47238
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47238
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47241
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47241
+"GET /media/products/vn-11134207-7r98o-lrzbaz1jdnrt5c.webp HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47241
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47241
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47241
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47241
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47241
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47213
+"GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/css_base.css HTTP/1.1" 304 0
+"GET /static/css/footer_view.css HTTP/1.1" 304 0
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/src/output.css HTTP/1.1" 304 0
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/images/visa.png HTTP/1.1" 304 0
+"GET /static/images/mastercard.png HTTP/1.1" 304 0
+"GET /static/images/jcb.png HTTP/1.1" 304 0
+"GET /static/js/script_footer.js HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /static/images/momo.png HTTP/1.1" 304 0
+"GET /static/images/atm.png HTTP/1.1" 304 0
+"GET /static/images/cod.png HTTP/1.1" 304 0
+"GET /static/images/icons/messenger.png HTTP/1.1" 304 0
+"GET /static/js/script_base.js HTTP/1.1" 304 0
+"GET /static/js/alpine.js HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47239
+"GET /media/products/vn-11134207-7r98o-lrzbaz1jdnrt5c.webp HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47239
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47258
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47258
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47258
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47258
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47257
+"GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/css_base.css HTTP/1.1" 304 0
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/css/footer_view.css HTTP/1.1" 304 0
+"GET /static/src/output.css HTTP/1.1" 304 0
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /media/products/vn-11134207-7r98o-lrzbaz1jdnrt5c.webp HTTP/1.1" 304 0
+"GET /static/images/visa.png HTTP/1.1" 304 0
+"GET /static/images/mastercard.png HTTP/1.1" 304 0
+"GET /static/images/jcb.png HTTP/1.1" 304 0
+"GET /static/js/script_footer.js HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /static/images/cod.png HTTP/1.1" 304 0
+"GET /static/images/atm.png HTTP/1.1" 304 0
+"GET /static/images/momo.png HTTP/1.1" 304 0
+"GET /static/images/icons/messenger.png HTTP/1.1" 304 0
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/script_base.js HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /static/js/alpine.js HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47257
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47257
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47257
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47257
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47257
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47257
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47257
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47257
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47257
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47257
+"GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/css_base.css HTTP/1.1" 304 0
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/css/footer_view.css HTTP/1.1" 304 0
+"GET /static/src/output.css HTTP/1.1" 304 0
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /media/products/vn-11134207-7r98o-lrzbaz1jdnrt5c.webp HTTP/1.1" 304 0
+"GET /static/images/visa.png HTTP/1.1" 304 0
+"GET /static/images/jcb.png HTTP/1.1" 304 0
+"GET /static/images/mastercard.png HTTP/1.1" 304 0
+"GET /static/js/script_footer.js HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /static/images/cod.png HTTP/1.1" 304 0
+"GET /static/images/atm.png HTTP/1.1" 304 0
+"GET /static/images/momo.png HTTP/1.1" 304 0
+"GET /static/images/icons/messenger.png HTTP/1.1" 304 0
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/script_base.js HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/js/alpine.js HTTP/1.1" 304 0
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47257
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 2017
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 2002
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47257
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47260
+"GET /static/css/css_base.css HTTP/1.1" 304 0
+"GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/css/footer_view.css HTTP/1.1" 304 0
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /media/products/vn-11134207-7r98o-lrzbaz1jdnrt5c.webp HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/images/visa.png HTTP/1.1" 304 0
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15671
+"GET /static/src/output.css HTTP/1.1" 304 0
+"GET /static/images/mastercard.png HTTP/1.1" 304 0
+"GET /static/images/jcb.png HTTP/1.1" 304 0
+"GET /static/js/script_footer.js HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /static/images/cod.png HTTP/1.1" 304 0
+"GET /static/images/atm.png HTTP/1.1" 304 0
+"GET /static/images/momo.png HTTP/1.1" 304 0
+"GET /static/images/icons/messenger.png HTTP/1.1" 304 0
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/script_base.js HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/js/alpine.js HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47260
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15655
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47260
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15655
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47260
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15671
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47260
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15670
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47260
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15670
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47260
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15670
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47260
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47260
+"GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/css_base.css HTTP/1.1" 304 0
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/css/footer_view.css HTTP/1.1" 304 0
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15670
+"GET /static/images/visa.png HTTP/1.1" 304 0
+"GET /static/src/output.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /media/products/vn-11134207-7r98o-lrzbaz1jdnrt5c.webp HTTP/1.1" 304 0
+"GET /static/images/mastercard.png HTTP/1.1" 304 0
+"GET /static/images/jcb.png HTTP/1.1" 304 0
+"GET /static/js/script_footer.js HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /static/images/cod.png HTTP/1.1" 304 0
+"GET /static/images/atm.png HTTP/1.1" 304 0
+"GET /static/images/momo.png HTTP/1.1" 304 0
+"GET /static/images/icons/messenger.png HTTP/1.1" 304 0
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/script_base.js HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/js/alpine.js HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47260
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47260
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15670
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47260
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15670
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47260
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15668
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47171
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47171
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15668
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47171
+"GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/css_base.css HTTP/1.1" 304 0
+"GET /static/css/footer_view.css HTTP/1.1" 304 0
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/src/output.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15669
+"GET /media/products/vn-11134207-7r98o-lrzbaz1jdnrt5c.webp HTTP/1.1" 304 0
+"GET /static/images/visa.png HTTP/1.1" 304 0
+"GET /static/images/mastercard.png HTTP/1.1" 304 0
+"GET /static/images/jcb.png HTTP/1.1" 304 0
+"GET /static/js/script_footer.js HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /static/images/cod.png HTTP/1.1" 304 0
+"GET /static/images/atm.png HTTP/1.1" 304 0
+"GET /static/images/momo.png HTTP/1.1" 304 0
+"GET /static/images/icons/messenger.png HTTP/1.1" 304 0
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/script_base.js HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/js/alpine.js HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47115
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15673
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47115
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47115
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15673
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47115
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47115
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15499
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47115
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15673
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47115
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15673
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47115
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15673
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47115
+"GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/css_base.css HTTP/1.1" 304 0
+"GET /static/css/footer_view.css HTTP/1.1" 304 0
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/src/output.css HTTP/1.1" 304 0
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15673
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/images/mastercard.png HTTP/1.1" 304 0
+"GET /static/images/visa.png HTTP/1.1" 304 0
+"GET /static/images/jcb.png HTTP/1.1" 304 0
+"GET /static/js/script_footer.js HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /static/images/cod.png HTTP/1.1" 304 0
+"GET /static/images/atm.png HTTP/1.1" 304 0
+"GET /static/images/momo.png HTTP/1.1" 304 0
+"GET /static/images/icons/messenger.png HTTP/1.1" 304 0
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/script_base.js HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/js/alpine.js HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+"GET /san-pham/ao-thun-nam-tay-ngn-mua-he-ecollect-day-khoa-keo-c-ao-pha-phi-djn-gin-tinh-t-polo-thi-trang-dji-bin-dji-chi-cd28/ HTTP/1.1" 200 47115
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /profile/ HTTP/1.1" 200 62084
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15673
+"POST /profile/ HTTP/1.1" 302 0
+"GET /profile/ HTTP/1.1" 200 62545
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /media/profile_pictures/anh-den-ngau_BD543bp.jpeg HTTP/1.1" 200 54686
+"GET / HTTP/1.1" 200 77900
+"GET /media/profile_pictures/anh-den-ngau_BD543bp.jpeg HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /media/slides/slide_4_u7sFuJo_3jctaXi.png HTTP/1.1" 304 0
+"GET /media/slides/slide_3_t10aHt9_CGSX330_Y3tpZAn.png HTTP/1.1" 304 0
+"GET /media/slides/slide_2_GFe0GtE_yrX1Kgj.png HTTP/1.1" 304 0
+"GET /media/slides/slide_1_2I5N8vo_nra09ea.png HTTP/1.1" 304 0
+"GET /media/categories/DSC08383-scaled.jpg HTTP/1.1" 304 0
+"GET /media/categories/lovepik-fashion-womens-summer-shopping-image-png-image_400331099_wh1200.png HTTP/1.1" 304 0
+"GET /media/categories/vn-11134207-7ras8-m2msrktcw4vu2d_tn.webp HTTP/1.1" 304 0
+"GET /media/categories/images_2.jpg HTTP/1.1" 304 0
+"GET /media/products/vn-11134207-7r98o-lmttsfaxyztrad.webp HTTP/1.1" 304 0
+"GET /media/products/vn-11134207-7r98o-lrzbaz1jdnrt5c.webp HTTP/1.1" 304 0
+"GET /media/products/vn-11134207-7ra0g-m6gdfg9lpoag2f_tn.webp HTTP/1.1" 304 0
+"GET /static/images/bosieutam.jpg HTTP/1.1" 304 0
+"GET /media/instagram_posts/e9c2f537783b7d9a5fdb512d1561a622_I8V5HSv.jpg HTTP/1.1" 304 0
+"GET /media/instagram_posts/photo-1-1606291917324352525852_xzzF6B2.webp HTTP/1.1" 304 0
+"GET /media/instagram_posts/4492114_4476993_upload_2018-11-7_22-20-19_JHCP9q8.jpg HTTP/1.1" 304 0
+"GET /media/instagram_posts/20230606_Rl61LQHo_ZMbXfDm.jpg HTTP/1.1" 304 0
+"GET /media/instagram_posts/mo-shop-quan-ao1_wN1TTBy.webp HTTP/1.1" 304 0
+"GET /media/instagram_posts/thiet-ke-noi-that-shop-thoi-trang.jpg HTTP/1.1" 304 0
+"GET /san-pham/b-qun-ao-nam-uma-store-ha-tit-bu-cht-cotton-cheo-sieu-djp-set-dj-tr-trung-khe-khon-spb06/ HTTP/1.1" 200 48055
+"GET /media/profile_pictures/anh-den-ngau_BD543bp.jpeg HTTP/1.1" 304 0
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+Internal Server Error: /cart/add/b-qun-ao-nam-uma-store-ha-tit-bu-cht-cotton-cheo-sieu-djp-set-dj-tr-trung-khe-khon-spb06/
+"POST /cart/add/b-qun-ao-nam-uma-store-ha-tit-bu-cht-cotton-cheo-sieu-djp-set-dj-tr-trung-khe-khon-spb06/ HTTP/1.1" 500 81
+"POST /cart/add/b-qun-ao-nam-uma-store-ha-tit-bu-cht-cotton-cheo-sieu-djp-set-dj-tr-trung-khe-khon-spb06/ HTTP/1.1" 200 139
+"GET /checkout/ HTTP/1.1" 200 66494
+"GET /media/profile_pictures/anh-den-ngau_BD543bp.jpeg HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET / HTTP/1.1" 200 77971
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 304 0
+"GET /media/profile_pictures/anh-den-ngau_BD543bp.jpeg HTTP/1.1" 304 0
+"POST /cart/add/b-qun-ao-nam-uma-store-ha-tit-bu-cht-cotton-cheo-sieu-djp-set-dj-tr-trung-khe-khon-spb06/ HTTP/1.1" 200 139
+"GET /checkout/ HTTP/1.1" 200 66496
+"GET /media/profile_pictures/anh-den-ngau_BD543bp.jpeg HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"GET /view-cart/ HTTP/1.1" 200 43710
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 304 0
+"GET /media/profile_pictures/anh-den-ngau_BD543bp.jpeg HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+"POST /delete-cart-item/1/ HTTP/1.1" 200 158
+"GET /view-cart/ HTTP/1.1" 200 36819
+"GET /media/profile_pictures/anh-den-ngau_BD543bp.jpeg HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 404 1966
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
