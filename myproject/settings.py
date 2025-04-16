@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(" ")
 
 # Security settings
 DEBUG = False
@@ -53,6 +53,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Nếu thư mục static của app 'ecommerce' tồn tại thì thêm vào STATICFILES_DIRS
 ecommerce_static_path = BASE_DIR / 'ecommerce' / 'static'
@@ -61,7 +62,6 @@ if ecommerce_static_path.exists():
     STATICFILES_DIRS.append(str(ecommerce_static_path))
 
 # WhiteNoise config
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 INSTALLED_APPS = [
@@ -129,7 +129,7 @@ if os.environ.get('DATABASE_URL'):
         conn_max_age=600,
         ssl_require=True  # Important for Render.com
     )
-    
+
 # postgresql://viu_postgres_django_user:jNHpOviIgeOxLIIMB3vx2WAClEjC2umL@dpg-cvvtsc3uibrs73bpsv20-a.singapore-postgres.render.com/viu_postgres_django
 
 # Password validation
