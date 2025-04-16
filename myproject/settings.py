@@ -122,9 +122,14 @@ DATABASES = {
     }
 }
 
-database_url = os.environ.get("DATABASE_URL")
-DATABASES["default"] = dj_database_url.parse(database_url) 
-
+# Only override with PostgreSQL if DATABASE_URL exists
+if os.environ.get('DATABASE_URL'):
+    DATABASES['default'] = dj_database_url.parse(
+        os.environ['DATABASE_URL'],
+        conn_max_age=600,
+        ssl_require=True  # Important for Render.com
+    )
+    
 # postgresql://viu_postgres_django_user:jNHpOviIgeOxLIIMB3vx2WAClEjC2umL@dpg-cvvtsc3uibrs73bpsv20-a.singapore-postgres.render.com/viu_postgres_django
 
 # Password validation
