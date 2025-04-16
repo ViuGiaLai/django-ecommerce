@@ -31,12 +31,19 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool('DEBUG', default=False)
 
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['127.0.0.1', 'localhost', 'viu-django-ecommerce.onrender.com'])
+ALLOWED_HOSTS = ['viu-django-ecommerce.onrender.com', 'localhost']
 
+# Security settings
+DEBUG = False
+SECURE_HSTS_SECONDS = 3600
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8000",
     "http://127.0.0.1:8000",
 ]
+
 import os
 from pathlib import Path
 
@@ -109,16 +116,16 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": os.getenv('DB_NAME', 'my_ecommerce'),
-        "USER": os.getenv('DB_USER', 'root'),
-        "PASSWORD": os.getenv('DB_PASSWORD'),
-        "HOST": os.getenv('DB_HOST'),
-        "PORT": os.getenv('DB_PORT', '3306'),
-        "OPTIONS": {
-            "charset": "utf8mb4",  # Đã có từ trước
-            "connect_timeout": 30,  # Thêm timeout như một key riêng
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT', '3306'),
+        'OPTIONS': {
+            'charset': 'utf8mb4',
+            'connect_timeout': 30,  # Tăng thời gian timeout
         },
     }
 }
