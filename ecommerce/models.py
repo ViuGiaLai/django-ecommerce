@@ -5,10 +5,13 @@ from django.utils.text import slugify
 from django.utils import timezone
 import uuid
 
+from cloudinary.models import CloudinaryField
+
 class Category(models.Model):
     id = models.BigAutoField(primary_key=True)  # ID tự động tăng
     name = models.CharField(max_length=255, unique=True)
-    image = models.ImageField(upload_to='categories/', blank=True, null=True)
+    # image = models.ImageField(upload_to='categories/', blank=True, null=True)
+    image = CloudinaryField('image', blank=True, null=True)  # Sử dụng CloudinaryField
     is_active = models.BooleanField(default=True)  # Thêm dòng này
     show_on_home = models.BooleanField(default=False)  # Thêm trường này
     description = models.TextField(blank=True, null=True)
@@ -37,7 +40,8 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     sale_price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     discount_percent = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
-    image = models.ImageField(upload_to='products/')
+    # image = models.ImageField(upload_to='products/')
+    image = CloudinaryField('image', blank=True, null=True)  # Chuyển sang CloudinaryField
     sold_quantity = models.PositiveIntegerField(default=0)
     stock = models.PositiveIntegerField(default=0)
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
@@ -109,7 +113,8 @@ class FeaturedProduct(models.Model):
         return f"Featured: {self.product.name}"
 class ProductImage(models.Model):
     product = models.ForeignKey(Product, related_name='images', on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='product_images/')
+    # image = models.ImageField(upload_to='product_images/')
+    image = CloudinaryField('image', blank=True, null=True)  # Thay ImageField bằng CloudinaryField
 
     def __str__(self):
         return f"Image for {self.product.name}"
@@ -117,7 +122,8 @@ class ProductImage(models.Model):
 class Slide(models.Model):
     title = models.CharField(max_length=255)
     subtitle = models.TextField(blank=True, null=True)
-    image = models.ImageField(upload_to='slides/')
+    # image = models.ImageField(upload_to='slides/')
+    image = CloudinaryField('image', blank=True, null=True)  # Xóa upload_to
     cta = models.CharField(max_length=100, blank=True, null=True)
     cta_link = models.URLField(blank=True, null=True)
     is_active = models.BooleanField(default=True)  # Thêm dòng này
@@ -147,7 +153,8 @@ class Profile(models.Model):
     dob = models.DateField(null=True, blank=True)
     phone = models.CharField(max_length=15, null=True, blank=True)
     gender = models.CharField(max_length=10, choices=[('M', 'Nam'), ('F', 'Nữ')], default='male')
-    image = models.ImageField(upload_to='profile_pictures/', null=True, blank=True)
+    # image = models.ImageField(upload_to='profile_pictures/', null=True, blank=True)
+    image = CloudinaryField('image', null=True, blank=True)  # Xóa upload_to
 
     def __str__(self):
         return f"{self.user.username} - Profile"
@@ -197,7 +204,8 @@ class Address(models.Model):
         super().save(*args, **kwargs)
 
 class InstagramPost(models.Model):
-    image = models.ImageField(upload_to='instagram_posts/')  # Để lưu trữ ảnh Instagram
+    # image = models.ImageField(upload_to='instagram_posts/')  # Để lưu trữ ảnh Instagram
+    image = CloudinaryField('image', blank=True, null=True)  # Không cần 'upload_to' với CloudinaryField
     caption = models.CharField(max_length=255, blank=True, null=True)  # Thêm mô tả cho ảnh
     is_active = models.BooleanField(default=True)  # Trạng thái của ảnh (hiển thị hay không)
     created_at = models.DateTimeField(auto_now_add=True)  # Thời gian tạo bài đăng
@@ -221,8 +229,8 @@ class Comment(models.Model):
 
 class CommentImage(models.Model):
     comment = models.ForeignKey(Comment, related_name='images', on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='comment_images/')
-
+    image = CloudinaryField('image', blank=True, null=True)  # Không cần 'upload_to' với CloudinaryField
+    
     def __str__(self):
         return f'Hình ảnh cho đánh giá {self.comment.id}'
 
