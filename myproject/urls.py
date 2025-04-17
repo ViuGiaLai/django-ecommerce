@@ -26,6 +26,6 @@ urlpatterns = [
     path('', include('ecommerce.urls')),  # Include ecommerce URLs
 ]
 
-# Phục vụ static và media files trong development
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# # Phục vụ static và media files trong development
+# if settings.DEBUG:
+#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
