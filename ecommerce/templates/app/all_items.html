@@ -137,7 +137,7 @@
                         <div class="relative overflow-hidden rounded-lg mb-3">
                             <div class="aspect-[3/4] relative">
                                 <a href="{% url 'product_detail' product.slug %}">
-                                    <img src="{% get_media_prefix %}{{ product.image }}" alt="{{ product.name }}"
+                                    <img src="{{ product.image.url }}" alt="{{ product.name }}"
                                          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                                 </a>
                             </div>
@@ -193,8 +193,7 @@
                         <!-- Product Image -->
                         <div class="w-48 h-48 flex-shrink-0">
                             <a href="{% url 'product_detail' product.slug %}" class="block w-full h-full">
-                                <img src="{% get_media_prefix %}{{ product.image }}" alt="{{ product.name }}"
-                                     class="w-full h-full object-cover rounded-lg">
+                                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="w-full h-full object-cover rounded-lg">
                             </a>
                         </div>
                         <!-- Product Info -->
