@@ -61,6 +61,18 @@ ecommerce_static_path = BASE_DIR / 'ecommerce' / 'static'
 STATICFILES_DIRS = []
 if ecommerce_static_path.exists():
     STATICFILES_DIRS.append(str(ecommerce_static_path))
+# câu hình file để lưu ảnh tốt hơn từ admin
+
+from decouple import config
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': config('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': config('CLOUDINARY_API_KEY'),
+    'API_SECRET': config('CLOUDINARY_API_SECRET'),
+}
+
 
 # WhiteNoise config
 
@@ -78,6 +90,8 @@ INSTALLED_APPS = [
     'ecommerce',
     'widget_tweaks',
     'corsheaders',
+    'cloudinary',
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
