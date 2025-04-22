@@ -56109,3 +56109,347 @@ Watching for file changes with StatReloader
 "GET /static/css/cssproduct_detail.css HTTP/1.1" 304 0
 D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 78823
+"GET /static/css/css_base.css HTTP/1.1" 200 9735
+"GET /static/css/footer_view.css HTTP/1.1" 200 9493
+"GET /static/css/breadcrumb.css HTTP/1.1" 200 1279
+"GET /static/css/css_home.css HTTP/1.1" 200 6558
+"GET /static/css/profile.css HTTP/1.1" 200 21435
+"GET /static/css/about.css HTTP/1.1" 200 3683
+"GET /static/css/css_all_items.css HTTP/1.1" 200 8443
+"GET /static/css/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/css/category_detail.css HTTP/1.1" 200 2506
+"GET /static/css/cssfavorites.css HTTP/1.1" 200 3898
+"GET /static/css/checkout.css HTTP/1.1" 200 9753
+"GET /static/css/my_orders.css HTTP/1.1" 200 8352
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15673
+"GET /static/src/output.css HTTP/1.1" 200 29167
+"GET /static/css/style_addcart.css HTTP/1.1" 200 4146
+"GET /static/css/order_detail.css HTTP/1.1" 200 5238
+"GET /static/css/order_success_form.css HTTP/1.1" 200 11167
+"GET /static/css/main.css HTTP/1.1" 200 19889
+"GET /static/images/logo_viu.png HTTP/1.1" 200 3761
+"GET /static/js/main.js HTTP/1.1" 200 2833
+"GET /static/js/script_footer.js HTTP/1.1" 200 3753
+"GET /static/images/bosieutam.jpg HTTP/1.1" 200 815797
+"GET /static/images/visa.png HTTP/1.1" 200 22100
+"GET /static/images/mastercard.png HTTP/1.1" 200 52849
+"GET /static/images/cod.png HTTP/1.1" 200 15859
+"GET /static/images/jcb.png HTTP/1.1" 200 6387
+"GET /static/images/atm.png HTTP/1.1" 200 14049
+"GET /static/images/momo.png HTTP/1.1" 200 22119
+"GET /static/images/icons/messenger.png HTTP/1.1" 200 21140
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 200 41526
+"GET /static/js/alpine.js HTTP/1.1" 200 114
+"GET /static/js/script_base.js HTTP/1.1" 200 3559
+"GET /static/js/home.js HTTP/1.1" 200 5848
+"GET /static/js/all_items.js HTTP/1.1" 200 12543
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/js/product_detail.js HTTP/1.1" 200 19822
+"GET / HTTP/1.1" 200 78823
+"GET /static/css/css_home.css HTTP/1.1" 304 0
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/css/profile.css HTTP/1.1" 304 0
+"GET /static/css/about.css HTTP/1.1" 304 0
+"GET /static/css/checkout.css HTTP/1.1" 304 0
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 304 0
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 78823
+"GET / HTTP/1.1" 200 78823
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 3154
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 40696
+"GET /admin/ecommerce/color/ HTTP/1.1" 200 22515
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/product/ HTTP/1.1" 200 34889
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET / HTTP/1.1" 200 79317
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/images/bosieutam.jpg HTTP/1.1" 200 815797
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET / HTTP/1.1" 200 79317
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET / HTTP/1.1" 200 79317
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 87, in home
+    return render(request, 'app/home.html', context)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+        (
+    ...<2 lines>...
+        )
+    )
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 701, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 611, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'replace'
+"GET / HTTP/1.1" 500 351794
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13659
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\templatetags\custom_filters.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 79317
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET / HTTP/1.1" 200 79317
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET / HTTP/1.1" 200 79314
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET / HTTP/1.1" 200 79314
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET / HTTP/1.1" 200 79314
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\templatetags\custom_filters.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /admin/ecommerce/product/3/change/ HTTP/1.1" 200 47031
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/jazzmin/img/selector-icons.svg HTTP/1.1" 200 3291
+"GET /admin/ecommerce/product/3/change/ HTTP/1.1" 200 47031
+"GET /admin/ecommerce/product/ HTTP/1.1" 200 34889
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\admin.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\admin.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\admin.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\admin.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 127707
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 3154
+- Broken pipe from ('127.0.0.1', 52934)
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 38548
+"GET /all-items/ HTTP/1.1" 200 129279
+"GET /all-items/?view=list HTTP/1.1" 200 155738
+"GET /all-items/?view=list HTTP/1.1" 200 155734
+"GET /static/css/all_items.css HTTP/1.1" 200 8653
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /all-items/?view=list HTTP/1.1" 200 155734
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /all-items/?view=list&view=grid HTTP/1.1" 200 129275
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /all-items/?view=list&view=grid HTTP/1.1" 200 129275
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /all-items/?view=list&view=grid&view=list HTTP/1.1" 200 155734
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /all-items/?view=list&view=grid&view=list HTTP/1.1" 200 155734
+"GET /static/css/all_items.css HTTP/1.1" 200 9413
+"GET /all-items/?view=list&view=grid&view=list HTTP/1.1" 200 155734
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /all-items/?view=list&view=grid&view=list HTTP/1.1" 200 155734
+"GET /static/css/all_items.css HTTP/1.1" 200 9425
+"GET /all-items/?view=list&view=grid&view=list HTTP/1.1" 200 155734
+"GET /static/css/all_items.css HTTP/1.1" 200 6500
+"GET /all-items/?view=list&view=grid&view=list HTTP/1.1" 200 155734
+"GET /static/css/all_items.css HTTP/1.1" 200 9426
+"GET /all-items/?view=list&view=grid&view=list HTTP/1.1" 200 155734
+"GET /static/css/all_items.css HTTP/1.1" 200 9426
+"GET / HTTP/1.1" 200 128147
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /all-items/ HTTP/1.1" 200 129275
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /all-items/?view=list HTTP/1.1" 200 155734
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /all-items/?view=list HTTP/1.1" 200 155734
+"GET /static/css/all_items.css HTTP/1.1" 200 6465
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /all-items/?view=list HTTP/1.1" 200 155734
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /all-items/?view=list HTTP/1.1" 200 156434
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /all-items/?view=list HTTP/1.1" 200 156434
+"GET / HTTP/1.1" 200 128147
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /all-items/ HTTP/1.1" 200 129275
+"GET /all-items/?view=list HTTP/1.1" 200 156434
+"GET /all-items/?view=list HTTP/1.1" 200 156554
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /all-items/?view=list HTTP/1.1" 200 156614
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /all-items/?view=list HTTP/1.1" 200 155974
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /all-items/?view=list HTTP/1.1" 200 156394
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /all-items/?view=list HTTP/1.1" 200 155234
+"GET /all-items/?view=list HTTP/1.1" 200 155234
+"GET /all-items/?view=list HTTP/1.1" 200 155754
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /all-items/?view=list HTTP/1.1" 200 156374
+"GET /all-items/?view=list HTTP/1.1" 200 156374
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /all-items/?view=list HTTP/1.1" 200 156374
+"GET /all-items/?view=list HTTP/1.1" 200 156374
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /san-pham/ao-croptop-thun-ngn-tay-c-tron-n-cotton-100-cao-cp-swelee-0089/ HTTP/1.1" 200 48225
+"GET /admin/ecommerce/product/ HTTP/1.1" 200 62458
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/product/19/change/ HTTP/1.1" 200 47567
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ecommerce/product/19/delete/ HTTP/1.1" 200 17899
+"POST /admin/ecommerce/product/19/delete/ HTTP/1.1" 302 0
+"GET /admin/ecommerce/product/ HTTP/1.1" 200 61736
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Not Found: /san-pham/ao-croptop-thun-ngn-tay-c-tron-n-cotton-100-cao-cp-swelee-0089/
+"GET /san-pham/ao-croptop-thun-ngn-tay-c-tron-n-cotton-100-cao-cp-swelee-0089/ HTTP/1.1" 404 4648
+"GET /all-items/?view=list HTTP/1.1" 200 154619
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /all-items/?view=list HTTP/1.1" 200 154639
+"GET / HTTP/1.1" 200 128147
+"GET /san-pham/b-qun-ao-nam-mua-he-xp-van-ni-ha-tit-logo-cao-su-tr-trung-b-c-tron-cc-tay-nam-hang-cao-cp-bo21/ HTTP/1.1" 200 47065
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /san-pham/ HTTP/1.1" 200 129810
+"GET /san-pham/?min_price=500000&max_price=3000000 HTTP/1.1" 200 37792
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /san-pham/?min_price=300000&max_price=3000000 HTTP/1.1" 200 37792
+"GET /san-pham/?min_price=300000&max_price=3000000 HTTP/1.1" 200 37708
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /san-pham/? HTTP/1.1" 200 129722
+"GET /san-pham/? HTTP/1.1" 200 129879
+"GET /san-pham/?min_price=700000&max_price=3000000 HTTP/1.1" 200 37863
+"GET /san-pham/?min_price=200000&max_price=3000000 HTTP/1.1" 200 37863
+"GET /san-pham/? HTTP/1.1" 200 129879
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /san-pham/qun-ng-rng-n-k-nhiu-mau-ulzzang/ HTTP/1.1" 200 47458
+"GET / HTTP/1.1" 200 128147
+"GET /all-items/ HTTP/1.1" 200 129879
+"GET /all-items/ HTTP/1.1" 200 129206
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /all-items/ HTTP/1.1" 200 129206
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /all-items/ HTTP/1.1" 200 129810
+"GET / HTTP/1.1" 200 124376

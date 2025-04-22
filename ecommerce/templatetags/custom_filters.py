@@ -14,3 +14,8 @@ def widthratio(value, arg):
         return (value / arg) * 100
     except ZeroDivisionError:
         return 0
+
+@register.filter
+def replace(value, arg):
+    old, new = arg.split(',')
+    return value.replace(old, new)
