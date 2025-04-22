@@ -56453,3 +56453,13 @@ Watching for file changes with StatReloader
 "GET /static/css/all_items.css HTTP/1.1" 304 0
 "GET /all-items/ HTTP/1.1" 200 129810
 "GET / HTTP/1.1" 200 124376
+"GET /admin/ecommerce/product/27/change/ HTTP/1.1" 200 45884
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET / HTTP/1.1" 200 124376
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
