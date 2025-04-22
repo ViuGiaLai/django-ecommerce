@@ -40,11 +40,12 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     sale_price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     discount_percent = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
+    # image = models.ImageField(upload_to='products/')
     image = CloudinaryField('image', blank=True, null=True)  # Chuyển sang CloudinaryField
     sold_quantity = models.PositiveIntegerField(default=0)
     stock = models.PositiveIntegerField(default=0)
-    category = models.ForeignKey('Category', related_name='products', on_delete=models.CASCADE)
-    colors = models.ManyToManyField('Color', related_name='products', blank=True)
+    category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
+    colors = models.ManyToManyField(Color, related_name='products', blank=True)
     is_featured = models.BooleanField(default=False)
     is_new = models.BooleanField(default=False)
     is_sale = models.BooleanField(default=False)
@@ -82,20 +83,6 @@ class Product(models.Model):
         """Hiển thị giá gốc nếu có sale, với định dạng tiền tệ."""
         if self.sale_price:
             return f"{self.price:,.0f}.000₫"
-        return None
-
-    # Method để tự động thêm `f_auto,q_auto` vào URL ảnh
-    def cloudinary_image_url(self):
-        # Lấy URL ảnh từ Cloudinary
-        url = self.image.url
-        # Thêm tham số `f_auto,q_auto` vào URL
-        return url.replace('/upload/', '/upload/f_auto,q_auto/')
-
-    @property
-    def image_url(self):
-        """Trả về URL của ảnh với `f_auto,q_auto` để tối ưu ảnh."""
-        if self.image:
-            return self.cloudinary_image_url()
         return None
 # mã giảm giá
 

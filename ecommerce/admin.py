@@ -16,21 +16,12 @@ class ColorAdmin(admin.ModelAdmin):
 # Đăng ký model Product
 class ProductAdmin(admin.ModelAdmin):
     inlines = [ProductImageInline]  # Thêm Inline cho ProductImage
-    list_display = ('name', 'category', 'price', 'sale_price', 'is_featured', 'sold_quantity', 'stock', 'is_new', 'is_sale', 'is_active', 'sale_start_time', 'sale_end_time', 'rating', 'created_at', 'updated_at', 'image_display')
+    list_display = ('name', 'category', 'price', 'sale_price', 'is_featured', 'sold_quantity', 'stock', 'is_new', 'is_sale', 'is_active', 'sale_start_time', 'sale_end_time', 'rating', 'created_at', 'updated_at')
     list_filter = ('category', 'is_featured', 'is_new', 'is_sale', 'is_active', 'colors')
     search_fields = ('name', 'description')
     prepopulated_fields = {'slug': ('name',)}
     date_hierarchy = 'created_at'
     filter_horizontal = ('colors',)
-    
-    # Thêm trường tùy chỉnh để hiển thị ảnh với URL tối ưu
-    def image_display(self, obj):
-        # Kiểm tra nếu có ảnh và trả về ảnh tối ưu hóa với f_auto,q_auto
-        if obj.image:
-            return f'<img src="{obj.cloudinary_image_url()}" width="100px" />'
-        return 'No Image'
-    image_display.allow_tags = True  # Cho phép hiển thị HTML trong admin
-
     fieldsets = (
         ('Thông tin cơ bản', {
             'fields': ('name', 'slug', 'description', 'category', 'image', 'colors')
