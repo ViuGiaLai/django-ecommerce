@@ -56047,3 +56047,65 @@ Traceback (most recent call last):
 django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
 Bad Request: /
 "GET / HTTP/1.1" 400 73791
+Watching for file changes with StatReloader
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Bad Request: /
+"GET / HTTP/1.1" 400 75084
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Bad Request: /
+"GET / HTTP/1.1" 400 74454
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 400 74281
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 79219
+"GET /static/css/css_home.css HTTP/1.1" 304 0
+"GET /profile/ HTTP/1.1" 200 62088
+"GET / HTTP/1.1" 200 79219
+"GET /san-pham/b-dj-nam-ao-thun-co-c-tay-ngn-ecollect-vi-waffle-mi-pha-phi-mau-sc-tng-phn-polo-qun-short-nam-ss31/ HTTP/1.1" 200 46934
+"GET /san-pham/ HTTP/1.1" 200 51868
+"GET /san-pham/?view=list HTTP/1.1" 200 56455
+"GET /san-pham/?view=list&view=grid HTTP/1.1" 200 51868
+"GET /san-pham/?view=list&view=grid&view=list HTTP/1.1" 200 56455
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 78811
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 304 0
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
