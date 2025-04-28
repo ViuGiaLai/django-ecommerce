@@ -56463,3 +56463,1172 @@ Watching for file changes with StatReloader
 "GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
 D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
 Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\utils\supabase_client.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\utils\supabase_client.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\utils\supabase_client.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\utils\supabase_client.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 124454
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /profile/ HTTP/1.1" 200 62379
+"POST /accounts/logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 124010
+"GET /accounts/login/ HTTP/1.1" 200 6802
+"GET /accounts/login/ HTTP/1.1" 200 6880
+"GET /accounts/login/ HTTP/1.1" 200 6880
+"GET /accounts/login/ HTTP/1.1" 200 6880
+"GET /accounts/login/ HTTP/1.1" 200 6880
+"GET /accounts/login/ HTTP/1.1" 200 7069
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/css/css_home.css HTTP/1.1" 200 6558
+"GET /static/css/about.css HTTP/1.1" 200 3683
+"GET /static/css/footer_view.css HTTP/1.1" 200 9493
+"GET /static/css/all_items.css HTTP/1.1" 200 6465
+"GET /static/css/breadcrumb.css HTTP/1.1" 200 1279
+"GET /static/css/category_detail.css HTTP/1.1" 200 2506
+"GET /static/css/profile.css HTTP/1.1" 200 21435
+"GET /static/css/cssfavorites.css HTTP/1.1" 200 3898
+"GET /static/css/checkout.css HTTP/1.1" 200 9753
+"GET /static/css/css_base.css HTTP/1.1" 200 9735
+"GET /static/css/order_detail.css HTTP/1.1" 200 5238
+"GET /static/css/my_orders.css HTTP/1.1" 200 8352
+"GET /static/css/order_success_form.css HTTP/1.1" 200 11167
+"GET /static/css/style_addcart.css HTTP/1.1" 200 4146
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15673
+"GET /static/src/output.css HTTP/1.1" 200 29167
+"GET /static/css/main.css HTTP/1.1" 200 19889
+"GET /static/js/script_footer.js HTTP/1.1" 200 3753
+"GET /static/js/main.js HTTP/1.1" 200 2833
+"GET /static/images/logo_viu.png HTTP/1.1" 200 3761
+"GET /static/images/visa.png HTTP/1.1" 200 22100
+"GET /static/images/jcb.png HTTP/1.1" 200 6387
+"GET /static/images/mastercard.png HTTP/1.1" 200 52849
+"GET /static/images/cod.png HTTP/1.1" 200 15859
+"GET /static/images/atm.png HTTP/1.1" 200 14049
+"GET /static/images/momo.png HTTP/1.1" 200 22119
+"GET /static/images/icons/messenger.png HTTP/1.1" 200 21140
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 200 41526
+"GET /static/js/script_base.js HTTP/1.1" 200 3559
+"GET /static/images/bosieutam.jpg HTTP/1.1" 200 815797
+"GET /static/js/alpine.js HTTP/1.1" 200 114
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/js/all_items.js HTTP/1.1" 200 12543
+"GET /static/js/home.js HTTP/1.1" 200 5848
+"GET /static/js/product_detail.js HTTP/1.1" 200 19822
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /accounts/login/ HTTP/1.1" 200 7214
+"GET /accounts/login/ HTTP/1.1" 200 7389
+"GET /accounts/login/ HTTP/1.1" 200 7599
+"GET /accounts/login/ HTTP/1.1" 200 7599
+"GET /accounts/login/ HTTP/1.1" 200 7599
+"GET /accounts/login/ HTTP/1.1" 200 7599
+"GET /accounts/login/ HTTP/1.1" 200 7599
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/css_home.css HTTP/1.1" 304 0
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/css/all_items.css HTTP/1.1" 200 6465
+"GET /static/css/profile.css HTTP/1.1" 304 0
+"GET /static/css/about.css HTTP/1.1" 304 0
+"GET /static/css/checkout.css HTTP/1.1" 304 0
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 304 0
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /accounts/login/ HTTP/1.1" 200 7599
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13928
+"GET / HTTP/1.1" 200 123931
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 123931
+"GET / HTTP/1.1" 200 123931
+"GET /accounts/login/ HTTP/1.1" 200 9061
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET / HTTP/1.1" 200 123931
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /accounts/login/ HTTP/1.1" 200 8876
+"GET /accounts/login/ HTTP/1.1" 200 8894
+"GET /accounts/login/ HTTP/1.1" 200 8894
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 123931
+"GET /accounts/login/ HTTP/1.1" 200 8883
+"GET / HTTP/1.1" 200 123931
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 123931
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /accounts/login/ HTTP/1.1" 200 8901
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /accounts/login/ HTTP/1.1" 200 8901
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /accounts/login/ HTTP/1.1" 200 8901
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /accounts/login/ HTTP/1.1" 200 9131
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /accounts/login/ HTTP/1.1" 200 7873
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /accounts/login/ HTTP/1.1" 200 7873
+"GET / HTTP/1.1" 200 123931
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /accounts/login/ HTTP/1.1" 200 6992
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /accounts/login/ HTTP/1.1" 200 7212
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /accounts/login/ HTTP/1.1" 200 7212
+"GET / HTTP/1.1" 200 123931
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/css_base.css HTTP/1.1" 304 0
+"GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/footer_view.css HTTP/1.1" 304 0
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/css/profile.css HTTP/1.1" 304 0
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /static/css/about.css HTTP/1.1" 304 0
+"GET /static/css/checkout.css HTTP/1.1" 304 0
+"GET /static/css/my_orders.css HTTP/1.1" 304 0
+"GET /static/css/category_detail.css HTTP/1.1" 304 0
+"GET /static/css/order_detail.css HTTP/1.1" 304 0
+"GET /static/css/cssfavorites.css HTTP/1.1" 304 0
+"GET /static/css/order_success_form.css HTTP/1.1" 304 0
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 304 0
+"GET /static/src/output.css HTTP/1.1" 304 0
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/js/script_footer.js HTTP/1.1" 304 0
+"GET /static/css/css_home.css HTTP/1.1" 200 0
+"GET /static/css/style_addcart.css HTTP/1.1" 200 4146
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /static/images/bosieutam.jpg HTTP/1.1" 304 0
+"GET /static/images/visa.png HTTP/1.1" 304 0
+"GET /static/images/mastercard.png HTTP/1.1" 304 0
+"GET /static/images/jcb.png HTTP/1.1" 304 0
+"GET /static/images/cod.png HTTP/1.1" 304 0
+"GET /static/images/atm.png HTTP/1.1" 304 0
+"GET /static/images/momo.png HTTP/1.1" 304 0
+"GET /static/images/icons/messenger.png HTTP/1.1" 304 0
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/script_base.js HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/js/alpine.js HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 123933
+"GET /static/css/style_home.css HTTP/1.1" 200 6668
+"GET / HTTP/1.1" 200 123933
+"GET /static/css/style_home.css HTTP/1.1" 200 0
+"GET / HTTP/1.1" 200 123933
+"GET /static/css/style_home.css HTTP/1.1" 200 6668
+"GET /static/css/style_home.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 14039
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET / HTTP/1.1" 200 123933
+"GET /static/css/style_home.css HTTP/1.1" 200 6668
+"GET /static/css/css_base.css HTTP/1.1" 200 9735
+"GET /static/css/all_items.css HTTP/1.1" 200 6465
+"GET /static/css/breadcrumb.css HTTP/1.1" 200 1279
+"GET /static/css/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/css/footer_view.css HTTP/1.1" 200 9493
+"GET /static/css/profile.css HTTP/1.1" 200 21435
+"GET /static/css/about.css HTTP/1.1" 200 3683
+"GET /static/css/category_detail.css HTTP/1.1" 200 2506
+"GET /static/css/cssfavorites.css HTTP/1.1" 200 3898
+"GET /static/css/checkout.css HTTP/1.1" 200 9753
+"GET /static/css/style_addcart.css HTTP/1.1" 200 4146
+"GET /static/css/order_detail.css HTTP/1.1" 200 5238
+"GET /static/css/my_orders.css HTTP/1.1" 200 8352
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15673
+"GET /static/css/order_success_form.css HTTP/1.1" 200 11167
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13928
+"GET /static/css/main.css HTTP/1.1" 200 19889
+"GET /static/src/output.css HTTP/1.1" 200 29167
+"GET /static/images/logo_viu.png HTTP/1.1" 200 3761
+"GET /static/js/script_footer.js HTTP/1.1" 200 3753
+"GET /static/js/main.js HTTP/1.1" 200 2833
+"GET /static/images/bosieutam.jpg HTTP/1.1" 200 815797
+"GET /static/images/visa.png HTTP/1.1" 200 22100
+"GET /static/images/jcb.png HTTP/1.1" 200 6387
+"GET /static/images/atm.png HTTP/1.1" 200 14049
+"GET /static/images/cod.png HTTP/1.1" 200 15859
+"GET /static/images/mastercard.png HTTP/1.1" 200 52849
+"GET /static/images/momo.png HTTP/1.1" 200 22119
+"GET /static/images/icons/messenger.png HTTP/1.1" 200 21140
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 200 41526
+"GET /static/js/alpine.js HTTP/1.1" 200 114
+"GET /static/js/script_base.js HTTP/1.1" 200 3559
+"GET /static/js/home.js HTTP/1.1" 200 5848
+"GET /static/js/all_items.js HTTP/1.1" 200 12543
+"GET /static/js/product_detail.js HTTP/1.1" 200 19822
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/images/logo_viu.png HTTP/1.1" 200 3761
+"GET / HTTP/1.1" 200 123933
+"GET /static/css/style_home.css HTTP/1.1" 304 0
+"GET /san-pham/qun-kaki-n-day-rut-bo-gu-ng-rng-phong-cach-retro-cho-n-ma403/ HTTP/1.1" 200 39171
+"GET / HTTP/1.1" 200 123933
+"GET /static/css/style_home.css HTTP/1.1" 200 0
+"GET /static/css/style_home.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 14039
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET / HTTP/1.1" 200 123933
+"GET /static/css/style_home.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 123933
+"GET /static/css/style_home.css HTTP/1.1" 200 0
+"GET /static/css/css_base.css HTTP/1.1" 200 9735
+"GET /static/css/footer_view.css HTTP/1.1" 200 9493
+"GET /static/css/breadcrumb.css HTTP/1.1" 200 1279
+"GET /static/css/about.css HTTP/1.1" 200 3683
+"GET /static/css/category_detail.css HTTP/1.1" 200 2506
+"GET /static/css/all_items.css HTTP/1.1" 200 6465
+"GET /static/css/checkout.css HTTP/1.1" 200 9753
+"GET /static/css/cssfavorites.css HTTP/1.1" 200 3898
+"GET /static/css/order_detail.css HTTP/1.1" 200 5238
+"GET /static/css/order_success_form.css HTTP/1.1" 200 11167
+"GET /static/css/my_orders.css HTTP/1.1" 200 8352
+"GET /static/css/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15673
+"GET /static/css/profile.css HTTP/1.1" 200 21435
+"GET /static/css/style_addcart.css HTTP/1.1" 200 4146
+"GET /static/css/main.css HTTP/1.1" 200 19889
+"GET /static/src/output.css HTTP/1.1" 200 29167
+"GET /static/js/script_footer.js HTTP/1.1" 200 3753
+"GET /static/js/main.js HTTP/1.1" 200 2833
+"GET /static/images/logo_viu.png HTTP/1.1" 200 3761
+"GET /static/images/visa.png HTTP/1.1" 200 22100
+"GET /static/images/cod.png HTTP/1.1" 200 15859
+"GET /static/images/jcb.png HTTP/1.1" 200 6387
+"GET /static/images/mastercard.png HTTP/1.1" 200 52849
+"GET /static/images/atm.png HTTP/1.1" 200 14049
+"GET /static/images/momo.png HTTP/1.1" 200 22119
+"GET /static/images/icons/messenger.png HTTP/1.1" 200 21140
+"GET /static/js/script_base.js HTTP/1.1" 200 3559
+"GET /static/js/alpine.js HTTP/1.1" 200 114
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 200 41526
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/images/bosieutam.jpg HTTP/1.1" 200 815797
+"GET /static/js/home.js HTTP/1.1" 200 5848
+"GET /static/js/all_items.js HTTP/1.1" 200 12543
+"GET /static/js/product_detail.js HTTP/1.1" 200 19822
+"GET / HTTP/1.1" 200 123933
+"GET /static/css/style_home.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 123933
+"GET /static/css/style_home.css HTTP/1.1" 200 6668
+"GET / HTTP/1.1" 200 123933
+"GET /static/css/style_home.css HTTP/1.1" 200 6668
+"GET / HTTP/1.1" 200 123933
+"GET /static/css/css_base.css HTTP/1.1" 200 9735
+"GET /static/css/breadcrumb.css HTTP/1.1" 200 1279
+"GET /static/css/style_home.css HTTP/1.1" 200 6668
+"GET /static/css/profile.css HTTP/1.1" 200 21435
+"GET /static/css/about.css HTTP/1.1" 200 3683
+"GET /static/css/footer_view.css HTTP/1.1" 200 9493
+"GET /static/css/category_detail.css HTTP/1.1" 200 2506
+"GET /static/css/cssfavorites.css HTTP/1.1" 200 3898
+"GET /static/css/all_items.css HTTP/1.1" 200 6465
+"GET /static/css/checkout.css HTTP/1.1" 200 9753
+"GET /static/css/order_detail.css HTTP/1.1" 200 5238
+"GET /static/css/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/css/order_success_form.css HTTP/1.1" 200 11167
+"GET /static/css/my_orders.css HTTP/1.1" 200 8352
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15673
+"GET /static/css/style_addcart.css HTTP/1.1" 200 4146
+"GET /static/src/output.css HTTP/1.1" 200 29167
+"GET /static/css/main.css HTTP/1.1" 200 19889
+"GET /static/js/script_footer.js HTTP/1.1" 200 3753
+"GET /static/images/logo_viu.png HTTP/1.1" 200 3761
+"GET /static/js/main.js HTTP/1.1" 200 2833
+"GET /static/images/visa.png HTTP/1.1" 200 22100
+"GET /static/images/bosieutam.jpg HTTP/1.1" 200 815797
+"GET /static/images/jcb.png HTTP/1.1" 200 6387
+"GET /static/images/cod.png HTTP/1.1" 200 15859
+"GET /static/images/mastercard.png HTTP/1.1" 200 52849
+"GET /static/images/atm.png HTTP/1.1" 200 14049
+"GET /static/images/momo.png HTTP/1.1" 200 22119
+"GET /static/images/icons/messenger.png HTTP/1.1" 200 21140
+"GET /static/js/script_base.js HTTP/1.1" 200 3559
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 200 41526
+"GET /static/js/alpine.js HTTP/1.1" 200 114
+"GET /static/js/home.js HTTP/1.1" 200 5848
+"GET /static/js/all_items.js HTTP/1.1" 200 12543
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/js/product_detail.js HTTP/1.1" 200 19822
+"GET /static/images/logo_viu.png HTTP/1.1" 200 3761
+"GET / HTTP/1.1" 200 123933
+"GET /static/css/style_home.css HTTP/1.1" 200 6558
+"GET / HTTP/1.1" 200 123933
+"GET /static/css/style_home.css HTTP/1.1" 200 2558
+"GET / HTTP/1.1" 200 123933
+"GET /static/css/style_home.css HTTP/1.1" 304 0
+"GET /static/images/logo_viu.png HTTP/1.1" 200 3761
+"GET /static/images/logo_viu.png HTTP/1.1" 200 3761
+"GET / HTTP/1.1" 200 123933
+"GET /static/css/style_home.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 123933
+"GET /static/css/style_home.css HTTP/1.1" 200 2812
+"GET / HTTP/1.1" 200 123933
+"GET /static/css/style_home.css HTTP/1.1" 304 0
+"GET /static/images/logo_viu.png HTTP/1.1" 200 3761
+"GET /static/images/logo_viu.png HTTP/1.1" 200 3761
+"GET / HTTP/1.1" 200 123933
+"GET /static/css/style_home.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/css_home.css HTTP/1.1" 200 6558
+"GET /san-pham/b-qun-ao-nam-mua-he-xp-van-ni-ha-tit-logo-cao-su-tr-trung-b-c-tron-cc-tay-nam-hang-cao-cp-bo21/ HTTP/1.1" 200 40445
+"GET /static/css/css_home.css HTTP/1.1" 304 0
+"GET /accounts/login/ HTTP/1.1" 200 7212
+"GET /static/css/style_login.css HTTP/1.1" 304 0
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/css_home.css HTTP/1.1" 200 6558
+"GET /static/css/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/css/css_base.css HTTP/1.1" 200 9735
+"GET /static/css/footer_view.css HTTP/1.1" 200 9493
+"GET /static/css/breadcrumb.css HTTP/1.1" 200 1279
+"GET /static/css/profile.css HTTP/1.1" 200 21435
+"GET /static/css/about.css HTTP/1.1" 200 3683
+"GET /static/css/category_detail.css HTTP/1.1" 200 2506
+"GET /static/css/all_items.css HTTP/1.1" 200 6465
+"GET /static/css/cssfavorites.css HTTP/1.1" 200 3898
+"GET /static/css/order_detail.css HTTP/1.1" 200 5238
+"GET /static/css/checkout.css HTTP/1.1" 200 9753
+"GET /static/css/my_orders.css HTTP/1.1" 200 8352
+"GET /static/css/main.css HTTP/1.1" 200 19889
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 200 15673
+"GET /static/src/output.css HTTP/1.1" 200 29167
+"GET /static/css/style_addcart.css HTTP/1.1" 200 4146
+"GET /static/css/order_success_form.css HTTP/1.1" 200 11167
+"GET /static/images/logo_viu.png HTTP/1.1" 200 3761
+"GET /static/images/bosieutam.jpg HTTP/1.1" 200 815797
+"GET /static/js/script_footer.js HTTP/1.1" 200 3753
+"GET /static/js/main.js HTTP/1.1" 200 2833
+"GET /static/images/visa.png HTTP/1.1" 200 22100
+"GET /static/images/mastercard.png HTTP/1.1" 200 52849
+"GET /static/images/jcb.png HTTP/1.1" 200 6387
+"GET /static/images/cod.png HTTP/1.1" 200 15859
+"GET /static/images/atm.png HTTP/1.1" 200 14049
+"GET /static/images/momo.png HTTP/1.1" 200 22119
+"GET /static/images/icons/messenger.png HTTP/1.1" 200 21140
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 200 41526
+"GET /static/js/script_base.js HTTP/1.1" 200 3559
+"GET /static/js/alpine.js HTTP/1.1" 200 114
+"GET /static/js/home.js HTTP/1.1" 200 5848
+"GET /static/js/all_items.js HTTP/1.1" 200 12543
+"GET /static/js/product_detail.js HTTP/1.1" 200 19822
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET / HTTP/1.1" 200 123931
+"GET /static/css/css_base.css HTTP/1.1" 304 0
+"GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/css_home.css HTTP/1.1" 304 0
+"GET /static/css/breadcrumb.css HTTP/1.1" 304 0
+"GET /static/css/footer_view.css HTTP/1.1" 304 0
+"GET /static/css/checkout.css HTTP/1.1" 304 0
+"GET /static/css/profile.css HTTP/1.1" 304 0
+"GET /static/css/cssfavorites.css HTTP/1.1" 304 0
+"GET /static/css/all_items.css HTTP/1.1" 304 0
+"GET /static/css/category_detail.css HTTP/1.1" 304 0
+"GET /static/css/my_orders.css HTTP/1.1" 304 0
+"GET /static/css/about.css HTTP/1.1" 304 0
+"GET /static/css/order_detail.css HTTP/1.1" 304 0
+"GET /static/css/order_success_form.css HTTP/1.1" 304 0
+"GET /static/src/output.css HTTP/1.1" 304 0
+"GET /static/css/cssproduct_detail.css HTTP/1.1" 304 0
+"GET /static/css/style_addcart.css HTTP/1.1" 304 0
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/js/script_footer.js HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/images/logo_viu.png HTTP/1.1" 304 0
+"GET /static/images/bosieutam.jpg HTTP/1.1" 304 0
+"GET /static/images/visa.png HTTP/1.1" 304 0
+"GET /static/images/mastercard.png HTTP/1.1" 304 0
+"GET /static/images/jcb.png HTTP/1.1" 304 0
+"GET /static/images/cod.png HTTP/1.1" 304 0
+"GET /static/images/atm.png HTTP/1.1" 304 0
+"GET /static/images/momo.png HTTP/1.1" 304 0
+"GET /static/images/icons/messenger.png HTTP/1.1" 304 0
+"GET /static/images/icons/Icon_of_Zalo.svg.webp HTTP/1.1" 304 0
+"GET /static/js/script_base.js HTTP/1.1" 304 0
+"GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/js/alpine.js HTTP/1.1" 304 0
+"GET /static/js/home.js HTTP/1.1" 304 0
+"GET /static/js/all_items.js HTTP/1.1" 304 0
+"GET /static/js/product_detail.js HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 123931
+"GET /accounts/login/ HTTP/1.1" 200 7212
+"GET /static/css/style_login.css HTTP/1.1" 304 0
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13928
+"GET / HTTP/1.1" 200 125384
+"GET / HTTP/1.1" 200 125384
+"GET / HTTP/1.1" 200 125383
+"GET / HTTP/1.1" 200 125479
+"GET / HTTP/1.1" 200 125685
+"POST / HTTP/1.1" 200 125685
+"GET /register/ HTTP/1.1" 200 5252
+"GET /static/css/style_register.css HTTP/1.1" 200 7068
+"POST / HTTP/1.1" 200 126155
+"POST / HTTP/1.1" 200 126143
+"POST / HTTP/1.1" 200 126143
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST / HTTP/1.1" 200 127436
+"POST /accounts/login/ HTTP/1.1" 302 0
+Forbidden (CSRF token from POST incorrect.): /accounts/login/
+"POST /accounts/login/ HTTP/1.1" 403 2503
+"GET / HTTP/1.1" 200 127843
+"POST /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 127843
+Forbidden (CSRF token from POST incorrect.): /accounts/login/
+"POST /accounts/login/ HTTP/1.1" 403 2503
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 14039
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+Forbidden (CSRF token from POST incorrect.): /accounts/login/
+"POST /accounts/login/ HTTP/1.1" 403 2503
+Forbidden (CSRF token from POST incorrect.): /accounts/login/
+"POST /accounts/login/ HTTP/1.1" 403 2503
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Forbidden (CSRF token from POST incorrect.): /
+"POST / HTTP/1.1" 403 2503
+"GET / HTTP/1.1" 200 127825
+"GET / HTTP/1.1" 200 127825
+"GET /profile/ HTTP/1.1" 200 65750
+"POST /accounts/logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 127418
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 14030
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+"GET / HTTP/1.1" 200 127418
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 14030
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET / HTTP/1.1" 200 127418
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 14030
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 127418
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 14030
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 127418
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 14030
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\works\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py", line 2201, in login_view
+    if request.method == "POST" and request.is_ajax():
+                                    ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+"POST /login/ HTTP/1.1" 500 71641
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Python2\My_project_viu\django-ecommerce-viu-main\ecommerce\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 123931
+"GET /accounts/login/ HTTP/1.1" 200 7212
+"POST /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 124375
+"GET /profile/ HTTP/1.1" 200 62300
+"POST /accounts/logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 123931
+"GET / HTTP/1.1" 200 124300
+"GET / HTTP/1.1" 200 124228
+"GET / HTTP/1.1" 200 124212
+"GET / HTTP/1.1" 200 124212
+"GET / HTTP/1.1" 200 124364
+"GET / HTTP/1.1" 200 124716
+"GET / HTTP/1.1" 200 124956
+"GET / HTTP/1.1" 200 124956
+"GET / HTTP/1.1" 200 126084
+"GET / HTTP/1.1" 200 125244
+"GET / HTTP/1.1" 200 125244
+"GET / HTTP/1.1" 200 125724
+"GET / HTTP/1.1" 200 118192
+"GET / HTTP/1.1" 200 125724
+"GET / HTTP/1.1" 200 125644
+"POST /cart/add/qun-d-k-day-rut-ng-rng-vi-dy-dn-mm-mi-lng-chun-co-gian-qun-k-caro-form-rng-ulzzang-ma97/ HTTP/1.1" 302 0
+"GET /accounts/login/?next=/cart/add/qun-d-k-day-rut-ng-rng-vi-dy-dn-mm-mi-lng-chun-co-gian-qun-k-caro-form-rng-ulzzang-ma97/ HTTP/1.1" 200 7212
+"POST /cart/add/qun-d-k-day-rut-ng-rng-vi-dy-dn-mm-mi-lng-chun-co-gian-qun-k-caro-form-rng-ulzzang-ma97/ HTTP/1.1" 302 0
+"GET /accounts/login/?next=/cart/add/qun-d-k-day-rut-ng-rng-vi-dy-dn-mm-mi-lng-chun-co-gian-qun-k-caro-form-rng-ulzzang-ma97/ HTTP/1.1" 200 7212
+"GET /accounts/login/ HTTP/1.1" 200 7212
+"POST /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 126088
+"GET /profile/ HTTP/1.1" 200 62300
+"POST /accounts/logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 125644
+"GET /accounts/login/ HTTP/1.1" 200 7212
+"POST /accounts/login/ HTTP/1.1" 200 7498
+"POST /accounts/login/ HTTP/1.1" 200 7498
+"POST /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 126093
+"POST /cart/add/ao-s-mi-nam-basic-cht-vi-kaki-cheo-han-phom-dang-cc-djp/ HTTP/1.1" 200 139
+"GET /checkout/ HTTP/1.1" 200 71055
+"GET / HTTP/1.1" 200 126093
+"POST /cart/add/set-ao-s-mi-theu-n-mix-chan-vay-xoe-hai-tng-co-qun-bo-h-mc-dji-hc-dji-chi-sieu-xinh/ HTTP/1.1" 200 139
+"GET /profile/ HTTP/1.1" 200 63479
+"GET /view-cart/ HTTP/1.1" 200 53642
+"POST /delete-cart-item/4/ HTTP/1.1" 200 160
+"GET / HTTP/1.1" 200 126093
+"GET /san-pham/set-ao-s-mi-theu-n-mix-chan-vay-xoe-hai-tng-co-qun-bo-h-mc-dji-hc-dji-chi-sieu-xinh/ HTTP/1.1" 200 50429
+"GET /san-pham/set-ao-s-mi-theu-n-mix-chan-vay-xoe-hai-tng-co-qun-bo-h-mc-dji-hc-dji-chi-sieu-xinh/ HTTP/1.1" 200 50373
+"GET / HTTP/1.1" 200 126093
+"GET /san-pham/qun-kaki-n-day-rut-bo-gu-ng-rng-phong-cach-retro-cho-n-ma403/ HTTP/1.1" 200 45737
+"GET / HTTP/1.1" 200 126093
+"GET /san-pham/b-qun-ao-nam-mua-he-xp-van-ni-ha-tit-logo-cao-su-tr-trung-b-c-tron-cc-tay-nam-hang-cao-cp-bo21/ HTTP/1.1" 200 47013
+"GET /san-pham/b-qun-ao-nam-mua-he-xp-van-ni-ha-tit-logo-cao-su-tr-trung-b-c-tron-cc-tay-nam-hang-cao-cp-bo21/ HTTP/1.1" 200 47266
+"GET /san-pham/b-qun-ao-nam-mua-he-xp-van-ni-ha-tit-logo-cao-su-tr-trung-b-c-tron-cc-tay-nam-hang-cao-cp-bo21/ HTTP/1.1" 200 47242
+"GET /san-pham/b-qun-ao-nam-mua-he-xp-van-ni-ha-tit-logo-cao-su-tr-trung-b-c-tron-cc-tay-nam-hang-cao-cp-bo21/ HTTP/1.1" 200 47255
+"GET /san-pham/b-qun-ao-nam-mua-he-xp-van-ni-ha-tit-logo-cao-su-tr-trung-b-c-tron-cc-tay-nam-hang-cao-cp-bo21/ HTTP/1.1" 200 49662
+"GET /san-pham/b-qun-ao-nam-mua-he-xp-van-ni-ha-tit-logo-cao-su-tr-trung-b-c-tron-cc-tay-nam-hang-cao-cp-bo21/ HTTP/1.1" 200 49662
+"GET /san-pham/b-qun-ao-nam-mua-he-xp-van-ni-ha-tit-logo-cao-su-tr-trung-b-c-tron-cc-tay-nam-hang-cao-cp-bo21/ HTTP/1.1" 200 48050
+"GET /static/images/huongdanchonsize.jpg HTTP/1.1" 200 31570
+"GET /san-pham/b-qun-ao-nam-mua-he-xp-van-ni-ha-tit-logo-cao-su-tr-trung-b-c-tron-cc-tay-nam-hang-cao-cp-bo21/ HTTP/1.1" 200 48107
+"GET /static/images/huongdanchonsize.jpg HTTP/1.1" 304 0
+"GET /san-pham/b-qun-ao-nam-mua-he-xp-van-ni-ha-tit-logo-cao-su-tr-trung-b-c-tron-cc-tay-nam-hang-cao-cp-bo21/ HTTP/1.1" 200 47034
+"GET /view-cart/ HTTP/1.1" 200 48655
+"POST /delete-cart-item/5/ HTTP/1.1" 200 160
+"GET / HTTP/1.1" 200 126093
+"GET /all-items/ HTTP/1.1" 200 129814
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 14039
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+"GET /all-items/ HTTP/1.1" 200 131414
+"GET /all-items/ HTTP/1.1" 200 130254
+"GET /all-items/ HTTP/1.1" 200 129814
+"GET /all-items/ HTTP/1.1" 200 129814
+"GET /all-items/ HTTP/1.1" 200 131514
+"GET /all-items/ HTTP/1.1" 200 131514
+"GET /all-items/ HTTP/1.1" 200 132914
+"GET /all-items/ HTTP/1.1" 200 132814
+"GET /all-items/ HTTP/1.1" 200 132814
+"GET /all-items/?view=list HTTP/1.1" 200 154643
+"GET /all-items/?view=list&view=grid HTTP/1.1" 200 132814
+"GET /san-pham/ HTTP/1.1" 200 132814
+"GET / HTTP/1.1" 200 126093
+"GET /san-pham/qun-kaki-n-day-rut-bo-gu-ng-rng-phong-cach-retro-cho-n-ma403/ HTTP/1.1" 200 45758
+"POST /add-comment/qun-kaki-n-day-rut-bo-gu-ng-rng-phong-cach-retro-cho-n-ma403/ HTTP/1.1" 200 571
+"GET / HTTP/1.1" 200 126103
+"GET /san-pham/qun-dai-th-thao-nam-ng-suong-nh-cht-poly-co-gian/ HTTP/1.1" 200 46136
+"GET /san-pham/qun-dai-th-thao-nam-ng-suong-nh-cht-poly-co-gian/ HTTP/1.1" 200 46147
+"GET /san-pham/qun-dai-th-thao-nam-ng-suong-nh-cht-poly-co-gian/ HTTP/1.1" 200 46137
+"POST /cart/add/qun-dai-th-thao-nam-ng-suong-nh-cht-poly-co-gian/ HTTP/1.1" 200 139
+"POST /cart/add/qun-dai-th-thao-nam-ng-suong-nh-cht-poly-co-gian/ HTTP/1.1" 200 139
+Internal Server Error: /cart/add/qun-dai-th-thao-nam-ng-suong-nh-cht-poly-co-gian/
+"POST /cart/add/qun-dai-th-thao-nam-ng-suong-nh-cht-poly-co-gian/ HTTP/1.1" 500 118
+Internal Server Error: /cart/add/qun-dai-th-thao-nam-ng-suong-nh-cht-poly-co-gian/
+"POST /cart/add/qun-dai-th-thao-nam-ng-suong-nh-cht-poly-co-gian/ HTTP/1.1" 500 118
+Internal Server Error: /cart/add/qun-dai-th-thao-nam-ng-suong-nh-cht-poly-co-gian/
+"POST /cart/add/qun-dai-th-thao-nam-ng-suong-nh-cht-poly-co-gian/ HTTP/1.1" 500 118
+Internal Server Error: /cart/add/qun-dai-th-thao-nam-ng-suong-nh-cht-poly-co-gian/
+"POST /cart/add/qun-dai-th-thao-nam-ng-suong-nh-cht-poly-co-gian/ HTTP/1.1" 500 118
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 14039
+"GET /static/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 1904
+"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1889
+Internal Server Error: /cart/add/qun-dai-th-thao-nam-ng-suong-nh-cht-poly-co-gian/
+"POST /cart/add/qun-dai-th-thao-nam-ng-suong-nh-cht-poly-co-gian/ HTTP/1.1" 500 118
+Internal Server Error: /cart/add/qun-dai-th-thao-nam-ng-suong-nh-cht-poly-co-gian/
+"POST /cart/add/qun-dai-th-thao-nam-ng-suong-nh-cht-poly-co-gian/ HTTP/1.1" 500 118
+"GET /view-cart/ HTTP/1.1" 200 53399
+"POST /delete-cart-item/9/ HTTP/1.1" 200 160
+"POST /delete-cart-item/10/ HTTP/1.1" 200 160
+"POST /delete-cart-item/8/ HTTP/1.1" 200 158
+"GET / HTTP/1.1" 200 126032
+- Broken pipe from ('127.0.0.1', 54799)
+"GET /favorites/ HTTP/1.1" 200 29477
+"GET / HTTP/1.1" 200 126032
+"GET / HTTP/1.1" 200 125184
+"GET / HTTP/1.1" 200 125176
+"GET / HTTP/1.1" 200 124568
+"GET / HTTP/1.1" 200 126544
+"GET / HTTP/1.1" 200 126032
+"GET / HTTP/1.1" 200 126032
+"GET / HTTP/1.1" 200 126032
+"GET / HTTP/1.1" 200 126032
+"GET / HTTP/1.1" 200 126032
+"GET / HTTP/1.1" 200 125928
+"GET / HTTP/1.1" 200 126016
+"GET / HTTP/1.1" 200 126024
+"GET / HTTP/1.1" 200 125440
+"GET / HTTP/1.1" 200 125528
+"GET / HTTP/1.1" 200 125528
+"GET / HTTP/1.1" 200 125640
+"POST /add-to-favorites/set-ao-s-mi-theu-n-mix-chan-vay-xoe-hai-tng-co-qun-bo-h-mc-dji-hc-dji-chi-sieu-xinh/ HTTP/1.1" 200 138
+"POST /add-to-favorites/set-ao-s-mi-theu-n-mix-chan-vay-xoe-hai-tng-co-qun-bo-h-mc-dji-hc-dji-chi-sieu-xinh/ HTTP/1.1" 200 138
+"GET / HTTP/1.1" 200 125648
+"GET / HTTP/1.1" 200 125064
+"GET / HTTP/1.1" 200 125056
+"GET /san-pham/set-ao-s-mi-theu-n-mix-chan-vay-xoe-hai-tng-co-qun-bo-h-mc-dji-hc-dji-chi-sieu-xinh/ HTTP/1.1" 200 50324

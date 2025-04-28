@@ -28,6 +28,7 @@ import random
 from django.conf import settings
 from django.db import transaction
 from django.urls import reverse
+import jwt  # Import the PyJWT library for decoding tokens
 
 logger = logging.getLogger(__name__)  # Add this line to define the logger
 
@@ -2161,3 +2162,34 @@ def get_address(request, address_id):
         return JsonResponse({'error': 'Địa chỉ không tồn tại'}, status=404)
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)
+
+@csrf_exempt
+def google_signup(request):
+    if request.method == "POST":
+        try:
+            data = json.loads(request.body)
+            token = data.get("token")
+            if not token:
+                logger.error("Missing token in request body.")
+                return JsonResponse({"success": False, "message": "Token không hợp lệ."})
+
+            # Decode the token using PyJWT
+            try:
+                decoded_token = jwt.decode(token, options={"verify_signature": False})
+                email = decoded_token.get("email")
+                if not email:
+                    logger.error("Email not found in decoded token.")
+                    return JsonResponse({"success": False, "message": "Không tìm thấy email trong token."})
+            except jwt.DecodeError as e:
+                logger.error(f"Token decode error: {str(e)}")
+                return JsonResponse({"success": False, "message": "Token không hợp lệ."})
+
+            # Get or create the user
+            user, created = User.objects.get_or_create(email=email, defaults={"username": email})
+            login(request, user)
+
+            return JsonResponse({"success": True, "redirect_url": "/"})
+        except Exception as e:
+            logger.error(f"Error in google_signup: {str(e)}")
+            return JsonResponse({"success": False, "message": f"Lỗi: {str(e)}"})
+    return JsonResponse({"success": False, "message": "Phương thức không được hỗ trợ."})

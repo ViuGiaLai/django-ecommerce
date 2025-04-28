@@ -49,4 +49,7 @@ urlpatterns = [
     path('review-order/<str:order_number>/', views.review_order, name='review_order'),
     path('rebuy-order/<str:order_number>/', views.rebuy_order, name='rebuy_order'),
     path('get-address/<int:address_id>/', views.get_address, name='get_address'),
+
+    # gg 
+     path('google_signup/', views.google_signup, name='google_signup'),
 ]

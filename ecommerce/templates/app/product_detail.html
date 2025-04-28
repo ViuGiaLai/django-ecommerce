@@ -61,7 +61,7 @@
         <div class="product-main">
             <!-- Product Images -->
             <div class="product-images">
-                <div class="main-image" style="width: 250px; height: 250px; object-fit: cover;">
+                <div class="main-image ">
                     <img id="main-image" src="{{ product.image.url }}" alt="{{ product.name }}">
                     {% if product.is_new %}
                     <span class="badge new" >Mới</span>
@@ -119,6 +119,7 @@
                             <button class="size-btn {% if size == 'M' %}active{% endif %}" data-size="{{ size }}">{{ size }}</button>
                         {% endfor %}
                     </div>
+                    
                 </div>
 
                 <!-- Quantity Section -->

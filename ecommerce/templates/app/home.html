@@ -80,7 +80,7 @@
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 ">
                     {% for product in featured_products|slice:":8" %}
-                    <div class="group transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="{% widthratio forloop.counter0 1 50 %}">
+                    <div class="group transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="{% widthratio forloop.counter0 1 50 %}" style="padding: 20px 20px 20px; box-shadow:  none; background-color: none; border-radius: 0px;">
                         <div class="relative overflow-hidden rounded-lg mb-3">
                             <a href="{% url 'product_detail' product.slug %}" class="text-decoration-none product-link">
                                 <div class="aspect-[3/4] relative">
@@ -95,11 +95,13 @@
                                 {% if product.is_sale %}
                                     <span class="bg-red-500 text-white text-xs px-2 py-1 rounded">Sale</span>
                                 {% endif %}
-                               <button class="btn-heart btn-outline-danger rounded-circle p-2 d-flex align-items-center justify-content-center position-absolute top-0 end-0 m-2 add-to-favorites" data-product-slug="{{ product.slug }}"
-                                style="position: absolute; top: 3px; left: 245px; width: 35px; height: 35px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                                   <i class="fas fa-heart text-danger"></i>
-                                </button>
                             </div>
+
+                            <button class="btn-heart btn-outline-danger rounded-circle p-2 d-flex align-items-center justify-content-center position-absolute top-0 end-0 m-2 add-to-favorites" data-product-slug="{{ product.slug }}"
+                            style="position: absolute; top: 3px; width: 35px; height: 35px; background-color: white; border-radius: 50%; left 125px">
+                               <i class="fas fa-heart text-danger"></i>
+                            </button>
+
                             <!-- Quick actions -->
                            <div class="absolute bottom-0 left-0 right-0 flex justify-center gap-1 translate-y-full group-hover:translate-y-0 transition-transform duration-300 p-1 bg-white bg-opacity-90">
                             <button class="flex-1 bg-blue-500 text-white py-2 rounded-md text-sm hover:bg-blue-600 buy-now-btn" 
@@ -108,7 +110,7 @@
                             </button>
                             <button class="flex-1 bg-green-500 text-white py-2 rounded-md text-sm hover:bg-green-600 add-to-cart-btn" 
                                     data-product-slug="{{ product.slug }}">
-                                Thêm giỏ
+                                    <i class="fa-solid fa-cart-plus"></i>
                             </button>
                             </div>
 
@@ -139,6 +141,7 @@
                     </div>
                     {% endfor %}
                 </div>
+                {% comment %} next {% endcomment %}
             </div>
         </section>
         {% endif %}
@@ -181,7 +184,7 @@
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                     {% for product in new_arrivals|slice:":8" %}
-                    <div class="group transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="{% widthratio forloop.counter0 1 50 %}">
+                    <div class="group transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="{% widthratio forloop.counter0 1 50 %}" style="padding: 20px 20px 20px; box-shadow:  none; background-color: none; border-radius: 0px;">
                         <div class="relative overflow-hidden rounded-lg mb-3">
                             <a href="{% url 'product_detail' product.slug %}" class="text-decoration-none product-link">
                                 <div class="aspect-[3/4] relative">
@@ -196,21 +199,23 @@
                                 {% if product.is_sale %}
                                     <span class="bg-red-500 text-white text-xs px-2 py-1 rounded">Sale</span>
                                 {% endif %}
-                                <button class="btn-heart btn-outline-danger rounded-circle p-2 d-flex align-items-center justify-content-center position-absolute top-0 end-0 m-2 add-to-favorites" data-product-slug="{{ product.slug }}"
-                                style="position: absolute; top: 3px; left: 195px; width: 35px; height: 35px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                                   <i class="fas fa-heart text-danger"></i>
-                                </button>
+                               
                             </div>
+
+                            <button class="btn-heart btn-outline-danger rounded-circle p-2 d-flex align-items-center justify-content-center position-absolute top-0 end-0 m-2 add-to-favorites" data-product-slug="{{ product.slug }}"
+                            style="position: absolute; top: 3px; width: 35px; height: 35px; background-color: white; border-radius: 50%; left 125px">
+                               <i class="fas fa-heart text-danger"></i>
+                            </button>
                             <!-- Quick actions -->
-                            <div class="absolute bottom-0 left-0 right-0 flex justify-center gap-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300 p-3 bg-white bg-opacity-90">
-                                <button class="flex-1 bg-blue-500 text-white py-2 rounded-md text-sm hover:bg-blue-600 buy-now-btn" 
-                                        data-product-slug="{{ product.slug }}">
-                                    MUA NGAY
-                                </button>
-                                <button class="flex-1 bg-green-500 text-white py-2 rounded-md text-sm hover:bg-green-600 add-to-cart-btn" 
-                                        data-product-slug="{{ product.slug }}">
-                                    Thêm giỏ
-                                </button>
+                            <div class="absolute bottom-0 left-0 right-0 flex justify-center gap-1 translate-y-full group-hover:translate-y-0 transition-transform duration-300 p-1 bg-white bg-opacity-90">
+                            <button class="flex-1 bg-blue-500 text-white py-2 rounded-md text-sm hover:bg-blue-600 buy-now-btn" 
+                            data-product-slug="{{ product.slug }}">
+                                MUA NGAY
+                            </button>
+                            <button class="flex-1 bg-green-500 text-white py-2 rounded-md text-sm hover:bg-green-600 add-to-cart-btn" 
+                                    data-product-slug="{{ product.slug }}">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                            </button>
                             </div>
                         </div>
                         <h3 class="font-medium mb-1" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; white-space: normal;">

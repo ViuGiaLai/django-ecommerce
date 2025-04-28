@@ -96,150 +96,63 @@
             </form>
         </div>
     </div>
-
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-        import { getAuth, GoogleAuthProvider, FacebookAuthProvider, signInWithRedirect, getRedirectResult } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-
-        const firebaseConfig = {
-            apiKey: "AIzaSyB8Jgj3Runcd4g8x-aNg2IsZGSK6wj9NoE",
-            authDomain: "viu-shop-e-commerce.firebaseapp.com",
-            projectId: "viu-shop-e-commerce",
-            storageBucket: "viu-shop-e-commerce.appspot.com",
-            messagingSenderId: "194860739362",
-            appId: "1:194860739362:web:ea9a1270c8ecc7d415537b",
-            measurementId: "G-EECQLYVZC6"
-        };
-
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-        const googleProvider = new GoogleAuthProvider();
-        const facebookProvider = new FacebookAuthProvider();
-
-        googleProvider.addScope('profile');
-        googleProvider.addScope('email');
-        facebookProvider.addScope('email');
-
-        googleProvider.setCustomParameters({
-            prompt: 'select_account'
-        });
-
-        window.firebase = { auth, googleProvider, facebookProvider, signInWithRedirect, getRedirectResult };
-    </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <script>
-        function showFirebaseError(message) {
-            const errorDiv = document.getElementById('firebase-error');
-            errorDiv.textContent = message;
-            errorDiv.style.display = 'block';
-            setTimeout(() => {
-                errorDiv.style.display = 'none';
-            }, 5000);
-        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const supabaseUrl = 'https://vlgsgoqjfifshsnodavc.supabase.co'; // Replace with your Supabase URL
+            const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZsZ3Nnb3FqZmlmc2hzbm9kYXZjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDUwNzYwMjUsImV4cCI6MjA2MDY1MjAyNX0.-IJn0q1xqYEDXYL-ZUQrOrR7UmDL5YuOnua34RyVxJQ'; // Replace with your Supabase API Key
+            const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
-        function setButtonLoading(buttonId, isLoading) {
-            const button = document.getElementById(buttonId);
-            const spinner = button.querySelector('.loading-spinner');
-            const icon = button.querySelector('.fab');
-            const text = button.querySelector('span:not(.loading-spinner)');
+            document.getElementById('google-login-btn').addEventListener('click', async () => {
+                try {
+                    const { data, error } = await supabase.auth.signInWithOAuth({ provider: 'google' });
+                    if (error) {
+                        console.error('Supabase OAuth error:', error);
+                        alert('Lỗi đăng nhập: ' + error.message);
+                        return;
+                    }
 
-            if (isLoading) {
-                button.classList.add('btn-disabled');
-                button.disabled = true;
-                spinner.style.display = 'inline-block';
-                icon.style.display = 'none';
-                text.textContent = 'Đang xử lý...';
-            } else {
-                button.classList.remove('btn-disabled');
-                button.disabled = false;
-                spinner.style.display = 'none';
-                icon.style.display = 'inline-block';
-                text.textContent = buttonId === 'google-login-btn' ? 'Đăng nhập với Google' : 'Đăng nhập với Facebook';
-            }
-        }
+                    // Wait for the redirect result to complete
+                    let { data: sessionData, error: sessionError } = await supabase.auth.getSession();
+                    if (sessionError || !sessionData?.session?.access_token) {
+                        console.warn('Session data not immediately available. Retrying...');
+                        // Retry fetching the session after a short delay
+                        await new Promise(resolve => setTimeout(resolve, 2000));
+                        ({ data: sessionData, error: sessionError } = await supabase.auth.getSession());
+                    }
 
-        async function sendUserDataToBackend(user) {
-            const csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
-            try {
-                const response = await fetch('/social-login/', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-CSRFToken': csrfToken
-                    },
-                    body: JSON.stringify({
-                        uid: user.uid,
-                        email: user.email,
-                        displayName: user.displayName,
-                        photoURL: user.photoURL
+                    if (sessionError || !sessionData?.session?.access_token) {
+                        console.error('Access token is missing in the session data:', sessionData);
+                        alert('Không tìm thấy access token. Vui lòng thử lại.');
+                        return;
+                    }
+
+                    const accessToken = sessionData.session.access_token;
+
+                    // Send the token to the backend for authentication
+                    fetch('/google_signup/', {
+                        method: 'POST',
+                        body: JSON.stringify({ token: accessToken }),
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                        }
                     })
-                });
-
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-
-                const data = await response.json();
-                if (data.success) {
-                    window.location.href = window.homeUrl;
-                } else {
-                    showFirebaseError(data.message || "Đăng nhập thất bại");
-                }
-            } catch (error) {
-                console.error("Error sending data to backend:", error);
-                showFirebaseError("Lỗi kết nối với server. Vui lòng thử lại sau.");
-            }
-        }
-
-        async function handleSocialLogin(provider, buttonId) {
-            setButtonLoading(buttonId, true);
-
-            try {
-                await window.firebase.signInWithRedirect(window.firebase.auth, provider); // Sử dụng đúng namespace
-
-                const result = await window.firebase.getRedirectResult(window.firebase.auth);
-                console.log("Redirect result:", result); // Debug
-                if (result) {
-                    const user = result.user;
-                    console.log("User data:", user); // Debug
-                    await sendUserDataToBackend(user);
-                } else {
-                    throw new Error("No redirect result received");
-                }
-
-            } catch (error) {
-                console.error("Login error:", error);
-                let errorMessage = "Đã xảy ra lỗi. Vui lòng thử lại.";
-
-                if (error.code === 'auth/popup-closed-by-user' || error.code === 'auth/cancelled-popup-request') {
-                    errorMessage = "Quá trình đăng nhập bị gián đoạn. Vui lòng đảm bảo cho phép redirect trong trình duyệt (Cài đặt > Quyền riêng tư và bảo mật > Cài đặt trang web > Popup và chuyển hướng), và thử lại.";
-                } else if (error.code === 'auth/popup-blocked') {
-                    errorMessage = "Trình duyệt đã chặn redirect. Vui lòng vào Cài đặt > Quyền riêng tư và bảo mật > Cài đặt trang web > Popup và cửa sổ bật lên để cho phép, sau đó thử lại.";
-                } else if (error.code === 'auth/account-exists-with-different-credential') {
-                    errorMessage = "Email này đã được sử dụng với phương thức đăng nhập khác.";
-                } else if (error.message === "No redirect result received") {
-                    errorMessage = "Không nhận được kết quả xác thực. Vui lòng thử lại hoặc kiểm tra kết nối mạng.";
-                }
-
-                showFirebaseError(errorMessage);
-            } finally {
-                setButtonLoading(buttonId, false);
-            }
-        }
-
-        document.getElementById('google-login-btn').addEventListener('click', () => {
-            handleSocialLogin(window.firebase.googleProvider, 'google-login-btn');
-        });
-
-        document.getElementById('facebook-login-btn').addEventListener('click', () => {
-            handleSocialLogin(window.firebase.facebookProvider, 'facebook-login-btn');
-        });
-
-        document.querySelectorAll('.form-control').forEach(input => {
-            input.addEventListener('input', function() {
-                const errorMessage = this.closest('.form-group').querySelector('.error-message');
-                if (errorMessage) {
-                    errorMessage.style.display = 'none';
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            window.location.href = data.redirect_url || window.homeUrl;
+                        } else {
+                            alert('Lỗi: ' + data.message);
+                        }
+                    })
+                    .catch(err => {
+                        console.error('Error during token processing:', err);
+                        alert('Đã xảy ra lỗi. Vui lòng thử lại.');
+                    });
+                } catch (err) {
+                    console.error('Error during Google login:', err);
+                    alert('Đã xảy ra lỗi. Vui lòng thử lại.');
                 }
             });
         });

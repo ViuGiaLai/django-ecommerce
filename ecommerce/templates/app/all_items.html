@@ -133,7 +133,7 @@
                     {% for product in products %}
                     {% if view_mode == 'grid' %}
                     <!-- Grid View -->
-                    <div class="group transition-all duration-300 hover:-translate-y-1">
+                    <div class="group transition-all duration-300 hover:-translate-y-1"  style="padding: 10px 10px 10px; box-shadow:  none; background-color: none; border-radius: 0px;">
                         <div class="relative overflow-hidden rounded-lg mb-3">
                             <div class="aspect-[3/4] relative">
                                 <a href="{% url 'product_detail' product.slug %}">
@@ -151,12 +151,14 @@
                                 {% endif %}
                             </div>
                             <!-- Quick actions -->
-                            <div class="absolute bottom-0 left-0 right-0 flex justify-center gap-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300 p-3 bg-white bg-opacity-90">
+                            <div class="absolute bottom-0 left-0 right-0 flex justify-center gap-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300 p-3 bg-white bg-opacity-90"
+                            
+                            >
                                 <button class="rounded-full w-10 h-10 p-0 flex items-center justify-center border border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition add-to-favorites" data-product-slug="{{ product.slug }}">
                                     <i class="fas fa-heart h-4 w-4"></i>
                                 </button>
                                 <button class="flex-1 bg-blue-500 text-white py-2 rounded-md text-sm hover:bg-blue-600 add-to-cart" data-product-slug="{{ product.slug }}">
-                                    Thêm vào giỏ
+                                    Thêm giỏ
                                 </button>
                             </div>
                         </div>
