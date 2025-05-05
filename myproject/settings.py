@@ -32,7 +32,11 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", "True").lower() == "true"
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",") + ["viugialai.site", "www.viugialai.site"]
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",") + [
+    "viugialai.site", 
+    "www.viugialai.site", 
+    "viu-shop-ecommerce.onrender.com"
+]
 # ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
 
 # Security settings
