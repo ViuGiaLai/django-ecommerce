@@ -17,11 +17,10 @@ This is an e-commerce website project built with Django, providing essential fea
 ## Technologies Used
 - Python 3
 - Django
-- SQLite (can be switched to PostgreSQL/MySQL)
+- PostgreSQL 
 - HTML, CSS, JavaScript (may include TailwindCSS)
 - Django Template Engine
 - Additional libraries: (listed in requirements.txt)
-- Screenshots
 ## 📸 Screenshots
 <p align="center">
   <img width="30%" src="https://github.com/user-attachments/assets/8b1a2ee5-cd64-4e3d-9f7f-ab0aa1550f09" />
@@ -51,7 +50,7 @@ This is an e-commerce website project built with Django, providing essential fea
 
 1. **Clone the source code**
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/ViuGiaLai/django-ecommerce.git
    cd django-ecommerce-viu-main
    ```
 
